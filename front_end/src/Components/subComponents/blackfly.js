@@ -148,14 +148,20 @@ export default class Blackfly extends Component {
                                     Blackfly Polarization Camera GUI
                                 </h2>
                                 <div className = "Info">
-                                    <h3>About: <h5>While working as an undergraduate research assistant, I 
-                                        developed a GUI for use in reflectance and transmission mode quantitative polarized light imaging (QPLI). QPLI is an imaging technique that uses polarized light
-                                        to image birefringent materials. Birefringent materials, like many human tissues, reflect and transmit polarized light in a predictable manner. Therefore, by exposing
-                                        ligament samples to polarized light the alligmnet of the collagen fibers can be determined. This information can then be used to deuce the failure mechanism of the ligament. 
-                                        The GUI interfaced with a commercial camera and allowed the operator to remotely control the camera and obtain specially
-                                        filtered images in real time. The GUI and camera will be used to study stress and failure in the ulnar collateral ligament (UCL) which often
-                                        leads to Tommy John surgery in baseball players and powerlifters.</h5> </h3>       
-                                    <h3>Languages: C++ &nbsp;&nbsp;<a 
+                                    <h3>About: 
+                                        <h5>
+                                            While working as an undergraduate research assistant, I 
+                                            developed a GUI for use in reflectance and transmission mode quantitative polarized light imaging (QPLI). QPLI is an imaging technique that uses polarized light
+                                            to image birefringent materials. Birefringent materials, such as certain human tissues, reflect and transmit polarized light in a predictable manner. Therefore, by exposing
+                                            ligament samples to polarized light the alligmnet of the collagen fibers within that ligament can be determined. This information can then be used to deuce the failure mechanism of the ligament. 
+                                            The GUI interfaced with a commercial camera and allowed the operator to remotely control the camera and obtain specially
+                                            filtered images in real time. The GUI and camera will be used to study stress and failure in the ulnar collateral ligament (UCL) which 
+                                            when torn requires Tommy John surgery to repair. By studying the failure mechanism with QPLI we may be able to prevent the need for Tommy 
+                                            John surgery.
+                                        </h5>
+                                     </h3>       
+                                    <h3>Languages: C++ &nbsp;&nbsp;</h3>
+                                    <h3>Code: <a 
                                         href = "https://github.com/ejmeitz/GUI"
                                         className = "gitHub social" 
                                         target = "_blank"
