@@ -21,7 +21,7 @@ const ArtStyles = styled.div `
     height: 80vh;
     width: 80vw;
     margin: 6vw auto 4vw auto;
-    background-color:rgb(63,168,176,0.6);
+    background-color:rgba( 140, 194, 255,0.6);
    
    
   
@@ -59,7 +59,7 @@ li{
 
 .carousel-control-next, .carousel-control-prev{
     width:5vw;
-    background:rgb(63,168,176,0.8);
+    background-color:rgba( 140, 194, 255,0.8);;
     
 
     &:hover {

@@ -14,7 +14,8 @@ const NavStyles = styled.div `
 }
 
 .navbar{
-    background-color:#3fa8b0;
+  
+    background-color:rgb( 140, 194, 255);
     position:fixed;
     width: 100%;
     padding: 10px;
@@ -54,6 +55,7 @@ const NavStyles = styled.div `
   #nav-dropdown{
     color: white;
     font-weight:20px;
+    
     margin:10px 20px 10px 20px;
 
     &:hover {
@@ -80,12 +82,12 @@ const NavStyles = styled.div `
 
 
 .dropdown-menu, .dropdown-item{
-  background-color: white;
+  background-color:rgb( 140, 194, 255);
   margin:auto;
-  color:black;
+  color:white;
 
   &:hover{
-      color: #457BD9
+    color: #ffcb3d;
   }
 
 }

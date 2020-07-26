@@ -20,7 +20,7 @@ const FooterStyles = styled.div `
           height:20vh;
           
 
-          background-color:rgb(63,168,176,0.6);
+          background-color:rgba( 140, 194, 255,0.6);
           
           justify-items:center;
           justify-content:center;
@@ -38,7 +38,7 @@ const FooterStyles = styled.div `
             width:100vw;
             grid-row:2;
             height: 4vh;
-            background-color:#3fa8b0;
+            background-color: rgb( 140, 194, 255);
             align-self:center;
             text-align:center;
             padding:0px
