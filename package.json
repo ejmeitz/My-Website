@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cd front_end && npm run build",
-    "install-client": "cd front_end && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build",
+    
     "start": "node server.js",
     "client": "cd front_end && npm start",
     "save": "git add -A && git commit -m \"automated push\" && git push"
