@@ -4,29 +4,30 @@ const nodemailer = require("nodemailer");
 
 
 function checkAndSendEmail (first, last, emp, textVal) {
-    console.log("Inside email func");
     if(textVal === ""){
         console.log("No text in body. Will not send email");
         return;
     }
 
-    
-    let transporterYahoo = nodemailer.createTransport({
-        host: 'smtp.mail.yahoo.com',
-        port: 465,
-        service: 'yahoo',
-        secure: 'false',
-        auth: {
-        user: process.env.USER_YAHOO, 
-        pass: process.env.PASS_YAHOO
+    let transporterOutlook = nodemailer.createTransport({
+        host: "smtp-mail.outlook.com",
+        secureConnection: false, 
+        port: 587, 
+        tls: {
+        ciphers:'SSLv3'
         },
-        debug: false,
-        logger: true 
+        auth: {
+            user: 'meitzwebsite@outlook.com',
+            pass: process.env.PASS_OUTLOOK
+        },
+            debug: false,
+            logger: true 
     });
 
     let transporterGMAIL = nodemailer.createTransport({
         host: 'smtp.gmail.com',
         port: 465,
+        secure: true,
         auth: {
         user: process.env.USER_GMAIL, 
         pass: process.env.PASS_GMAIL
@@ -35,8 +36,8 @@ function checkAndSendEmail (first, last, emp, textVal) {
         logger: true 
     })
     
-    let mailDetailsYahoo = { 
-        from: 'ejmeitz@yahoo.com', 
+    let mailDetailsOutlook = { 
+        from: 'meitzwebsite@outlook.com', 
         to: 'ejmeitz1@gmail.com',
         subject: 'Email From:' + first + ' ' + last, 
         text: 'EMPLOYER: \n'  + emp +  '\n BODY: \n'  + textVal,
@@ -50,7 +51,7 @@ function checkAndSendEmail (first, last, emp, textVal) {
     }; 
 
     
-    transporterGMAIL.sendMail(mailDetailsGmail, (err, info) => { 
+    transporterOutlook.sendMail(mailDetailsOutlook, (err, info) => { 
         
         if(err) { 
             console.log('Error Occurs' + err); 
