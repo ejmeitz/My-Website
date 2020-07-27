@@ -1,7 +1,28 @@
 const router = require('express').Router();
 let Email = require('../models/sendEmail.model');
 const nodemailer = require("nodemailer");
+const nodeoutlook = require('nodejs-nodemailer-outlook')
 
+function nodeOutlookEmail(first, last, emp, textVal){
+
+    nodeoutlook.sendEmail({
+        auth: {
+            user: "meitzwebsite@outlook.com",
+            pass: process.env.PASS_OUTLOOK
+        },
+        from: 'meitzwebsite@outlook.com',
+        to: 'ejmeitz1@gmail.com',
+        subject: 'Email From:' + first + ' ' + last, 
+        text: 'EMPLOYER: \n'  + emp +  '\n BODY: \n'  + textVal,
+
+        onError: (e) => console.log("ERROR: "+ e),
+        onSuccess: (i) => console.log("Email sent successfully" + i)
+        }
+        
+    
+    );
+   
+}
 
 function checkAndSendEmail (first, last, emp, textVal) {
     if(textVal === ""){
@@ -14,7 +35,7 @@ function checkAndSendEmail (first, last, emp, textVal) {
         secureConnection: false, 
         port: 587, 
         tls: {
-        ciphers:'SSLv3'
+            ciphers:'SSLv3'
         },
         auth: {
             user: 'meitzwebsite@outlook.com',
@@ -71,8 +92,8 @@ router.post('/', (request,response) => {
     let textBody = request.body.textBody;
 
     //send email
-    checkAndSendEmail (firstName,lastName,employer,textBody);
-
+    //checkAndSendEmail (firstName,lastName,employer,textBody);
+    nodeOutlookEmail (firstName,lastName,employer,textBody);
 });
 
 module.exports = router;

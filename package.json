@@ -28,6 +28,7 @@
     "express": "^4.17.1",
     "heroku": "^7.42.5",
     "mongoose": "^5.9.25",
+    "nodejs-nodemailer-outlook": "^1.2.3",
     "nodemailer": "^6.4.10",
     "nodemon": "^2.0.4",
     "openssl": "^1.1.0",
