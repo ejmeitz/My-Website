@@ -41,7 +41,7 @@ updateViewers() {
   }
 
 
-  axios.post('http://localhost:5000/views/add' || 'http://ethanmeitz.com/views/add', viewerInfo )
+  axios.post('http://localhost:5000/views/add' || '/views/add', viewerInfo )
     .then(res => console.log(res.data))
     .catch(err => console.log('Could not send information: ' + err));
 }

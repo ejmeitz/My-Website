@@ -93,7 +93,7 @@ export default class Contact extends Component {
             employer: ''
         });
         
-        axios.post( "http://localhost:5000/sendEmail" || "http://ethanmeitz.com/sendEmail"   , data)
+        axios.post( "http://localhost:5000/sendEmail" || "/sendEmail"   , data)
         .then(res => console.log(res.data))
         .then((response) => {
             if(response.statusText === "OK" && response.status >= 200 && response.status < 300) {
