@@ -11,24 +11,46 @@ function checkAndSendEmail (first, last, emp, textVal) {
     }
 
     
-    let transporter = nodemailer.createTransport({
-        service: 'gmail',
+    let transporterYahoo = nodemailer.createTransport({
+        host: 'smtp.mail.yahoo.com',
+        port: 465,
+        service: 'yahoo',
+        secure: 'false',
         auth: {
-        user: process.env.USER, 
-        pass: process.env.PASS
-        }
+        user: process.env.USER_YAHOO, 
+        pass: process.env.PASS_YAHOO
+        },
+        debug: false,
+        logger: true 
     });
 
+    let transporterGMAIL = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 465,
+        auth: {
+        user: process.env.USER_GMAIL, 
+        pass: process.env.PASS_GMAIL
+        },
+        debug: false,
+        logger: true 
+    })
     
-    let mailDetails = { 
+    let mailDetailsYahoo = { 
+        from: 'ejmeitz@yahoo.com', 
+        to: 'ejmeitz1@gmail.com',
+        subject: 'Email From:' + first + ' ' + last, 
+        text: 'EMPLOYER: \n'  + emp +  '\n BODY: \n'  + textVal,
+    }; 
+
+    let mailDetailsGmail = { 
         from: 'ejmeitz1@gmail.com', 
-        to: 'ejmeitz@wustl.edu',
+        to: 'ejmeitz1@gmail.com',
         subject: 'Email From:' + first + ' ' + last, 
         text: 'EMPLOYER: \n'  + emp +  '\n BODY: \n'  + textVal,
     }; 
 
     
-    transporter.sendMail(mailDetails, (err, info) => { 
+    transporterGMAIL.sendMail(mailDetailsGmail, (err, info) => { 
         
         if(err) { 
             console.log('Error Occurs' + err); 
