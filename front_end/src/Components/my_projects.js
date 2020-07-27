@@ -215,7 +215,7 @@ export default class my_projects extends Component {
                     </div>
 
                     <div className = "element b">
-                        <img src = ""/>
+                        <img src = "" alt =""/>
                         <h2 className = "ProjectName">
                             My Website
                         </h2> 
@@ -238,7 +238,7 @@ export default class my_projects extends Component {
                     </div>
 
                     <div className = "element c">
-                        <img src = ""/>
+                        <img src = ""  alt =""/>
                         <h2 className = "ProjectName">
                             Radial Finite Differencing Method for Heat Transfer
                         </h2>

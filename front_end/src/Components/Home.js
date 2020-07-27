@@ -220,12 +220,10 @@ render(){
                         </p>
                 </div>
                 <div className = "extra">
-                    <h2>Activities:</h2>
-                        <p> 
-                          
+                    <h2>Activities:</h2>                         
                             <div className = "clubs">
                                 <div className = "club dbf">
-                                    <img  src = {blackfly}  />
+                                    <img  src = {blackfly} alt = "Blackfly Camera imaging tissue in biaxial loading machine" />
                                     <h4>Design/Build/Fly (DBF)</h4> 
                                     <p>DBF has offered me the opportunity to learn about building and operating aircraft. Each year DBF participates
                                     in the AAIA Design/Build/Fly competition where competitors follow a set of rules to build an airplane. During the 2019-2020 school year, 
@@ -251,8 +249,6 @@ render(){
                                     </p>
                                 </div>
                             </div>
-                        </p>
-                
                 </div>
                 <div className = "exp">
                     <h2>Experience: </h2>

@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-import {Form, Col, Row, Button} from 'react-bootstrap';
-const nodemailer = require("nodemailer");
+import {Form, Col, Button, Modal} from 'react-bootstrap';
+import axios from 'axios';
+
+
+
 const ContactStyles = styled.div `
 
 .container{
@@ -16,74 +19,106 @@ const ContactStyles = styled.div `
 
 `;
 
+
+
 export default class Contact extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            textValue: '',
-            firstName: '',
-            lastName: '',
-            employer:''
-    };
-    
-        this.handleChangeText = this.handleChangeText.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.checkAndSendEmail = this.checkAndSendEmail.bind(this);
+            this.state = {
+                    textValue: '',
+                    firstName: '',
+                    lastName: '',
+                    employer:'',
+                    show: false
+            };
+
+            this.handleChangeText = this.handleChangeText.bind(this);
+            this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
+            this.handleLastNameChange = this.handleLastNameChange.bind(this);
+            this.handleEmployerChange = this.handleEmployerChange.bind(this);
+            this.handleSubmit = this.handleSubmit.bind(this);
+            this.showModal = this.showModal.bind(this);
+            this.hideModal = this.hideModal.bind(this);
       }
 
+      handleFirstNameChange(event) {
+        this.setState({firstName: event.target.value});
+      }
+      
+      handleLastNameChange(event) {
+        this.setState({lastName: event.target.value});
+      }
+      
+      handleEmployerChange(event) {
+        this.setState({employer: event.target.value});
+      }
       handleChangeText(event) {
         this.setState({textValue: event.target.value});
-       // console.log(event.target.value);
       }
     
+      showModal = (e) => {
+            this.setState({
+            show: true
+            });
+       };
+       hideModal = (e) => {
+            this.setState({
+            show: false
+            });
+       };
 
       handleSubmit(event) {
-        alert('Submit Clicked: ');
+
+        console.log('Submit Clicked: ');
+        console.log(this.state); 
         event.preventDefault();
+
+        if(this.state.textValue === "" || this.state.firstName === "" || this.state.lastName === "" || this.state.employer === ""){
+            console.log("Empty text body aborting");
+            this.showModal();
+            return;
+        }
+
+        const data = {
+            first: this.state.firstName,
+            last: this.state.lastName,
+            emp: this.state.employer,
+            textBody: this.state.textValue
+        }
+
+        this.setState({  //clear form
+            textValue :'',
+            firstName: '',
+            lastName: '',
+            employer: ''
+        });
+        
+        axios.post("http://localhost:5000/sendEmail", data)
+        .then(res => console.log(res.data))
+        .catch(err => console.log('Could not send information: ' + err));
+
       }
 
+     
 
-   checkAndSendEmail (state) {
-
-    this.refs.btn.setAttribute("disabled", "disabled");
-    if(state.textValue === ''){
-        console.log("No text in body. Will not send email");
-        this.refs.btn.removeAttribute("disabled");
-    }
-
-  
-    const nodemailer = require("nodemailer");
-    
-    
-      let transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: process.env.USER, 
-          pass: process.env.PASS
-        },
-      });
-    
-    
-      let mailDetails = { 
-        from: 'ejmeitz1@gmail.com', 
-        to: 'ejmeitz1@gmail.com',
-        subject: "Email From:", 
-        text: state.textValue,  
-    }; 
-    
-    transporter.sendMail(mailDetails, function(err, data) { 
-        if(err) { 
-            console.log('Error Occurs'); 
-        } else { 
-            console.log('Email sent successfully'); 
-        } 
-    });
-
-    this.refs.btn.removeAttribute("disabled");
-}
 
     render(){
         return(
+
+        <React.Fragment>
+            <Modal show={this.state.show} onHide={this.hideModal}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Oops. Please fill out every box!</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>Every box must contain text.</Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={this.hideModal}>
+                    Close
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+
+
             <ContactStyles>  
                 <div className = "container"> 
 
@@ -91,22 +126,22 @@ export default class Contact extends Component {
                 <h1>
                     Contact Me:
                 </h1>
-                    <Form className = "contactMe">
+                    <Form className = "contactMe" id = 'myForm'>
                     <Form.Row>
                             <Form.Group as={Col}>
                             <Form.Label>First name</Form.Label>
-                            <Form.Control type="name" onChange={this.updateFirstName} placeholder="First Name" />
+                            <Form.Control type="name" value={this.state.firstName} onChange={this.handleFirstNameChange} placeholder="First Name" />
                             </Form.Group>
 
                             <Form.Group as={Col}>
                             <Form.Label>Last Name</Form.Label>
-                            <Form.Control type="name" onChange={this.updateLastName} placeholder="Last Name" />
+                            <Form.Control type="name" value={this.state.lastName} onChange={this.handleLastNameChange} placeholder="Last Name" />
                             </Form.Group>
                         </Form.Row>
 
                         <Form.Group>
                             <Form.Label>Employer</Form.Label>
-                            <Form.Control onChange={this.updateEmployer} placeholder="Employer" />
+                            <Form.Control value={this.state.employer} onChange={this.handleEmployerChange} placeholder="Employer" />
                         </Form.Group>
 
                         <Form.Group controlId="exampleForm.ControlTextarea1">
@@ -114,12 +149,14 @@ export default class Contact extends Component {
                             <Form.Control as="textarea" type = "text" rows="15" value={this.state.textValue} onChange={this.handleChangeText} placeholder = "Your text here" />
                         </Form.Group>
 
-                        <Button variant="primary" ref="btn" onClick = {this.checkAndSendEmail} type="submit">
+                        <Button variant="primary"  onClick = {this.handleSubmit} type="submit">
                             Submit
                         </Button>
-                                            </Form>
+                    </Form>
                 </div>
             </ContactStyles>
+
+            </React.Fragment>
         );
     }
 }

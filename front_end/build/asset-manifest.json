@@ -1,26 +1,38 @@
 {
   "files": {
-    "main.css": "/static/css/main.066dee9d.chunk.css",
-    "main.js": "/static/js/main.8daa4846.chunk.js",
-    "main.js.map": "/static/js/main.8daa4846.chunk.js.map",
+    "main.css": "/static/css/main.99007684.chunk.css",
+    "main.js": "/static/js/main.a6e1008f.chunk.js",
+    "main.js.map": "/static/js/main.a6e1008f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.6e64ad1a.js",
     "runtime-main.js.map": "/static/js/runtime-main.6e64ad1a.js.map",
     "static/css/2.af3c1da9.chunk.css": "/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.897daaa1.chunk.js": "/static/js/2.897daaa1.chunk.js",
-    "static/js/2.897daaa1.chunk.js.map": "/static/js/2.897daaa1.chunk.js.map",
+    "static/js/2.c71d4f1d.chunk.js": "/static/js/2.c71d4f1d.chunk.js",
+    "static/js/2.c71d4f1d.chunk.js.map": "/static/js/2.c71d4f1d.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.5def9228a236a1c65a1ae567ad71cb15.js": "/precache-manifest.5def9228a236a1c65a1ae567ad71cb15.js",
+    "precache-manifest.e514f01b97c0c89ed2b049ffe40e7108.js": "/precache-manifest.e514f01b97c0c89ed2b049ffe40e7108.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/static/css/2.af3c1da9.chunk.css.map",
-    "static/css/main.066dee9d.chunk.css.map": "/static/css/main.066dee9d.chunk.css.map",
-    "static/js/2.897daaa1.chunk.js.LICENSE.txt": "/static/js/2.897daaa1.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/static/media/balloons.6559c0ef.jpg"
+    "static/css/main.99007684.chunk.css.map": "/static/css/main.99007684.chunk.css.map",
+    "static/js/2.c71d4f1d.chunk.js.LICENSE.txt": "/static/js/2.c71d4f1d.chunk.js.LICENSE.txt",
+    "static/media/ExpVsTheory.PNG": "/static/media/ExpVsTheory.c4ec853a.PNG",
+    "static/media/Jaguar.png": "/static/media/Jaguar.ce7a2bc8.png",
+    "static/media/LC.PNG": "/static/media/LC.a68553f5.PNG",
+    "static/media/NumericalSoln.PNG": "/static/media/NumericalSoln.994f8bfe.PNG",
+    "static/media/beluga.png": "/static/media/beluga.a122c224.png",
+    "static/media/cathedral.png": "/static/media/cathedral.6347dfdd.png",
+    "static/media/codePic.PNG": "/static/media/codePic.44b4b34d.PNG",
+    "static/media/dog.png": "/static/media/dog.e121026e.png",
+    "static/media/elephant.png": "/static/media/elephant.4d1f45cf.png",
+    "static/media/elephant_grey.png": "/static/media/elephant_grey.08d825ba.png",
+    "static/media/fish.png": "/static/media/fish.9914876b.png",
+    "static/media/qpli.jpeg": "/static/media/qpli.3333c78d.jpeg",
+    "static/media/walrus.png": "/static/media/walrus.c40c7f88.png"
   },
   "entrypoints": [
     "static/js/runtime-main.6e64ad1a.js",
     "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.897daaa1.chunk.js",
-    "static/css/main.066dee9d.chunk.css",
-    "static/js/main.8daa4846.chunk.js"
+    "static/js/2.c71d4f1d.chunk.js",
+    "static/css/main.99007684.chunk.css",
+    "static/js/main.a6e1008f.chunk.js"
   ]
 }

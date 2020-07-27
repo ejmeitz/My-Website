@@ -33,10 +33,11 @@ mongoose.connection.on('connected',()=> {
 })
 
 
-//const viewsRouter = require('./routes/viewCounter.js');
+const viewsRouter = require('./routes/viewCounter.js');
+const sendEmailRouter = require('./routes/sendEmail.js');
 
-//app.use('/views', viewsRouter);
-
+app.use('/views', viewsRouter);
+app.use('/sendEmail', sendEmailRouter);
 
 if(process.env.NODE_ENV === 'production'){
   
@@ -47,6 +48,8 @@ if(process.env.NODE_ENV === 'production'){
             });
 
     }
+
+
 
 app.listen(PORT, () => {
     console.log(`Server is running on port: ${PORT}`)

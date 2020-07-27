@@ -23,6 +23,7 @@ import Footer from './Components/footer.js';
 import './App.css';
 import './index.css'
 
+require('dotenv').config();
 
 class App extends Component{ 
   
@@ -34,29 +35,26 @@ class App extends Component{
 updateViewers() {
 
   const viewerInfo = {
-    viewerIP : '',
+    viewerIP : 'N/A',
     pageViewed : window.location.pathname.toString(),
     timestamp : Date.now()
   }
 
 
-  axios.post('http://ethanmeitz.com/views/add' || 'http://localhost:5000/views/add', viewerInfo )
-  
+  axios.post('http://localhost:5000/views/add' || 'http://ethanmeitz.com/views/add', viewerInfo )
     .then(res => console.log(res.data))
     .catch(err => console.log('Could not send information: ' + err));
 }
 
-componentWillMount() {
-    this.updateViewers();
-}
 
 render(){
   return (
+   
     <React.Fragment >
         <Nav />
                   <Router>
                       <Switch>
-                        <Route updateViewers={this.updateViewers} exact path = "/" component ={Home} />
+                        <Route onEnter={() => this.updateViewers} exact path = "/" component ={Home} />
                         <Route  path = "/art" component ={Art} />
                         <Route  path = "/fun" component ={Fun} />
                         <Route  exact path = "/projects" component ={Projects} />
@@ -74,13 +72,3 @@ render(){
 }
 export default App;
 
-
-/*
-
-<footer>
-          <p>
-            Copyright {'\u00A9'} {new Date().getFullYear()}, Ethan Meitz
-          </p>
-        </footer>
-
-*/
