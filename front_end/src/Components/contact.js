@@ -93,9 +93,19 @@ export default class Contact extends Component {
             employer: ''
         });
         
-        axios.post("http://localhost:5000/sendEmail" || "http://ethanmeitz.com/sendEmail", data)
+        axios.post( "http://localhost:5000/sendEmail" || "http://ethanmeitz.com/sendEmail"   , data)
         .then(res => console.log(res.data))
-        .catch(err => console.log('Could not send information: ' + err));
+        .then((response) => {
+            if(response.statusText === "OK" && response.status >= 200 && response.status < 300) {
+                return response.json()
+            } else {
+                throw new Error("Server can't be reached!")
+            }
+        })
+        .then((json) => {
+            console.log("It is JSON")
+         })
+        .catch(err => console.log('Could not send email: ' + err));
       }
 
      
