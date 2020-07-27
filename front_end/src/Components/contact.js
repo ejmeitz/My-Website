@@ -93,10 +93,9 @@ export default class Contact extends Component {
             employer: ''
         });
         
-        axios.post("http://localhost:5000/sendEmail", data)
+        axios.post("http://localhost:5000/sendEmail" || "http://ethanmeitz.com/sendEmail", data)
         .then(res => console.log(res.data))
         .catch(err => console.log('Could not send information: ' + err));
-
       }
 
      
