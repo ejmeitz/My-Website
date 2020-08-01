@@ -44,20 +44,16 @@ const sendEmailRouter = require('./routes/sendEmail.js');
 app.use('/views', viewsRouter);
 app.use('/sendEmail', sendEmailRouter);
 
-// if(process.env.NODE_ENV === 'production'){
+if(process.env.NODE_ENV === 'production'){
   
-//             app.use(express.static("front_end/build"));
-//             app.use('*', express.static('front_end/build'));
-//             app.get("*", (req, res) => {
-//               res.sendFile(path.resolve((__dirname, "front_end", "build", "index.html")));
-//             });
+            app.use(express.static("front_end/build"));
+            app.use('*', express.static('front_end/build'));
+            app.get("*", (req, res) => {
+              res.sendFile(path.resolve((__dirname, "front_end", "build", "index.html")));
+            });
 
-// }
-app.get('/',(request,response) => {
+}
 
-    response.json("Welcome to the backend");
-
-});
 
 app.listen(currentPORT, () => {
     console.log(`Server is running on port: ${currentPORT}`)
