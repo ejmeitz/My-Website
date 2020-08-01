@@ -41,8 +41,7 @@ updateViewers() {
         timestamp : Date.now()
       }
 
-      let URL = 'FILL IN WITH FINAL BACKEND URL --MAYBE PUT IN ENV even tho that does nothing'
-      axios.post('http://localhost:5000/views', viewerInfo )
+      axios.post('https://backend-website.herokuapp.com/views', viewerInfo )
         .then(res => console.log(res.data))
         .catch(err => console.log('Could not send information: ' + err));
    }
