@@ -81,19 +81,35 @@ function checkAndSendEmail (first, last, emp, textVal) {
         } 
     });
 }
+router.get('/', (request,response) => {
+     response.json("On post page");
+});
 
 
 router.post('/', (request,response) => {
  
     //parse request info
-    let firstName = request.body.first;
-    let lastName = request.body.last;
-    let employer = request.body.emp
+    let firstName = request.body.firstName;
+    let lastName = request.body.lastName;
+    let employer = request.body.employer;
     let textBody = request.body.textBody;
 
     //send email
     //checkAndSendEmail (firstName,lastName,employer,textBody);
-    nodeOutlookEmail (firstName,lastName,employer,textBody);
+   // nodeOutlookEmail (firstName,lastName,employer,textBody);
+
+    console.log(firstName);
+    console.log(lastName);
+    const newPost = new Email({
+        firstName,
+        lastName,
+        employer,
+        textBody
+    });
+
+    newPost.save()
+    .then(() => response.json('Text saved'))
+    .catch(err => response.status(400).json('There was an error saving the new post: ' + err));
 });
 
 module.exports = router;

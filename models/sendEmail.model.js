@@ -6,7 +6,7 @@ const Email = new Schema ({
 
     firstName : {
         type: String,
-        unique: true,
+        unique: false,
         trim:true
     },
 
@@ -15,9 +15,9 @@ const Email = new Schema ({
         unique:false,
         trim:true
     },
-    Employer : {
+    employer : {
         type:String,
-        unique:true,
+        unique:false,
         trim: true
     },
     textBody : {
