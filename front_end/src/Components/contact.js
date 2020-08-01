@@ -7,9 +7,16 @@ import axios from 'axios';
 
 const ContactStyles = styled.div `
 
+
+*{
+
+    
+}
 .container{
-    margin:7vh 20vw 1vh 20vw;
+    margin:7vh auto 1vh auto;
     height: 94vh;
+    justify-self:center;
+    min-width: 375px;
 }
 
 .largeForm, .name, .employer{
@@ -80,9 +87,9 @@ export default class Contact extends Component {
         }
 
         const data = {
-            first: this.state.firstName,
-            last: this.state.lastName,
-            emp: this.state.employer,
+            firstName: this.state.firstName,
+            lastName: this.state.lastName,
+            employer: this.state.employer,
             textBody: this.state.textValue
         }
 
@@ -99,17 +106,7 @@ export default class Contact extends Component {
         }
 
         axios.post(baseURL  , data)
-        .then(res => console.log("Email sent! " + res.data))
-        .then((response) => {
-            if(response.statusText === "OK" && response.status >= 200 && response.status < 300) {
-                return response.json()
-            } else {
-                throw new Error("Server can't be reached!")
-            }
-        })
-        .then((json) => {
-            console.log("It is JSON")
-         })
+        .then(res => console.log(res.data))
         .catch(err => console.log('Could not send email: ' + err));
       }
 
@@ -119,56 +116,56 @@ export default class Contact extends Component {
     render(){
         return(
 
-        <React.Fragment>
-            <Modal show={this.state.show} onHide={this.hideModal}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Oops. Please fill out every box!</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>Every box must contain text.</Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={this.hideModal}>
-                    Close
-                    </Button>
-                </Modal.Footer>
-            </Modal>
-
-
-            <ContactStyles>  
-                <div className = "container"> 
-
-                
-                <h1>
-                    Contact Me:
-                </h1>
-                    <Form className = "contactMe" id = 'myForm'>
-                    <Form.Row>
-                            <Form.Group as={Col}>
-                            <Form.Label>First name</Form.Label>
-                            <Form.Control type="name" value={this.state.firstName} onChange={this.handleFirstNameChange} placeholder="First Name" />
-                            </Form.Group>
-
-                            <Form.Group as={Col}>
-                            <Form.Label>Last Name</Form.Label>
-                            <Form.Control type="name" value={this.state.lastName} onChange={this.handleLastNameChange} placeholder="Last Name" />
-                            </Form.Group>
-                        </Form.Row>
-
-                        <Form.Group>
-                            <Form.Label>Employer</Form.Label>
-                            <Form.Control value={this.state.employer} onChange={this.handleEmployerChange} placeholder="Employer" />
-                        </Form.Group>
-
-                        <Form.Group controlId="exampleForm.ControlTextarea1">
-                            <Form.Label>Comments:</Form.Label>
-                            <Form.Control as="textarea" type = "text" rows="15" value={this.state.textValue} onChange={this.handleChangeText} placeholder = "Your text here" />
-                        </Form.Group>
-
-                        <Button variant="primary"  onClick = {this.handleSubmit} type="submit">
-                            Submit
+            <React.Fragment>
+                <Modal show={this.state.show} onHide={this.hideModal}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Oops. Please fill out every box!</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>Every box must contain text.</Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="primary" onClick={this.hideModal}>
+                        Close
                         </Button>
-                    </Form>
-                </div>
-            </ContactStyles>
+                    </Modal.Footer>
+                </Modal>
+
+
+                <ContactStyles>  
+                    <div className = "container"> 
+
+                    
+                        <h1>
+                            Contact Me:
+                        </h1>
+                            <Form className = "contactMe" id = 'myForm'>
+                            <Form.Row>
+                                    <Form.Group as={Col}>
+                                    <Form.Label>First Name</Form.Label>
+                                    <Form.Control type="name" value={this.state.firstName} onChange={this.handleFirstNameChange} placeholder="First Name" />
+                                    </Form.Group>
+
+                                    <Form.Group as={Col}>
+                                    <Form.Label>Last Name</Form.Label>
+                                    <Form.Control type="name" value={this.state.lastName} onChange={this.handleLastNameChange} placeholder="Last Name" />
+                                    </Form.Group>
+                                </Form.Row>
+
+                                <Form.Group>
+                                    <Form.Label>Employer</Form.Label>
+                                    <Form.Control value={this.state.employer} onChange={this.handleEmployerChange} placeholder="Employer" />
+                                </Form.Group>
+
+                                <Form.Group controlId="exampleForm.ControlTextarea1">
+                                    <Form.Label>Comments:</Form.Label>
+                                    <Form.Control as="textarea" type = "text" rows="15" value={this.state.textValue} onChange={this.handleChangeText} placeholder = "Your text here" />
+                                </Form.Group>
+
+                                <Button variant="primary"  onClick = {this.handleSubmit} type="submit">
+                                    Submit
+                                </Button>
+                            </Form>
+                    </div>
+                </ContactStyles>
 
             </React.Fragment>
         );

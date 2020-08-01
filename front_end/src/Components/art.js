@@ -11,10 +11,7 @@ import grey_elephant from "../resources/elephant_grey.png";
 import wge from "../resources/walrus.png";
 
 const ArtStyles = styled.div `
-   *{
-       color:black;
-       
-   }
+ 
 
    .carousel{
       overflow:hidden;
@@ -27,18 +24,23 @@ const ArtStyles = styled.div `
   
    }
 
+   .slide {
+  
+
+   }
+
 .carousel-indicators{
     margin:auto;
    }
 
 li{
-    background-color:black;
-   
+    background-color:#6b6b6b;
+ 
 }
    .carousel-item{
        margin:auto;
        padding:auto;
-    height: 92vh;
+   
     object-fit:scale-down
   
 }
@@ -48,7 +50,7 @@ li{
    overflow:hidden;
     max-height: 75vh;
     max-width:50vw;
-    margin:20px auto 20px auto;
+    margin:auto auto auto auto;
    
     object-fit:scale-down;
     box-shadow: 2px 2px 2px grey;

@@ -33,17 +33,24 @@ class App extends Component{
   }
 
 updateViewers() {
+  if(process.env.NODE_ENV === "production"){ 
+    
+      const viewerInfo = {
+        viewerIP : 'N/A',
+        pageViewed : window.location.pathname.toString(),
+        timestamp : Date.now()
+      }
 
-  const viewerInfo = {
-    viewerIP : 'N/A',
-    pageViewed : window.location.pathname.toString(),
-    timestamp : Date.now()
-  }
+      let URL = 'FILL IN WITH FINAL BACKEND URL --MAYBE PUT IN ENV even tho that does nothing'
+      axios.post('http://localhost:5000/views', viewerInfo )
+        .then(res => console.log(res.data))
+        .catch(err => console.log('Could not send information: ' + err));
+   }
 
+}
 
-  axios.post('http://localhost:5000/views/add' || '/views/add', viewerInfo )
-    .then(res => console.log(res.data))
-    .catch(err => console.log('Could not send information: ' + err));
+componentDidMount(){
+  this.updateViewers();
 }
 
 
@@ -54,7 +61,7 @@ render(){
         <Nav />
                   <Router>
                       <Switch>
-                        <Route onEnter={() => this.updateViewers} exact path = "/" component ={Home} />
+                        <Route updateViewers={() => this.updateViewers()} exact path = "/" component ={Home} />
                         <Route  path = "/art" component ={Art} />
                         <Route  path = "/fun" component ={Fun} />
                         <Route  exact path = "/projects" component ={Projects} />
