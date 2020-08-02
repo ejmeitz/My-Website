@@ -1,7 +1,8 @@
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {Container} from 'react-bootstrap';
-import {faFacebook,faGithub,faInstagram,faLinkedin, } from '@fortawesome/free-brands-svg-icons';
+import {faFacebook,faGithub,faInstagram,faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
 import styled from 'styled-components';
 
 const SocialStyles = styled.div `
@@ -19,8 +20,8 @@ const SocialStyles = styled.div `
         display: inline-block;
 
         &:hover{
-                    transform: translateY(-4px)
-                }
+            transform: translateY(-4px)
+        }
         
     }
 

@@ -4,7 +4,7 @@ let Viewer = require('../models/viewCounter.model');
 router.get('/',(request,response) => {
     
     Viewer.find()
-    .then((views) => response.json("Views:" + views))
+    .then((views) => response.json("Views page"))
     .catch(err => response.status(400).json('Could not display total number of viewers: ' + err));
 
 });

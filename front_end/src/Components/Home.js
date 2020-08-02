@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import blackfly from "../resources/qpli.jpeg"
 import {faLinkedin, } from '@fortawesome/free-brands-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faChevronDown} from '@fortawesome/free-solid-svg-icons';
 import '../index.css';
-
+import {Link} from 'react-scroll';
 
 
 const HomeStyles = styled.div `
@@ -158,6 +159,29 @@ a{
     color: #457BD9;
 }
 
+.readMore{
+    position:absolute;
+    text-align:center;
+    
+    color:rgb( 140, 194, 255);
+    top:88vh;
+    left:50vw;
+    margin:auto;
+
+    
+    &:hover {
+        color:rgb( 140, 194, 255);
+        cursor:pointer
+
+      }
+
+
+    p{
+        font-size:1.3em;
+        color:rgb( 140, 194, 255);
+    }
+}
+
 
 @media screen and (max-width: 1500px) {
     .welcome{
@@ -179,6 +203,7 @@ a{
 }
 
 
+
 `;
 
 export default class Home extends Component {
@@ -189,6 +214,12 @@ export default class Home extends Component {
 render(){
     return (
     <HomeStyles>
+        <Link className = "readMore" activeClass="active" to = "secondPageAnchor" smooth={true} duration={650}>
+            <p>Read More</p>
+            <FontAwesomeIcon  icon = {faChevronDown} size = "4x" />
+        </Link>
+        
+
         <div className="bg">
             
             <div className = "welcome">
@@ -202,8 +233,7 @@ render(){
             
         </div>
     
-
-        <div className = "secondPage">
+        <div className = "secondPage" id = "secondPageAnchor">
                 <div className = "about">
                     <h2 >
                         About Me:

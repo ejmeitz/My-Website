@@ -74,12 +74,7 @@ render(){
                         <Route  exact path = "/projects/project3" component ={Project3} />
                         <Route path = "*" component = {NotFound} status = {404} />
 
-                        {/* {isSignedIn ? (
-                            <Route exact path="/sendEmail" component={RestrictedPage} />
-                          ) : (
-                            <Redirect to="/login" />
-                        )} */}
-
+                    
                       </Switch>
                   </Router> 
         <Footer />
