@@ -28,13 +28,14 @@ const NavStyles = styled.div `
   }
   
   .navbar--hidden {
-    top: -75px;
+    top: -6vh;
   }
 
    .navbar-nav .nav-link {
     color: white;
     font-weight:20px;
     margin:10px 20px 10px 20px;
+    background-color:rgb( 140, 194, 255);
 
     &:hover {
       color: #ffcb3d;
@@ -55,9 +56,8 @@ const NavStyles = styled.div `
   #nav-dropdown{
     color: white;
     font-weight:20px;
-    
     margin:10px 20px 10px 20px;
-
+    background-color:rgb( 140, 194, 255);
     &:hover {
       color: #ffcb3d;
     }
@@ -67,11 +67,13 @@ const NavStyles = styled.div `
  
   .navbar-nav li:hover .dropdown-menu {
     display: block;
+    background-color:rgb( 140, 194, 255);
 }
 
 
 .navbar-toggler{
   margin-right:20px;
+  
 }
 .navbar-toggler:focus,
 .navbar-toggler:active,
@@ -92,9 +94,12 @@ const NavStyles = styled.div `
 
 }
 
+.navbar-nav{
+  background-color:rgb( 140, 194, 255);
+}
 .dropdown-item{
+  background-color:rgb( 140, 194, 255);
     text-align:center;
-    border:none;
 }
 
 
