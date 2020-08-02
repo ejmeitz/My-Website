@@ -29,11 +29,15 @@ class App extends Component{
   
   constructor(props) {
     super(props);
+    this.state = {
+      isSignedIn : false
+    };
+
     this.updateViewers = this.updateViewers.bind(this);
   }
 
 updateViewers() {
-  if(process.env.NODE_ENV === "production"){ 
+  if(process.env.NODE_ENV === "production"){  //only send if its the real website
     
       const viewerInfo = {
         viewerIP : 'N/A',
@@ -41,7 +45,7 @@ updateViewers() {
         timestamp : Date.now()
       }
 
-      axios.post('https://backend-website.herokuapp.com/views', viewerInfo )
+      axios.post("/views", viewerInfo )
         .then(res => console.log(res.data))
         .catch(err => console.log('Could not send information: ' + err));
    }
@@ -69,6 +73,13 @@ render(){
                         <Route  exact path = "/projects/website" component ={websiteProj} />
                         <Route  exact path = "/projects/project3" component ={Project3} />
                         <Route path = "*" component = {NotFound} status = {404} />
+
+                        {/* {isSignedIn ? (
+                            <Route exact path="/sendEmail" component={RestrictedPage} />
+                          ) : (
+                            <Redirect to="/login" />
+                        )} */}
+
                       </Switch>
                   </Router> 
         <Footer />

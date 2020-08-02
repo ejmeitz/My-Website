@@ -4,7 +4,6 @@ import {Form, Col, Button, Modal} from 'react-bootstrap';
 import axios from 'axios';
 
 
-
 const ContactStyles = styled.div `
 
 
@@ -24,6 +23,8 @@ const ContactStyles = styled.div `
     width: 60vw;
 }
 
+
+
 `;
 
 
@@ -36,16 +37,18 @@ export default class Contact extends Component {
                     firstName: '',
                     lastName: '',
                     employer:'',
-                    show: false
+                    showSubmitModal: false,
+                    showSuccessModal: false,
+                    showFailModal:false,
+                    disabled:false
             };
 
             this.handleChangeText = this.handleChangeText.bind(this);
             this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
             this.handleLastNameChange = this.handleLastNameChange.bind(this);
             this.handleEmployerChange = this.handleEmployerChange.bind(this);
-            this.handleSubmit = this.handleSubmit.bind(this);
-            this.showModal = this.showModal.bind(this);
             this.hideModal = this.hideModal.bind(this);
+            this.handleSubmit = this.handleSubmit.bind(this);
       }
 
       handleFirstNameChange(event) {
@@ -63,26 +66,29 @@ export default class Contact extends Component {
         this.setState({textValue: event.target.value});
       }
     
-      showModal = (e) => {
-            this.setState({
-            show: true
-            });
-       };
+
        hideModal = (e) => {
-            this.setState({
-            show: false
+            this.setState({ //no harm in turning them all off since they never could be activated at the same time
+                showSubmitModal: false,
+                showSuccessModal: false,
+                showFailModal: false
             });
        };
 
       handleSubmit(event) {
-
+        this.setState({
+            disabled:true
+        });
         console.log('Submit Clicked: ');
         console.log(this.state); 
         event.preventDefault();
 
         if(this.state.textValue === "" || this.state.firstName === "" || this.state.lastName === "" || this.state.employer === ""){
             console.log("Empty text body aborting");
-            this.showModal();
+            this.setState({
+                showSubmitModal: true,
+                disabled:false
+                });
             return;
         }
 
@@ -106,8 +112,29 @@ export default class Contact extends Component {
         }
 
         axios.post(baseURL  , data)
-        .then(res => console.log(res.data))
-        .catch(err => console.log('Could not send email: ' + err));
+        .then((res) => {
+            console.log('Request Successful');
+                 this.setState({
+                    showSuccessModal: true
+                    });
+
+            console.log(res.data);
+        })
+        .catch((err) => {
+            this.setState({
+                showFailModal: true,
+                disabled:false
+                });
+            console.log('Could not send info: ' + err)
+        });
+
+
+        setTimeout(() => {
+            this.setState({
+                disabled:false
+                });
+        }, 10000) //prevent spamming submit button
+
       }
 
      
@@ -116,8 +143,8 @@ export default class Contact extends Component {
     render(){
         return(
 
-            <React.Fragment>
-                <Modal show={this.state.show} onHide={this.hideModal}>
+            <ContactStyles>
+                <Modal  show={this.state.showSubmitModal} onHide={this.hideModal}>
                     <Modal.Header closeButton>
                         <Modal.Title>Oops. Please fill out every box!</Modal.Title>
                     </Modal.Header>
@@ -129,11 +156,33 @@ export default class Contact extends Component {
                     </Modal.Footer>
                 </Modal>
 
+                <Modal  show={this.state.showSuccessModal} onHide={this.hideModal}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Success! Form submitted.</Modal.Title>
+                    </Modal.Header>
+ 
+                    <Modal.Footer>
+                        <Button variant="primary" onClick={this.hideModal}>
+                        Close
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
 
-                <ContactStyles>  
+                <Modal show={this.state.showFailModal} onHide={this.hideModal}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Form could not be submitted. </Modal.Title>
+                    </Modal.Header>
+   
+                    <Modal.Footer>
+                        <Button variant="primary" onClick={this.hideModal}>
+                        Close
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
+
+                
                     <div className = "container"> 
 
-                    
                         <h1>
                             Contact Me:
                         </h1>
@@ -160,14 +209,14 @@ export default class Contact extends Component {
                                     <Form.Control as="textarea" type = "text" rows="15" value={this.state.textValue} onChange={this.handleChangeText} placeholder = "Your text here" />
                                 </Form.Group>
 
-                                <Button variant="primary"  onClick = {this.handleSubmit} type="submit">
-                                    Submit
-                                </Button>
+                                <Form.Row > 
+                                    <Button variant="primary"  onClick = {this.handleSubmit} type="submit" disabled = {this.state.disabled}>
+                                        Submit
+                                    </Button>
+                                </Form.Row>
                             </Form>
                     </div>
                 </ContactStyles>
-
-            </React.Fragment>
         );
     }
 }
