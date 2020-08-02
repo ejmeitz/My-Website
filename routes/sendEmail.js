@@ -96,10 +96,9 @@ router.post('/', (request,response) => {
 
     //send email
     //checkAndSendEmail (firstName,lastName,employer,textBody);
-   // nodeOutlookEmail (firstName,lastName,employer,textBody);
+    nodeOutlookEmail (firstName,lastName,employer,textBody);
 
-    console.log(firstName);
-    console.log(lastName);
+    //save form to database incase email fails
     const newPost = new Email({
         firstName,
         lastName,

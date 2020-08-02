@@ -35,13 +35,14 @@ mongoose.connection.on('connected',()=> {
     console.log('Mongoose is connected')
 })
 
-
+//create back end routes
 const viewsRouter = require('./routes/viewCounter.js');
 const sendEmailRouter = require('./routes/sendEmail.js');
 
 app.use('/views', viewsRouter);
 app.use('/sendEmail', sendEmailRouter);
 
+//serve static files
 if(process.env.NODE_ENV === 'production'){
             app.use(express.static("front_end/build"));
             app.use('*', express.static('front_end/build'));

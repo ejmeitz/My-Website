@@ -4,6 +4,7 @@ import {Form, Col, Button, Modal} from 'react-bootstrap';
 import axios from 'axios';
 
 
+
 const ContactStyles = styled.div `
 
 
@@ -40,7 +41,8 @@ export default class Contact extends Component {
                     showSubmitModal: false,
                     showSuccessModal: false,
                     showFailModal:false,
-                    disabled:false
+                    disabled:false,
+                    errorMsg: 'test'
             };
 
             this.handleChangeText = this.handleChangeText.bind(this);
@@ -76,6 +78,7 @@ export default class Contact extends Component {
        };
 
       handleSubmit(event) {
+        document.body.style.cursor = 'wait';
         this.setState({
             disabled:true
         });
@@ -85,6 +88,7 @@ export default class Contact extends Component {
 
         if(this.state.textValue === "" || this.state.firstName === "" || this.state.lastName === "" || this.state.employer === ""){
             console.log("Empty text body aborting");
+            document.body.style.cursor = 'default';
             this.setState({
                 showSubmitModal: true,
                 disabled:false
@@ -99,12 +103,6 @@ export default class Contact extends Component {
             textBody: this.state.textValue
         }
 
-        this.setState({  //clear form
-            textValue :'',
-            firstName: '',
-            lastName: '',
-            employer: ''
-        });
         
         let baseURL = "http://localhost:5000/sendEmail";
         if(process.env.NODE_ENV === "production"){
@@ -115,16 +113,23 @@ export default class Contact extends Component {
         .then((res) => {
             console.log('Request Successful');
                  this.setState({
-                    showSuccessModal: true
+                    showSuccessModal: true,
+                    textValue :'',
+                    firstName: '',
+                    lastName: '',
+                    employer: ''
                     });
-
+            document.body.style.cursor = 'default';
             console.log(res.data);
         })
         .catch((err) => {
+            
             this.setState({
                 showFailModal: true,
-                disabled:false
+                disabled:false,
+                errorMsg: `${err}`
                 });
+            document.body.style.cursor = 'default';
             console.log('Could not send info: ' + err)
         });
 
@@ -133,11 +138,10 @@ export default class Contact extends Component {
             this.setState({
                 disabled:false
                 });
-        }, 10000) //prevent spamming submit button
+        }, 6000) //prevent spamming submit button
 
       }
 
-     
 
 
     render(){
@@ -172,7 +176,7 @@ export default class Contact extends Component {
                     <Modal.Header closeButton>
                         <Modal.Title>Form could not be submitted. </Modal.Title>
                     </Modal.Header>
-   
+                    <Modal.Body id = "errMsgModal">{this.state.errorMsg}</Modal.Body>
                     <Modal.Footer>
                         <Button variant="primary" onClick={this.hideModal}>
                         Close
