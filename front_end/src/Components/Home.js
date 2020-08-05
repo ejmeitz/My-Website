@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
+import {Card} from 'react-bootstrap';
 import styled from 'styled-components';
 import blackfly from "../resources/qpli.jpeg"
-import {faLinkedin, } from '@fortawesome/free-brands-svg-icons';
+import {faLinkedin, faGithub, } from '@fortawesome/free-brands-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faChevronDown} from '@fortawesome/free-solid-svg-icons';
 import '../index.css';
@@ -68,85 +69,39 @@ const HomeStyles = styled.div `
     grid-template-rows: 1fr 1fr;
     grid-auto-flow:row;
     grid-gap:10px;
+    margin:auto;
    
     
 }
 
 .about{
     grid-column: 1 / span 1;
-    grid-row: 1 / span 2;   
-    padding:10px;
-    margin:auto;
-    background-color:lightblue;
+    grid-row: 1 / span 1;  
 }
 .hobbies{
     grid-column: 2 / span 1;
-    grid-row: 1 / span 2;  
-    padding:10px; 
-    padding-left:20px;
-    background-color:lightblue;
+    grid-row: 1 / span 1;  
 }
 .exp{
     grid-column: 3 / span 1;
-    grid-row: 1 / span 1;   
-    
-    background-color:lightblue;
+    grid-row: 1 / span 1;  
+}
+.dbf{
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;  
+}
+.crash{
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;  
+}
+.iee{
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;  
 }
 
-.interests {
-    margin-top:10px;
-    grid-column: 4 / span 1;
-    grid-row: 1 / span 1;   
-    
-    background-color:lightblue;
-}
-
-.extra{
-    grid-column: 1 / span 4;
-    grid-row: 4 / span 1;   
-    padding:10px;
-    margin:auto;
-}
-
-.clubs {
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 0px 10px;
-   
-   
-
-     
-    .dbf{
-        grid-column: 1 / span 1;
-        grid-row: 1 / span 1;
-       
-        margin:auto;
-    }
-
-
-    .crash{
-        grid-column: 2 / span 1;
-        grid-row: 1 / span 1;
-    }
-    .ieee{
-        grid-column: 3 / span 1;
-        grid-row: 1 / span 1;
-    }
-    .club h4{
-        font-weight:bold;
-        background-color:red;
-        text-align:center;
-    }
-    .club{
-    
-    }
-    
-
-}
 img {
-    width: 400px;
-    height:400px;
+    width: 300px;
+    height:300px;
    
 }
 
@@ -234,12 +189,14 @@ render(){
         </div>
     
         <div className = "secondPage" id = "secondPageAnchor">
-                <div className = "about">
-                    <h2 >
-                        About Me:
-                    </h2>
-                        <p>
-                           I grew up in St. Paul Minnesota and currently attend Washington University in St. Louis. 
+             
+            
+                <Card className = "about" style={{ width: '30vw' }}>
+                    <Card.Img variant="top" src="holder.js/100px180" />
+                    <Card.Body>
+                        <Card.Title>About Me</Card.Title>
+                        <Card.Text>
+                        I grew up in St. Paul Minnesota and currently attend Washington University in St. Louis. 
                            WashU has taught me how to solve a variety problems in a focused and efficient manner. I can solve specific problems like the forces in a truss network
                             but can also apply myself to solve abstract, new problems. For example, this website! I began this app not knowing
                             anything about full stack development, JavaScript, CSS, HTML or the dozen other packages used to create this site. I find every
@@ -247,75 +204,105 @@ render(){
                             
                         
                             Check out the <a href ="/projects">projects</a> page for school work or the <a href ="/art">art</a> and <a href ="/fun">other</a> section for fun, artsy designs and animations.
-                        </p>
-                </div>
-                <div className = "extra">
-                    <h2>Activities:</h2>                         
-                            <div className = "clubs">
-                                <div className = "club dbf">
-                                    <img  src = {blackfly} alt = "Blackfly Camera imaging tissue in biaxial loading machine" />
-                                    <h4>Design/Build/Fly (DBF)</h4> 
-                                    <p>DBF has offered me the opportunity to learn about building and operating aircraft. Each year DBF participates
-                                    in the AAIA Design/Build/Fly competition where competitors follow a set of rules to build an airplane. During the 2019-2020 school year, 
-                                    the team built a banner-towing plane that could also carry "passengers". I was a member of the manufacturing and structures teams which
-                                    are responsible for the design and construction of the aircraft.
-                                    </p>
-                                </div>
-                                <div className = "club ieee">
-                                    <h4 >IEEE</h4>
-                                    <p>
-                                        The Washington University chapter of IEEE works with other clubs to design and build a product they request. For example, the Raas team at WashU asked
-                                        IEEE to build them dandiya (essentially batons) that light up synchronously. The IEEE team also participated in the IEEE robotics competition in 2020 to 
-                                        produce a fully autonomous robot to pick up trash. In both of these projects, I was responsible for the CAD and manufacturing. 
-                                    </p>
-                                </div>
-                                <div className = "club crash">
-                                    <h4 >Crash</h4>
-                                    <p>
-                                        Crash is a service oriented improvisational drumming group that uses plastic buckets and metal objects instead of traditional drums. The group
-                                        performs within the local community and on campus. We open for a capella groups but mostly play with groups of kids and teach them how to play drums. 
-                                        In the past, we've gone to grief clinics, after school care for children, and a local highschool. Everyone in Crash enjoys playing drums and loves
-                                        teaching and spreading joy to our community.
-                                    </p>
-                                </div>
-                            </div>
-                </div>
-                <div className = "exp">
-                    <h2>Experience: </h2>
-                    <h4>AmeriCorps:</h4>
-                    <h4>Research Assistant</h4>
-                    <a 
-                    href = "https://www.linkedin.com/in/ethan-meitz-48ab8b15b/"
-                    className = "linkedIn social" 
-                    target = "_blank"
-                    rel="noopener noreferrer">
-                    <FontAwesomeIcon icon = {faLinkedin} size = "2x" />
-                    </a>
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
 
-                </div>
-                <div className = "hobbies">
-
-                    <h2>Hobbies:</h2>
-                       
-                            <ul>
-                                <li>Drawing</li>
-                                <li>Playing Drums</li>
-                                <li>Coding</li>
-                            </ul>
-                    <div className = "interests">
-
-                                    <h2>Interests:</h2>
-
-                                    <p>
-                                    I'm curious about absolutely everything and love learning. 
-                                        Outer space, rockets, art and robots are my primary interests, but I can find just about anything fascinating. 
-                                    </p>
-                    </div>
+                
+                <Card className = "hobbies" style={{ width: '30vw' }}>
+                    <Card.Img variant="top" src="holder.js/100px180" />
+                    <Card.Body>
+                        <Card.Title>Hobbies and Interests</Card.Title>
+                        <Card.Text>
+                            <h2>Hobbies:</h2>
+                        <ul>
+                            <li>Drawing</li>
+                            <li>Playing Drums</li>
+                            <li>Coding</li>
+                        </ul>
+                            <h2>Interests:</h2>
+                            <p>
+                                I'm curious about absolutely everything and love learning. 
+                                Outer space, rockets, art and robots are my primary interests, but I can find just about anything fascinating. 
+                            </p>
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+                     
+                <Card className = "exp" style={{ width: '30vw' }}>
+                    <Card.Img variant="top" src="holder.js/100px180" />
+                    <Card.Body>
+                        <Card.Title>Experience</Card.Title>
+                        <Card.Text>
+                            <h4>AmeriCorps:</h4>
+                            <h4>Research Assistant</h4>
+                                    <a 
+                                    href = "https://www.linkedin.com/in/ethan-meitz-48ab8b15b/"
+                                    className = "linkedIn social" 
+                                    target = "_blank"
+                                    style = {{paddingRight:"10px", paddingLeft:"5px"}}
+                                    rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon = {faLinkedin} size = "2x" />
+                                    </a>
+                                    <a 
+                                    href = "https://github.com/ejmeitz"
+                                    className = "linkedIn social" 
+                                    target = "_blank"
+                                    style = {{color:"black"}}
+                                    rel="noopener noreferrer">
+                                    <FontAwesomeIcon icon = {faGithub} size = "2x" />
+                                    </a>
                                 
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
                    
-                </div>
+                      
+                <Card className = "club dbf" style={{ width: '30vw' }}>
+                    <Card.Img variant="top" src={blackfly} alt = "Blackfly Camera imaging tissue in biaxial loading machine" />
+                    <Card.Body>
+                        <Card.Title>Design/Build/Fly</Card.Title>
+                        <Card.Text>
+                            <p>
+                                DBF has offered me the opportunity to learn about building and operating aircraft. Each year DBF participates
+                                in the AAIA Design/Build/Fly competition where competitors follow a set of rules to build an airplane. During the 2019-2020 school year, 
+                                the team built a banner-towing plane that could also carry "passengers". I was a member of the manufacturing and structures teams which
+                                are responsible for the design and construction of the aircraft.
+                            </p>
+                                
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+                <Card className = "club ieee" style={{ width: '30vw' }}>
+                    <Card.Img variant="top" src={blackfly} alt = "Blackfly Camera imaging tissue in biaxial loading machine" />
+                    <Card.Body>
+                        <Card.Title>IEEE</Card.Title>
+                        <Card.Text>
+                                <p>
+                                    The Washington University chapter of IEEE works with other clubs to design and build a product they request. For example, the Raas team at WashU asked
+                                    IEEE to build them dandiya (essentially batons) that light up synchronously. The IEEE team also participated in the IEEE robotics competition in 2020 to 
+                                    produce a fully autonomous robot to pick up trash. In both of these projects, I was responsible for the CAD and manufacturing. 
+                                </p>
+                                
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+                <Card className = "club crash" style={{ width: '30vw' }}>
+                    <Card.Img variant="top" src={blackfly} alt = "Blackfly Camera imaging tissue in biaxial loading machine" />
+                    <Card.Body>
+                        <Card.Title>CRASH</Card.Title>
+                        <Card.Text>
+                            <p>
+                               Crash is a service oriented improvisational drumming group that uses plastic buckets and metal objects instead of traditional drums. The group
+                                performs within the local community and on campus. We open for a capella groups but mostly play with groups of kids and teach them how to play drums. 
+                                In the past, we've gone to grief clinics, after school care for children, and a local highschool. Everyone in Crash enjoys playing drums and loves
+                                teaching and spreading joy to our community.
+                            </p>
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
 
-
+              
             </div>       
     </HomeStyles>  
     )
