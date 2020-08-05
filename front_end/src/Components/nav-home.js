@@ -145,7 +145,7 @@ export default class NavHome extends Component{
     render(){
     return (
             <NavStyles>
-                <Navbar expand = "lg" className={"navbar", {
+                <Navbar fixed = "top" expand = "lg" className={"navbar", {
           "navbar--hidden": !this.state.visible}}>
                 <Navbar.Brand href = "/"> 
                     Ethan Meitz

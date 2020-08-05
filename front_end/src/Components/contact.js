@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-import {Form, Col, Button, Modal} from 'react-bootstrap';
+import {Form, Col, Button, Modal, Spinner} from 'react-bootstrap';
 import axios from 'axios';
 
 
@@ -42,8 +42,15 @@ export default class Contact extends Component {
                     showSuccessModal: false,
                     showFailModal:false,
                     disabled:false,
-                    errorMsg: 'test'
+                    errorMsg: 'test',
+                    showSpinner: false
             };
+
+
+             this.styles = {
+                marginLeft:"10px", 
+                display:"none"
+              };
 
             this.handleChangeText = this.handleChangeText.bind(this);
             this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
@@ -51,6 +58,8 @@ export default class Contact extends Component {
             this.handleEmployerChange = this.handleEmployerChange.bind(this);
             this.hideModal = this.hideModal.bind(this);
             this.handleSubmit = this.handleSubmit.bind(this);
+            this.showSpinner = this.showSpinner.bind(this);
+            this.hideSpinner = this.hideSpinner.bind(this);
       }
 
       handleFirstNameChange(event) {
@@ -77,8 +86,21 @@ export default class Contact extends Component {
             });
        };
 
+       showSpinner = () => {
+        this.styles = {
+            marginLeft:"10px"
+          };
+       }
+       hideSpinner = () => {
+        this.styles = {
+            marginLeft:"10px", 
+            display:"none"
+          };
+       }
+
       handleSubmit(event) {
         document.body.style.cursor = 'wait';
+        this.showSpinner();
         this.setState({
             disabled:true
         });
@@ -89,6 +111,7 @@ export default class Contact extends Component {
         if(this.state.textValue === "" || this.state.firstName === "" || this.state.lastName === "" || this.state.employer === ""){
             console.log("Empty text body aborting");
             document.body.style.cursor = 'default';
+            this.hideSpinner();
             this.setState({
                 showSubmitModal: true,
                 disabled:false
@@ -119,6 +142,7 @@ export default class Contact extends Component {
                     lastName: '',
                     employer: ''
                     });
+            this.hideSpinner();
             document.body.style.cursor = 'default';
             console.log(res.data);
         })
@@ -129,6 +153,7 @@ export default class Contact extends Component {
                 disabled:false,
                 errorMsg: `${err}`
                 });
+            this.hideSpinner();
             document.body.style.cursor = 'default';
             console.log('Could not send info: ' + err)
         });
@@ -142,9 +167,15 @@ export default class Contact extends Component {
 
       }
 
+    
 
 
     render(){
+
+      
+
+
+
         return(
 
             <ContactStyles>
@@ -217,6 +248,9 @@ export default class Contact extends Component {
                                     <Button variant="primary"  onClick = {this.handleSubmit} type="submit" disabled = {this.state.disabled}>
                                         Submit
                                     </Button>
+                                    <Spinner animation="border"  style = {this.styles} size = "lg" variant = "primary" role="status">
+                                         <span className="sr-only">Loading...</span>
+                                    </Spinner>
                                 </Form.Row>
                             </Form>
                     </div>

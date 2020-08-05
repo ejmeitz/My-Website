@@ -1,5 +1,6 @@
 
 import React, {Component} from 'react';
+import {Card} from 'react-bootstrap';
 import styled from 'styled-components';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -19,12 +20,7 @@ const ProjectStyles = styled.div `
        
         justify-items:center;
         justify-content:center;
-        align-items:center;
-
-      
-       
-
-        
+        align-items:center;   
     }
     .element{
        
@@ -39,10 +35,7 @@ const ProjectStyles = styled.div `
        
     }
       
-    .ProjectName{
-        text-align:center;
-       
-    }
+
     .Info{
         font-family: 'Lato', sans-serif;
     }
@@ -188,69 +181,88 @@ export default class my_projects extends Component {
 
     render(){
         return (
-    <>
+
             <ProjectStyles>
             
                 <div className = "grid">
-                    <div className = "element a">
-                        <img src = {camera} alt = "Camera"/>
-                        <h2 className = "ProjectName">
-                            Blackfly Polarization Camera GUI
-                        </h2>
-                        <div className = "Info">
-                            <h3><a href = {this.blackflySrc()}>About:</a> </h3>    
-                                <p>While working as an undergraduate research assistant I developed a GUI to interface with and control a commerical polarization camera.
-                                    The GUI was created using Qt and the code to connect with and manipulate the camera was written with C++ as speed was important. 
-                                    The GUI was ultimately successful and enabled the lab to perform research. For more detail click "About" or check out GitHub for the source code.
-                                </p>   
-                            <h3>Languages: C++ &nbsp;&nbsp; <a 
-                                href = "https://github.com/ejmeitz/GUI"
-                                className = "gitHub social" 
-                                target = "_blank"
-                                rel="noopener noreferrer">
-                                <FontAwesomeIcon icon = {faGithub} size = "1x" />
-                                </a></h3>
-                               
-                        </div>
-                    </div>
-
-                    <div className = "element b">
-                        <img src = "" alt =""/>
-                        <h2 className = "ProjectName">
-                            My Website
-                        </h2> 
-                        <div className = "Info">
-                            <h3><a href ={this.websiteSrc()} target = "_blank" rel="noopener noreferrer">About:</a> </h3> 
-                             <p>
-                                I created my website as a fun side project to learn about JavaScript, HTML, and CSS, none of which I'd been able to use at school. I started by watching YouTube videos
-                                and eventually ended up with what you see now. The website is hosted on a heroku and behind the scenes runs on a MERN stack (MongoDB, Express, React, NodeJS). This project
-                                was fun because it brought my interest of art and coding together in one project. For more detail click "About" or check out the source code by clicking the GitHub logo.
-                            </p>     
-                            <h3>Languages: JS, CSS, HTML &nbsp;&nbsp; <a 
-                            href = "https://github.com/ejmeitz/My-Website"
-                            className = "gitHub social" 
-                            target = "_blank"
-                            rel="noopener noreferrer">
-                            <FontAwesomeIcon icon = {faGithub} size = "1x" />
-                            </a> </h3>
-                           
-                        </div>
-                    </div>
-
-                    <div className = "element c">
-                        <img src = ""  alt =""/>
-                        <h2 className = "ProjectName">
-                            Radial Finite Differencing Method for Heat Transfer
-                        </h2>
-                        <div className = "Info">
-                            <h3><a href ={this.project3Src()} target = "_blank" rel="noopener noreferrer">About:</a></h3>       
-                            <h3>Languages: MATLAB</h3>
-                        </div>
-                    </div>
-                </div>
+                   
+                    <Card className = "element a" style={{ width: '30vw' }}>
+                        <Card.Img variant="top" src={camera}  alt = "Blackfly camera imaging a gel during a ramp to failure test"/>
+                        <Card.Body>
+                            <Card.Title>Blackfly Polarizaion Camera UI</Card.Title>
+                            <Card.Text>
+                                            
+                                <div className = "Info">
+                                    <h3><a href = {this.blackflySrc()}>About:</a> </h3>    
+                                        <p>While working as an undergraduate research assistant I developed a GUI to interface with and control a commerical polarization camera.
+                                            The GUI was created using Qt and the code to connect with and manipulate the camera was written with C++ as speed was important. 
+                                            The GUI was ultimately successful and enabled the lab to perform research. For more detail click "About" or check out GitHub for the source code.
+                                        </p>   
+                                    <h3>Languages: C++ &nbsp;&nbsp; <a 
+                                        href = "https://github.com/ejmeitz/GUI"
+                                        className = "gitHub social" 
+                                        target = "_blank"
+                                        rel="noopener noreferrer">
+                                        <FontAwesomeIcon icon = {faGithub} size = "1x" />
+                                        </a>
+                                    </h3>
+                                </div>
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                         
+                    <Card className = "element b" style={{ width: '30vw' }}>
+                        <Card.Img variant="top" src={camera}  alt = "Blackfly camera imaging a gel during a ramp to failure test"/>
+                        <Card.Body>
+                            <Card.Title>My Website</Card.Title>
+                            <Card.Text>
+                                <div className = "Info">
+                                    <h3><a href ={this.websiteSrc()} target = "_blank" rel="noopener noreferrer">About:</a> </h3> 
+                                    <p>
+                                        I created my website as a fun side project to learn about JavaScript, HTML, and CSS, none of which I'd been able to use at school. I started by watching YouTube videos
+                                        and eventually ended up with what you see now. The website is hosted on a heroku and behind the scenes runs on a MERN stack (MongoDB, Express, React, NodeJS). This project
+                                        was fun because it brought my interest of art and coding together in one project. For more detail click "About" or check out the source code by clicking the GitHub logo.
+                                    </p>     
+                                    <h3>Languages: JS, CSS, HTML &nbsp;&nbsp; 
+                                        <a 
+                                        href = "https://github.com/ejmeitz/My-Website"
+                                        className = "gitHub social" 
+                                        target = "_blank"
+                                        rel="noopener noreferrer">
+                                        <FontAwesomeIcon icon = {faGithub} size = "1x" />
+                                        </a> 
+                                    </h3>                          
+                                </div>    
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                    <Card className = "element c" style={{ width: '30vw' }}>
+                        <Card.Img variant="top" src={camera}  alt = "Blackfly camera imaging a gel during a ramp to failure test"/>
+                        <Card.Body>
+                            <Card.Title>Radial Finite Differencing Model of a Hot Dog</Card.Title>
+                            <Card.Text>
+                                <div className = "Info">
+                                    <h3><a href ={this.project3Src()} target = "_blank" rel="noopener noreferrer">About:</a></h3>       
+                                    <h3>Languages: MATLAB</h3>
+                                </div>
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                    <Card className = "element d" style={{ width: '30vw' }}>
+                        <Card.Img variant="top" src={camera}  alt = "Blackfly camera imaging a gel during a ramp to failure test"/>
+                        <Card.Body>
+                            <Card.Title>Strain Tracking Model using Image Processing</Card.Title>
+                            <Card.Text>
+                                <div className = "Info">
+                                    <h3><a href ={this.project3Src()} target = "_blank" rel="noopener noreferrer">About:</a></h3>       
+                                    <h3>Languages: MATLAB</h3>
+                                </div>
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                 </div> 
             </ProjectStyles>
                 
-    </>
         )
     }
 }
