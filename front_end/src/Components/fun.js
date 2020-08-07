@@ -25,7 +25,6 @@ const FunStyles = styled.div `
     width: 80%;
     grid-template-columns: 40% 40%;
     grid-gap:20px;
-    border: 3px solid blue;
     align-items:strech;
     justify-items:center;
     justify-content:center;
@@ -55,7 +54,7 @@ iframe{
         grid-template-columns: 80%;
         width: 80%;
         grid-gap:20px;
-        border: 3px solid blue;
+ 
         align-items:strech;
         justify-items:center;
         justify-content:center;
@@ -75,7 +74,7 @@ iframe{
         display:grid;
         width: 80%;
         grid-gap:10px;
-        border: 3px solid blue;
+       
         margin:auto;
     
         justify-items:center;

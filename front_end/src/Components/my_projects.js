@@ -186,12 +186,13 @@ export default class my_projects extends Component {
                  <div className = "grid">
                     <Card className = "element a" >
                         <Card.Title><a href = {this.blackflySrc()} target = "_blank" rel="noopener noreferrer">Blackfly Polarizaion Camera UI </a></Card.Title>
-                        <Card.Img top width = "100%" variant="top" src={camera}  alt = "Blackfly camera imaging a gel during a ramp to failure test"/>
+                        <Card.Img  variant="top" src={camera}  alt = "Blackfly camera imaging a gel during a ramp to failure test"/>
                         <Card.Body>  
-                            <Card.Text className = "Info">               
-                                        <p>While working as an undergraduate research assistant I developed a GUI to interface with and control a commerical polarization camera.
-                                            The GUI was created using Qt and the code to connect with and manipulate the camera was written with C++ as speed was important. 
-                                            The GUI was ultimately successful and enabled the lab to perform research. For more detail click "About" or check out GitHub for the source code.
+                            <div className = "Info">               
+                                        <p>While working as an research assistant I developed a user interface (UI) to control a commerical camera and polarization sensor.
+                                            The UI was created using Qt and the code to manipulate the camera was written with C++ to minimize overhead. 
+                                            The UI was ultimately successful and enabled the lab to perform quantative polarized light imaging which greater precison and ease.
+                                            For more detail click the title or check out the source code by clicking the GitHub logo.
                                         </p>   
                                     <h5>Languages: C++ &nbsp;&nbsp; 
                                         <a 
@@ -202,7 +203,7 @@ export default class my_projects extends Component {
                                         <FontAwesomeIcon icon = {faGithub} size = "1x" />
                                         </a>
                                     </h5>
-                            </Card.Text>
+                            </div>
                         </Card.Body>
                     </Card>
                     
@@ -210,11 +211,11 @@ export default class my_projects extends Component {
                         <Card.Title><a href ={this.websiteSrc()} target = "_blank" rel="noopener noreferrer">My Website</a></Card.Title>
                         <Card.Img variant="top" src={camera}  alt = "Blackfly camera imaging a gel during a ramp to failure test"/>
                         <Card.Body>
-                            <Card.Text className = "Info">
+                            <div className = "Info">
                                     <p>
                                         I created my website as a fun side project to learn about JavaScript, HTML, and CSS, none of which I'd been able to use at school. I started by watching YouTube videos
-                                        and eventually ended up with what you see now. The website is hosted on a heroku and behind the scenes runs on a MERN stack (MongoDB, Express, React, NodeJS). This project
-                                        was fun because it brought my interest of art and coding together in one project. For more detail click "About" or check out the source code by clicking the GitHub logo.
+                                        and eventually ended up with what you see now. The website is hosted on a heroku and runs on a MERN stack (MongoDB, Express, React and NodeJS). This project
+                                        was fun because it brought my interest of art and coding together. For more detail click the title or check out the source code by clicking the GitHub logo.
                                     </p>     
                                     <h5>Languages: JS, CSS, HTML &nbsp;&nbsp; 
                                         <a 
@@ -225,7 +226,7 @@ export default class my_projects extends Component {
                                         <FontAwesomeIcon icon = {faGithub} size = "1x" />
                                         </a> 
                                     </h5>                            
-                            </Card.Text>
+                            </div>
                         </Card.Body>
                     </Card>
                   
@@ -235,7 +236,13 @@ export default class my_projects extends Component {
                         <Card.Img variant="top" src={camera}  alt = "Blackfly camera imaging a gel during a ramp to failure test"/>
                         <Card.Body>
                             
-                            <Card.Text className = "Info">     
+                            <div className = "Info">    
+                                <p>
+                                    While taking heat transfer I was assigned a project to model cooking a hotdog using what I learned in class.
+                                    The initial model assumed lumped capacitence which which turned out to be inaccurate.
+                                    The second model used a time marching finite differencing method with theoretically derived heat transfer coefficients to improve the accuracy. The finite differencing model proved 
+                                    very accurate when compared with the actual temperatures inside a cooking hotdog. Click on the title to learn more about the model and the results.
+                                </p> 
                                     <h5>Languages: MATLAB &nbsp;&nbsp;
                                     <a 
                                         href = "https://github.com/ejmeitz/Radial-Finite-Differencing-Model--Cooking-a-HotDog"
@@ -245,7 +252,7 @@ export default class my_projects extends Component {
                                         <FontAwesomeIcon icon = {faGithub} size = "1x" />
                                         </a> 
                                     </h5>
-                            </Card.Text>
+                            </div>
                         </Card.Body>
                     </Card>
                    
@@ -253,7 +260,10 @@ export default class my_projects extends Component {
                         <Card.Title><a href ={this.project3Src()} target = "_blank" rel="noopener noreferrer">Strain Tracking Model using Image Processing</a></Card.Title>
                         <Card.Img variant="top" src={camera}  alt = "Blackfly camera imaging a gel during a ramp to failure test"/>
                         <Card.Body>
-                            <Card.Text className = "Info">
+                            <div className = "Info">
+                                    <p> 
+                                        
+                                    </p>
                                     <h5>Languages: MATLAB &nbsp;&nbsp;
                                     <a 
                                         href = "https://github.com/ejmeitz/StrainApproximationandVisualization"
@@ -263,7 +273,7 @@ export default class my_projects extends Component {
                                         <FontAwesomeIcon icon = {faGithub} size = "1x" />
                                         </a> 
                                     </h5>
-                            </Card.Text>
+                            </div>
                         </Card.Body>
                     </Card>
                     </div>
