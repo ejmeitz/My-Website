@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Card} from 'react-bootstrap';
+import {Card, Carousel, Container} from 'react-bootstrap';
 import styled from 'styled-components';
 import blackfly from "../resources/qpli.jpeg"
 import {faLinkedin, faGithub, } from '@fortawesome/free-brands-svg-icons';
@@ -32,8 +32,6 @@ const HomeStyles = styled.div `
         margin-top:35vh;
     }
 
-
-
     .welcome h5{
         font-size: 2.5em;
         font-weight:300;
@@ -58,56 +56,25 @@ const HomeStyles = styled.div `
  
 
 
-.secondPage{
+.secondPage {
     padding-top:10px;
     padding-bottom: 10px;
     justify-content:center;
 
 
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(3,1fr);
+
     grid-auto-flow:row;
-    grid-gap:10px;
+    grid-gap:30px;
     margin:auto;
    
     
 }
 
-.about{
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 1;  
+h2 {
+font-weight:bold;
 }
-.hobbies{
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 1;  
-}
-.exp{
-    grid-column: 3 / span 1;
-    grid-row: 1 / span 1;  
-}
-.dbf{
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;  
-}
-.crash{
-    grid-column: 2 / span 1;
-    grid-row: 2 / span 1;  
-}
-.iee{
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;  
-}
-
-img {
-    width: 300px;
-    height:300px;
-   
-}
-
-h2{
-        font-weight:bold;
-    }
 
 a{
     text-decoration:none;
@@ -119,7 +86,7 @@ a{
     text-align:center;
     
     color:rgb( 140, 194, 255);
-    top:88vh;
+    top:86vh;
     left:50vw;
     margin:auto;
 
@@ -135,6 +102,11 @@ a{
         font-size:1.3em;
         color:rgb( 140, 194, 255);
     }
+}
+.card-img-top {
+    width: 100%;
+    height: 10vw;
+    object-fit: scale-down;
 }
 
 
@@ -188,7 +160,7 @@ render(){
             
         </div>
     
-        <div className = "secondPage" id = "secondPageAnchor">
+        <Container className = "secondPage" id = "secondPageAnchor">
              
             
                 <Card className = "about" style={{ width: '30vw' }}>
@@ -303,7 +275,7 @@ render(){
                 </Card>
 
               
-            </div>       
+            </Container>       
     </HomeStyles>  
     )
 }

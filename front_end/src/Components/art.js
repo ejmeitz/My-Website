@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-import {Carousel} from 'react-bootstrap';
+import {Carousel, Container} from 'react-bootstrap';
 import image1 from "../resources/elephant.png"
 import dog from "../resources/dog.png";
 import jaguar from "../resources/Jaguar.png";
@@ -15,18 +15,10 @@ const ArtStyles = styled.div `
 
    .carousel{
       overflow:hidden;
-    height: 80vh;
-    width: 80vw;
-    margin: 6vw auto 4vw auto;
-    background-color:rgba( 140, 194, 255,0.6);
-   
-   
-  
-   }
-
-   .slide {
-  
-
+        height: 80vh;
+        width: 80vw;
+        margin: 6vw auto 4vw auto;
+        background-color:rgba( 140, 194, 255,0.6);
    }
 
 .carousel-indicators{
@@ -35,11 +27,11 @@ const ArtStyles = styled.div `
 
 li{
     background-color:#6b6b6b;
- 
 }
-   .carousel-item{
-       margin:auto;
-       padding:auto;
+
+.carousel-item{
+    margin:auto;
+    padding:auto;
    
     object-fit:scale-down
   
@@ -58,20 +50,14 @@ li{
     
 }
 
-
 .carousel-control-next, .carousel-control-prev{
     width:5vw;
     background-color:rgba( 140, 194, 255,0.8);;
     
-
     &:hover {
         opacity:1;
       }
-  
 }
-
-
-
 
 `;
 
@@ -83,93 +69,67 @@ export default class art extends Component {
     
         return (
             <ArtStyles>
+                <Container fluid>
                 <Carousel>
-                    
-
-                  
-                    <Carousel.Item style = {this.fixStuff}>
-              
+                    <Carousel.Item>              
                         <img
                         className = "d-block  max-auto"
                         src= {image1}
-                        alt="Watercolor Elephant"
-                
+                        alt="Watercolor Elephant"                
                         />
-                  
-                
-                     
                     </Carousel.Item> 
                     
                     <Carousel.Item>
-                   
                         <img
                         className="d-block  max-auto"
                         src={dog}
-                        alt="Second slide"
+                        alt="Watercolor dog"
                         />
-
                     </Carousel.Item>
                     <Carousel.Item>
-                 
                         <img
                         className="d-block  max-auto"
                         src= {jaguar}
-                        alt="Third slide"
+                        alt="Colored pencil jaguar"
                         />
-
-                      
                     </Carousel.Item>
                     <Carousel.Item>
-                 
                         <img
                         className="d-block  max-auto"
                         src= {beluga}
-                        alt="Third slide"
+                        alt="Beluga whale drawing"
                         />
-
-                     
-            
                     </Carousel.Item>
                     <Carousel.Item>
-                        
                         <img
                         className="d-block  max-auto"
                         src= {cathedral}
-                        alt="Third slide"
+                        alt="Cathedral sketch"
                         />
                     </Carousel.Item>
                     <Carousel.Item>
-                        
                         <img
                         className="d-block  max-auto"
                         src= {fish}
-                        alt="Third slide"
+                        alt="Watercolor beta fish"
                         />
-
-                
                     </Carousel.Item>
                     <Carousel.Item>
-                        
                         <img
                         className="d-block  max-auto"
                         src= {grey_elephant}
-                        alt="Third slide"
+                        alt="Elephant drawing"
                         />
-
-                
                     </Carousel.Item>
                     <Carousel.Item>
-                        
                         <img
                         className="d-block  max-auto"
                         src= {wge}
-                        alt="Third slide"
+                        alt="Walrus drawing"
                         />
-
-                
                     </Carousel.Item>
                 </Carousel>
-                
+            </Container>
             </ArtStyles>
         );
     }

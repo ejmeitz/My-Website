@@ -14,14 +14,14 @@ router.get('/',(request,response) => {
     /*let viewerIP = String(request.connection.remoteAddress);*/
     let viewerIP = request.headers['x-forwarded-for'];
     let pageViewed = request.body.pageViewed;
-    let timestamp = request.body.timestamp;
 
-    if(viewerIP === null || viewerIP === undefined){
-        viewerIP = request.body.viewerIP;
-    }
-   console.log(viewerIP);
-    console.log(pageViewed);
-   console.log(timestamp);
+    let today = new Date();
+    let year = today.getFullYear();
+    let month = today.getMonth() + 1; //january is 0
+    let day = today.getDate();
+
+    let parsedDate = day + '-' + month + '-' + year;
+    let timestamp = parsedDate;
 
     const newViewer = new Viewer({
         viewerIP,

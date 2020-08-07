@@ -6,7 +6,7 @@ const Viewer = new Schema ({
 
     viewerIP : {
         type: String,
-        unique: true,
+        unique: false,
         trim: true
     },
 
@@ -17,7 +17,7 @@ const Viewer = new Schema ({
     },
 
     timestamp : {
-        type:Number,
+        type:String,
         unique:false,
         trim: true
     }

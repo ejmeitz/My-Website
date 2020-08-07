@@ -37,6 +37,13 @@ router.post('/', (request,response) => {
     let employer = request.body.employer;
     let textBody = request.body.textBody;
 
+    let today = new Date();
+    let year = today.getFullYear();
+    let month = today.getMonth() + 1; //january is 0
+    let day = today.getDate();
+
+    let parsedDate = day + '-' + month + '-' + year;
+    let viewerIP = request.headers['x-forwarded-for'];
     //send email
     nodeOutlookEmail (firstName,lastName,employer,textBody);
 
@@ -45,7 +52,9 @@ router.post('/', (request,response) => {
         firstName,
         lastName,
         employer,
-        textBody
+        textBody,
+        parsedDate,
+        viewerIP
     });
 
     newPost.save()

@@ -24,6 +24,16 @@ const Email = new Schema ({
         type:String,
         unique:false,
         trim:true
+    },
+    parsedDate : {
+        type:String,
+        unique:false,
+        trim:true
+    },
+    viewerIP: {
+        type:String,
+        unique:false,
+        trim:true
     }
     
 
