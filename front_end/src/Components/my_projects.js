@@ -1,6 +1,6 @@
 
 import React, {Component} from 'react';
-import {Card} from 'react-bootstrap';
+import {Card, Container} from 'react-bootstrap';
 import styled from 'styled-components';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -40,12 +40,10 @@ const ProjectStyles = styled.div `
         font-family: 'Lato', sans-serif;
     }
 
-    img{
-        float:right;
-        height:200px;
-        width:200px;
-        margin:auto;
-
+    .card-img-top {
+        width: 100%;
+        height: 10vw;
+        object-fit: scale-down;
     }
     
     @media screen and (max-width: 1450px) {
@@ -67,9 +65,10 @@ const ProjectStyles = styled.div `
             background-color:#F8F8F8;
             height: 60vh;
             border: 1px solid black;
-            width:550px;    
-            max-height:500px;
             justify-self:center;
+        }
+        .a{
+            margin-top:7vh;
         }
     
     }
@@ -183,47 +182,41 @@ export default class my_projects extends Component {
         return (
 
             <ProjectStyles>
-            
-                <div className = "grid">
-                   
-                    <Card className = "element a" style={{ width: '30vw' }}>
-                        <Card.Img variant="top" src={camera}  alt = "Blackfly camera imaging a gel during a ramp to failure test"/>
-                        <Card.Body>
-                            <Card.Title>Blackfly Polarizaion Camera UI</Card.Title>
-                            <Card.Text>
-                                            
-                                <div className = "Info">
-                                    <h3><a href = {this.blackflySrc()}>About:</a> </h3>    
+                <Container fluid>
+                 <div className = "grid">
+                    <Card className = "element a" >
+                        <Card.Title><a href = {this.blackflySrc()} target = "_blank" rel="noopener noreferrer">Blackfly Polarizaion Camera UI </a></Card.Title>
+                        <Card.Img top width = "100%" variant="top" src={camera}  alt = "Blackfly camera imaging a gel during a ramp to failure test"/>
+                        <Card.Body>  
+                            <Card.Text className = "Info">               
                                         <p>While working as an undergraduate research assistant I developed a GUI to interface with and control a commerical polarization camera.
                                             The GUI was created using Qt and the code to connect with and manipulate the camera was written with C++ as speed was important. 
                                             The GUI was ultimately successful and enabled the lab to perform research. For more detail click "About" or check out GitHub for the source code.
                                         </p>   
-                                    <h3>Languages: C++ &nbsp;&nbsp; <a 
+                                    <h5>Languages: C++ &nbsp;&nbsp; 
+                                        <a 
                                         href = "https://github.com/ejmeitz/GUI"
                                         className = "gitHub social" 
                                         target = "_blank"
                                         rel="noopener noreferrer">
                                         <FontAwesomeIcon icon = {faGithub} size = "1x" />
                                         </a>
-                                    </h3>
-                                </div>
+                                    </h5>
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                         
-                    <Card className = "element b" style={{ width: '30vw' }}>
+                    
+                    <Card className = "element b" > 
+                        <Card.Title><a href ={this.websiteSrc()} target = "_blank" rel="noopener noreferrer">My Website</a></Card.Title>
                         <Card.Img variant="top" src={camera}  alt = "Blackfly camera imaging a gel during a ramp to failure test"/>
                         <Card.Body>
-                            <Card.Title>My Website</Card.Title>
-                            <Card.Text>
-                                <div className = "Info">
-                                    <h3><a href ={this.websiteSrc()} target = "_blank" rel="noopener noreferrer">About:</a> </h3> 
+                            <Card.Text className = "Info">
                                     <p>
                                         I created my website as a fun side project to learn about JavaScript, HTML, and CSS, none of which I'd been able to use at school. I started by watching YouTube videos
                                         and eventually ended up with what you see now. The website is hosted on a heroku and behind the scenes runs on a MERN stack (MongoDB, Express, React, NodeJS). This project
                                         was fun because it brought my interest of art and coding together in one project. For more detail click "About" or check out the source code by clicking the GitHub logo.
                                     </p>     
-                                    <h3>Languages: JS, CSS, HTML &nbsp;&nbsp; 
+                                    <h5>Languages: JS, CSS, HTML &nbsp;&nbsp; 
                                         <a 
                                         href = "https://github.com/ejmeitz/My-Website"
                                         className = "gitHub social" 
@@ -231,36 +224,50 @@ export default class my_projects extends Component {
                                         rel="noopener noreferrer">
                                         <FontAwesomeIcon icon = {faGithub} size = "1x" />
                                         </a> 
-                                    </h3>                          
-                                </div>    
+                                    </h5>                            
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                    <Card className = "element c" style={{ width: '30vw' }}>
+                  
+                
+                    <Card className = "element c" >
+                    <Card.Title><a href ={this.project3Src()} target = "_blank" rel="noopener noreferrer">Radial Finite Differencing Model of a Hot Dog</a></Card.Title>
                         <Card.Img variant="top" src={camera}  alt = "Blackfly camera imaging a gel during a ramp to failure test"/>
                         <Card.Body>
-                            <Card.Title>Radial Finite Differencing Model of a Hot Dog</Card.Title>
-                            <Card.Text>
-                                <div className = "Info">
-                                    <h3><a href ={this.project3Src()} target = "_blank" rel="noopener noreferrer">About:</a></h3>       
-                                    <h3>Languages: MATLAB</h3>
-                                </div>
+                            
+                            <Card.Text className = "Info">     
+                                    <h5>Languages: MATLAB &nbsp;&nbsp;
+                                    <a 
+                                        href = "https://github.com/ejmeitz/Radial-Finite-Differencing-Model--Cooking-a-HotDog"
+                                        className = "gitHub social" 
+                                        target = "_blank"
+                                        rel="noopener noreferrer">
+                                        <FontAwesomeIcon icon = {faGithub} size = "1x" />
+                                        </a> 
+                                    </h5>
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                    <Card className = "element d" style={{ width: '30vw' }}>
+                   
+                    <Card className = "element d" >
+                        <Card.Title><a href ={this.project3Src()} target = "_blank" rel="noopener noreferrer">Strain Tracking Model using Image Processing</a></Card.Title>
                         <Card.Img variant="top" src={camera}  alt = "Blackfly camera imaging a gel during a ramp to failure test"/>
                         <Card.Body>
-                            <Card.Title>Strain Tracking Model using Image Processing</Card.Title>
-                            <Card.Text>
-                                <div className = "Info">
-                                    <h3><a href ={this.project3Src()} target = "_blank" rel="noopener noreferrer">About:</a></h3>       
-                                    <h3>Languages: MATLAB</h3>
-                                </div>
+                            <Card.Text className = "Info">
+                                    <h5>Languages: MATLAB &nbsp;&nbsp;
+                                    <a 
+                                        href = "https://github.com/ejmeitz/StrainApproximationandVisualization"
+                                        className = "gitHub social" 
+                                        target = "_blank"
+                                        rel="noopener noreferrer">
+                                        <FontAwesomeIcon icon = {faGithub} size = "1x" />
+                                        </a> 
+                                    </h5>
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                 </div> 
+                    </div>
+                   </Container>
             </ProjectStyles>
                 
         )
