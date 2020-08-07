@@ -147,6 +147,7 @@ export default class my_projects extends Component {
         this.project3Src = this.project3Src.bind(this);
     }
 
+    //relative paths can break depending what page user is on
     blackflySrc = () => {
 
         if(window.location.hostname === "localhost"){
@@ -173,6 +174,15 @@ export default class my_projects extends Component {
             return "http://localhost:3000/projects/project3"
         } else {
             return "http://ethanmeitz.com/projects/project3";
+        }
+        
+    }
+    project4Src = () => {
+
+        if(window.location.hostname === "localhost"){
+            return "http://localhost:3000/projects/project4"
+        } else {
+            return "http://ethanmeitz.com/projects/project4";
         }
         
     }
@@ -232,7 +242,7 @@ export default class my_projects extends Component {
                   
                 
                     <Card className = "element c" >
-                    <Card.Title><a href ={this.project3Src()} target = "_blank" rel="noopener noreferrer">Radial Finite Differencing Model of a Hot Dog</a></Card.Title>
+                    <Card.Title><a href ={this.project3Src()} target = "_blank" rel="noopener noreferrer">Heat Transfer Model in a Hot Dog</a></Card.Title>
                         <Card.Img variant="top" src={camera}  alt = "Blackfly camera imaging a gel during a ramp to failure test"/>
                         <Card.Body>
                             
@@ -257,12 +267,15 @@ export default class my_projects extends Component {
                     </Card>
                    
                     <Card className = "element d" >
-                        <Card.Title><a href ={this.project3Src()} target = "_blank" rel="noopener noreferrer">Strain Tracking Model using Image Processing</a></Card.Title>
+                        <Card.Title><a href ={this.project4Src()} target = "_blank" rel="noopener noreferrer">Strain Tracking w/ Image Processing</a></Card.Title>
                         <Card.Img variant="top" src={camera}  alt = "Blackfly camera imaging a gel during a ramp to failure test"/>
                         <Card.Body>
                             <div className = "Info">
                                     <p> 
-                                        
+                                        The UI I created imaged tissue and gels during mechanical testing; however, strain beads could not be used. Using the image processing toolbox
+                                        on MATLAB I created a program to track the pins which hold the tissue down. Then, using that displacement data, I created an animation to 
+                                        simulate the deformation of the tissue and show relevant data values with a heatmap. Essentially, I created an animated heatmap. Click the title to see an example
+                                        or click the GitHub logo to see the source code.
                                     </p>
                                     <h5>Languages: MATLAB &nbsp;&nbsp;
                                     <a 

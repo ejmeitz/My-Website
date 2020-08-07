@@ -156,10 +156,10 @@ export default class NavHome extends Component{
                                     <Nav.Link href="/">HOME</Nav.Link>              
                                     <Nav.Link href="/art">ART</Nav.Link>            
                                     <NavDropdown title = "PROJECTS" id = "nav-dropdown">
-                                        <NavDropdown.Item href = "/projects/blackfly">Camera GUI</NavDropdown.Item>
+                                        <NavDropdown.Item href = "/projects/blackfly">Camera UI</NavDropdown.Item>
                                         <NavDropdown.Item href = "/projects/website">Website</NavDropdown.Item>
                                         <NavDropdown.Item href = "/projects/project3">FEA Model</NavDropdown.Item>
-                                        <NavDropdown.Item href = "/projects/project4">Strain Model</NavDropdown.Item>
+                                        <NavDropdown.Item href = "/projects/project4">Strain Tracking</NavDropdown.Item>
                                         <NavDropdown.Divider />
                                         <NavDropdown.Item href = "/projects">Project Home</NavDropdown.Item>
                                     </NavDropdown>  
