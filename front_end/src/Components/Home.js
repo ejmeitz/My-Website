@@ -1,13 +1,23 @@
 import React, {Component} from 'react';
-import {Card, Carousel, Container} from 'react-bootstrap';
+import {Card, Carousel, Container, ListGroup} from 'react-bootstrap';
 import styled from 'styled-components';
-import blackfly from "../resources/qpli.jpeg"
+import {Link} from 'react-scroll';
+
 import {faLinkedin, faGithub, } from '@fortawesome/free-brands-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faChevronDown} from '@fortawesome/free-solid-svg-icons';
-import '../index.css';
-import {Link} from 'react-scroll';
+import {faFacebook } from '@fortawesome/free-brands-svg-icons';
 
+
+import Crash1 from "../resources/CRASH1.PNG";
+import Crash2 from "../resources/CRASH2.PNG";
+import blackfly from "../resources/qpli.jpeg"
+import StPaul from "../resources/StPaul.jpg";
+import AmeriCorps from "../resources/AmeriCorps.jpg";
+import Plane from "../resources/Plane.jpg";
+import Robot from "../resources/robot.jpg";
+
+import '../index.css';
 
 const HomeStyles = styled.div `
 
@@ -105,8 +115,7 @@ a{
 }
 .card-img-top {
     width: 100%;
-    height: 10vw;
-    object-fit: scale-down;
+    height: 15vw;
 }
 
 
@@ -164,7 +173,7 @@ render(){
              
             
                 <Card className = "about" style={{ width: '30vw' }}>
-                    <Card.Img variant="top" src="holder.js/100px180" />
+                    <Card.Img variant="top" src={StPaul} alt="Downtown St.Paul"/>
                     <Card.Body>
                         <Card.Title>About Me</Card.Title>
                         <Card.Text>
@@ -202,7 +211,7 @@ render(){
                 </Card>
                      
                 <Card className = "exp" style={{ width: '30vw' }}>
-                    <Card.Img variant="top" src="holder.js/100px180" />
+                    <Card.Img variant="top" src={AmeriCorps} alt="Me and my coworkers at the end of the summer"/>
                     <Card.Body>
                         <Card.Title>Experience</Card.Title>
                         <Card.Text>
@@ -231,7 +240,7 @@ render(){
                    
                       
                 <Card className = "club dbf" style={{ width: '30vw' }}>
-                    <Card.Img variant="top" src={blackfly} alt = "Blackfly Camera imaging tissue in biaxial loading machine" />
+                    <Card.Img variant="top" src={Plane} alt = "Design Build Fly plane just before a test flight" />
                     <Card.Body>
                         <Card.Title>Design/Build/Fly</Card.Title>
                         <Card.Text>
@@ -246,7 +255,7 @@ render(){
                     </Card.Body>
                 </Card>
                 <Card className = "club ieee" style={{ width: '30vw' }}>
-                    <Card.Img variant="top" src={blackfly} alt = "Blackfly Camera imaging tissue in biaxial loading machine" />
+                    <Card.Img   variant="top" src={Robot} alt = "CAD model of the autonomous trash collector" />
                     <Card.Body>
                         <Card.Title>IEEE</Card.Title>
                         <Card.Text>
@@ -260,15 +269,25 @@ render(){
                     </Card.Body>
                 </Card>
                 <Card className = "club crash" style={{ width: '30vw' }}>
-                    <Card.Img variant="top" src={blackfly} alt = "Blackfly Camera imaging tissue in biaxial loading machine" />
+                    <Card.Img className="d-block w-100" variant="top" src={Crash1} alt = "CRASH playing on the street" />
                     <Card.Body>
-                        <Card.Title>CRASH</Card.Title>
+                        <ListGroup>
+                              <Card.Title style={{marginTop:"10px"}}>CRASH  <a 
+                            href = "https://www.facebook.com/wustlCRASH/"
+                            className = "fb social" 
+                            target = "_blank"
+                            rel="noopener noreferrer">
+                            <FontAwesomeIcon icon = {faFacebook} size = "1x" />
+                            </a>
+                        </Card.Title>
+                        </ListGroup>
+                      
                         <Card.Text>
                             <p>
-                               Crash is a service oriented improvisational drumming group that uses plastic buckets and metal objects instead of traditional drums. The group
-                                performs within the local community and on campus. We open for a capella groups but mostly play with groups of kids and teach them how to play drums. 
-                                In the past, we've gone to grief clinics, after school care for children, and a local highschool. Everyone in Crash enjoys playing drums and loves
-                                teaching and spreading joy to our community.
+                               CRASH is a service oriented improvisational drumming group that uses plastic buckets and metal objects instead of traditional drums. The group
+                                performs within the community and on campus. We open for a capella groups but mostly play with groups of kids and teach them how to play drums. 
+                                In the past, we've gone to grief clinics, after school care, and a local highschool. Everyone in CRASH enjoys playing drums and loves
+                                teaching and sharing drumming with our community.
                             </p>
                         </Card.Text>
                     </Card.Body>

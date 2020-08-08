@@ -164,7 +164,7 @@ export default class NavHome extends Component{
                                         <NavDropdown.Item href = "/projects">Project Home</NavDropdown.Item>
                                     </NavDropdown>  
                                     <Nav.Link href="/fun">ANIMATIONS</Nav.Link>
-                                    <Nav.Link href="/contact">CONTACT</Nav.Link>    
+                                    <Nav.Link href="/contact">CONTACT ME</Nav.Link>    
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>  
