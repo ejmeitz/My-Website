@@ -47,7 +47,6 @@ const NavStyles = styled.div `
       font-size: 20px;
       margin-left:10px;
 
-
       &:hover {
         color: white;
       }
@@ -100,6 +99,24 @@ const NavStyles = styled.div `
 .dropdown-item{
   background-color:rgb( 140, 194, 255);
     text-align:center;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .navbar{
+  
+    background-color:rgb( 140, 194, 255);
+    position:fixed;
+    width: 100%;
+    padding: 10px;
+    height:6vh;
+   
+    top: 0;
+    z-index:10;
+   
+  }
+  .navbar--hidden {
+    top: 0;
+  }
 }
 
 
