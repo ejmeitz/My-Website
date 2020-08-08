@@ -175,7 +175,21 @@ a{
 
 
 @media screen and (max-width: 400px) {
-
+    .bg{
+        display:grid;
+        grid-template-columns: auto;
+        margin: auto;
+        justify-items:center;
+        justify-content:center;
+    
+    }
+    .welcome {
+        margin-top:15vh;
+    }
+    .card-img-top {
+        width: 100%;
+        height: 40vw;
+    }
 
 }
 
