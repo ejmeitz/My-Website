@@ -224,7 +224,7 @@ render(){
             
         </div>
     
-        <Container className = "secondPage" id = "secondPageAnchor" fluid>
+        <Container className = "secondPage" id = "secondPageAnchor">
              
             
                 <Card className = "about" >

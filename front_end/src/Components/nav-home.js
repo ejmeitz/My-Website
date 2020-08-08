@@ -14,27 +14,26 @@ const NavStyles = styled.div `
 }
 
 .navbar{
-  
     background-color:rgb( 140, 194, 255);
     position:fixed;
     width: 100%;
     padding: 10px;
-    height:6vh;
-   
+    height:50px;
+    
     top: 0;
     transition: top 0.4s;
     z-index:10;
-   
   }
-  
+
   .navbar--hidden {
-    top: -6vh;
+    top: -50px;
   }
 
    .navbar-nav .nav-link {
     color: white;
     font-weight:20px;
-    margin:10px 20px 10px 20px;
+    margin: 10px 20px 8px 20px;
+
     background-color:rgb( 140, 194, 255);
 
     &:hover {
@@ -103,16 +102,14 @@ const NavStyles = styled.div `
 
 @supports (-webkit-touch-callout: none) {
   .navbar{
-  
     background-color:rgb( 140, 194, 255);
     position:fixed;
     width: 100%;
     padding: 10px;
-    height:6vh;
-   
+    height:50px;
+    
     top: 0;
     z-index:10;
-   
   }
   .navbar--hidden {
     top: 0;
