@@ -13,7 +13,6 @@ const FooterStyles = styled.div `
         }
 
       .footer {
-          
           display:grid;
           width:100vw;
           grid-template-rows: 80% 20%;

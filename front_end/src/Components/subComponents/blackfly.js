@@ -16,32 +16,47 @@ const BlackflyStyles = styled.div `
     margin: 70px auto 20px auto;
 }
 
+h5{
+    font-size:1.5em;
+}
+
 .card {
     border:none;
 }
-
 
 .card-text{
     box-shadow: 2px 2px 2px grey;
     background-color:#F8F8F8;
     border-radius:5px;
 }
-.carousel{
-    box-shadow: 2px 2px 2px grey;
+
+h5{
+    font-size:1.25em;
+    padding:10px;
 }
 
+.carousel{
+    box-shadow: 2px 2px 2px grey;
+    aspectRatio: 10/8;
+}
+
+@media screen and (max-width: 1100px) {
+    h5{
+        font-size:1.05em;
+    }
+}
+@media screen and (max-width: 800px) {
+    h5{
+        font-size:0.9em;
+    }
+    .projectName{
+        font-size:1.5em;
+    }
+}
 
 `;
 
-
-
-
-
-
 export default class Blackfly extends Component {
-
-               
-
 
     render(){
         return (
@@ -49,9 +64,9 @@ export default class Blackfly extends Component {
         <BlackflyStyles>
             <Container fluid>
                     <Card>
-                        <Row>
+                        <Row >
                         <Col xs={4} style = {{margin:"auto"}}>
-                                    <Carousel >
+                                    <Carousel>
                                         <Carousel.Item>
                                             <img
                                             className="d-block w-100"
@@ -84,13 +99,13 @@ export default class Blackfly extends Component {
                                         </Carousel.Item>
                                     </Carousel>
                         </Col>
-                        <Col>
+                        <Col style = {{margin:"auto"}}>
                        
                                 <Card.Body style = {{height:"70vh"}}>
                                     <Card.Title className = "projectName" style={{margin:"10px", fontSize:"2em"}}><strong>Blackfly Polarization Camera UI</strong></Card.Title>
                                     <div className = "card-text"> {/*don't use Card.Text cause its harder to customize*/}
 
-                                            <h4>
+                                            <h5>
                                                    While working as an undergraduate research assistant, I 
                                                     developed a user interface (UI) for use in reflectance and transmission mode quantitative polarized light imaging (QPLI). QPLI is an imaging technique that uses polarized light
                                                     to image birefringent materials. Birefringent materials, such as certain human tissues, reflect and transmit polarized light in a predictable manner. Therefore, by exposing
@@ -99,9 +114,9 @@ export default class Blackfly extends Component {
                                                     filtered images in real time. The UI and camera will be used to study stress and failure in the ulnar collateral ligament (UCL) which 
                                                     when torn requires Tommy John surgery to repair. By studying the failure mechanism with QPLI we may be able to prevent the need for Tommy 
                                                     John surgery.
-                                            </h4>
+                                            </h5>
                                                  
-                                        <h4>
+                                        <h5>
                                             Languages: C++ &nbsp;&nbsp; <br/>
                                             Code: <a 
                                                     href = "https://github.com/ejmeitz/GUI"
@@ -110,14 +125,14 @@ export default class Blackfly extends Component {
                                                     rel="noopener noreferrer">
                                                     <FontAwesomeIcon className = "fa-lg" icon = {faGithub}/>
                                                     </a>
-                                        </h4>
+                                        </h5>
                                             
                                    
-                                        <h4>
+                                        <h5>
                                             <Card.Link href = "https://lakelab.wustl.edu/resources/" target = "_blank" rel="noopener noreferrer">
                                             The Lake Lab    
                                             </Card.Link>
-                                        </h4>
+                                        </h5>
                                     </div>
                                 </Card.Body>
                         </Col>
