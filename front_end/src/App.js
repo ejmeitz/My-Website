@@ -12,9 +12,10 @@ import Fun from './Components/fun';
 import Nav from './Components/nav-home.js';
 
 
-import Blackfly from './Components/subComponents/blackfly';
-import websiteProj from './Components/subComponents/website';
-import Project3 from './Components/subComponents/project3';
+import Blackfly from './Components/subComponents/blackfly.js';
+import websiteProj from './Components/subComponents/website.js';
+import hotDogProj from './Components/subComponents/hotDogProject.js';
+import strainProj from './Components/subComponents/strainTracking.js';
 
 
 import Footer from './Components/footer.js';
@@ -71,7 +72,8 @@ render(){
                         <Route  path = "/contact" component ={Contact} />
                         <Route  exact path = "/projects/blackfly" component ={Blackfly} />
                         <Route  exact path = "/projects/website" component ={websiteProj} />
-                        <Route  exact path = "/projects/project3" component ={Project3} />
+                        <Route  exact path = "/projects/hotdog" component ={hotDogProj} />
+                        <Route  exact path = "/projects/strain" component ={strainProj} />
                         <Route path = "*" component = {NotFound} status = {404} />
 
                     

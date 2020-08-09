@@ -171,18 +171,18 @@ export default class my_projects extends Component {
     project3Src = () => {
 
         if(window.location.hostname === "localhost"){
-            return "http://localhost:3000/projects/project3"
+            return "http://localhost:3000/projects/hotdog"
         } else {
-            return "http://ethanmeitz.com/projects/project3";
+            return "http://ethanmeitz.com/projects/hotdog";
         }
         
     }
     project4Src = () => {
 
         if(window.location.hostname === "localhost"){
-            return "http://localhost:3000/projects/project4"
+            return "http://localhost:3000/projects/strain"
         } else {
-            return "http://ethanmeitz.com/projects/project4";
+            return "http://ethanmeitz.com/projects/strain";
         }
         
     }
