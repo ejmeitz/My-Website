@@ -13,7 +13,7 @@ const ContactStyles = styled.div `
     
 }
 .container{
-    margin:7vh auto 1vh auto;
+    margin:60px auto 1vh auto;
     height: 94vh;
     justify-self:center;
     min-width: 375px;

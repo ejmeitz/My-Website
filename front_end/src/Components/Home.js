@@ -69,7 +69,6 @@ const HomeStyles = styled.div `
     padding-bottom: 10px;
     justify-content:center;
 
-
     display:grid;
     grid-template-columns: repeat(3,1fr);
 
@@ -268,7 +267,7 @@ render(){
                         <Card.Text>
                             I've always loved volunteering at Habitat for Humanity, but during the 2019 summer I had the chance to serve with AmeriCorps at Habitat for Humanity. Instead of
                             just building the homes I was now responsible for teaching and keeping the volunteers safe. Every day was a new project and I learned so much about how to lead and teach a group
-                            and also about the state of affordable housing in Minnesota. It was a great opportunity and I highly reccomend both <a href = "https://www.nationalservice.gov/programs/americorps">AmeriCorps</a> and <a href="https://www.habitat.org/">Habitat for Humanity</a>.    
+                            and also about the state of affordable housing in Minnesota. It was a great opportunity and I highly reccomend both <a href = "https://www.nationalservice.gov/programs/americorps" target = "_blank" rel="noopener noreferrer">AmeriCorps</a> and <a href="https://www.habitat.org/" target = "_blank" rel="noopener noreferrer">Habitat for Humanity</a>.    
                         </Card.Text>
                     </Card.Body>
                 </Card>

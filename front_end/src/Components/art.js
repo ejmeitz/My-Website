@@ -17,7 +17,7 @@ const ArtStyles = styled.div `
       overflow:hidden;
         height: 80vh;
         width: 80vw;
-        margin: 6vw auto 4vw auto;
+        margin: 60px auto 4vw auto;
         background-color:rgba( 140, 194, 255,0.6);
    }
 

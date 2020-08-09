@@ -15,7 +15,7 @@ const FunStyles = styled.div `
 .body{
    display:flex;
    justify-content:center;
-   margin: 7vh auto 1vh auto;
+   margin: 60px auto 1vh auto;
 }
 .grid{
     display:grid;
