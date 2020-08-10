@@ -8,12 +8,12 @@ const FunStyles = styled.div `
     margin:0;
     padding:0;
     box-sizing:border-box;
+    justify-items:center;
 }
+
 .grid{
     display:grid;
-    margin-top:60px;
-    margin-bottom:20px;
-    padding-bottom:30px;
+    margin:60px auto 20px auto;
     width: 80%;
     grid-template-columns: 40% 40%;
     grid-gap:20px;
@@ -100,7 +100,8 @@ export default class my_projects extends Component {
         return (
     <>
         <FunStyles>  
-                <main className = "grid">
+            <Container fluid>
+                <div className = "grid">
                     <Container>
                         <h2 className = "title">Bouncing Balls</h2>
                         <div className = "animation a">
@@ -113,7 +114,8 @@ export default class my_projects extends Component {
                             <iframe  samesite = "None Secure" title = "tictactoe" width="100%" height="100%" frameBorder="0" scrolling="no" id="tttFrame" src="https://editor.p5js.org/ejmeitz/embed/6Ll3mkIKB"></iframe>
                         </div>
                     </Container>
-                </main>
+                </div>        
+            </Container>
         </FunStyles>
     </>
         )
