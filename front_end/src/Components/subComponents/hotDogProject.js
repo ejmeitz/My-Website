@@ -48,6 +48,9 @@ h5{
 li{
     background-color:black;
 }
+.carousel-indicators {
+    bottom:-50px;
+  }
 
 @media screen and (max-width: 1100px) {
     h5{

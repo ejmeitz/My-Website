@@ -40,6 +40,7 @@ h5{
     aspectRatio: 10/8;
 }
 
+
 @media screen and (max-width: 1100px) {
     h5{
         font-size:1.05em;
@@ -67,6 +68,7 @@ export default class Blackfly extends Component {
                         <Row >
                         <Col xs={4} style = {{margin:"auto"}}>
                                     <Carousel>
+
                                         <Carousel.Item>
                                             <img
                                             className="d-block w-100"
