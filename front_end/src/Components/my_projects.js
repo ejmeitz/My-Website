@@ -190,7 +190,7 @@ export default class my_projects extends Component {
 
     render(){
         return (
-
+            
             <ProjectStyles>
                 <Container fluid>
                  <div className = "grid">

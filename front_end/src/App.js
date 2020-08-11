@@ -68,15 +68,15 @@ render(){
                         <Route updateViewers={() => this.updateViewers()} exact path = "/" component ={Home} />
                         <Route  path = "/art" component ={Art} />
                         <Route  path = "/fun" component ={Fun} />
-                        <Route  exact path = "/projects" component ={Projects} />
+                        <Route  path = "/projects">
+                        <Route   path = "/projects/home" component ={Projects} />
+                          <Route   path = "/projects/blackfly" component ={Blackfly} />
+                          <Route   path = "/projects/website" component ={websiteProj} />
+                          <Route   path = "/projects/hotdog" component ={hotDogProj} />
+                          <Route   path = "/projects/strain" component ={strainProj} />
+                        </Route>
                         <Route  path = "/contact" component ={Contact} />
-                        <Route  exact path = "/projects/blackfly" component ={Blackfly} />
-                        <Route  exact path = "/projects/website" component ={websiteProj} />
-                        <Route  exact path = "/projects/hotdog" component ={hotDogProj} />
-                        <Route  exact path = "/projects/strain" component ={strainProj} />
                         <Route path = "*" component = {NotFound} status = {404} />
-
-                    
                       </Switch>
                   </Router> 
         <Footer />
