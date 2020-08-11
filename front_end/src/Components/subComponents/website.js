@@ -85,7 +85,7 @@ export default class website extends Component {
                                             alt="First slide"
                                             />
                                             <Carousel.Caption style = {{textShadow: "2px 2px black"}}>
-                                                QPLI camera imaging a sample in the bi-axial testing machine
+                                              
                                             </Carousel.Caption>
                                         </Carousel.Item>
                                         <Carousel.Item>
