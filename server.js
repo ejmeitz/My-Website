@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const enforce = require('express-sslify');
 
 require('dotenv').config();
 
@@ -12,6 +13,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true})); 
 app.use(bodyParser.json());
+enforce.HTTPS({ trustProtoHeader: true });
+app.use(enforce.HTTPS());
+
 
 let URI;
 if(process.env.NODE_ENV === 'production'){

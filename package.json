@@ -25,13 +25,14 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-sslify": "^1.2.0",
     "heroku": "^7.42.6",
     "mongodb": "^3.6.0",
-    "mongoose": "^5.9.27",
+    "mongoose": "^5.9.29",
     "nodejs-nodemailer-outlook": "^1.2.3",
     "nodemailer": "^6.4.10",
     "nodemon": "^2.0.4",
-    "react-scroll": "^1.8.0"
+    "react-scroll": "^1.8.1"
   },
   "proxy": "http://localhost:5000",
   "devDependencies": {}
