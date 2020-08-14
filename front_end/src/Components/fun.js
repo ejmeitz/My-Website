@@ -122,10 +122,10 @@ export default class my_projects extends Component {
                     </Container>
                     <Container>
                         <h2 className = "title">TicTacToe w/ Mini-Max:</h2> 
-                        <p>Not supported on phones or tablets</p>
                         <div className = "animation b">
                             <iframe  samesite = "None Secure" title = "tictactoe" width="100%" height="100%" frameBorder="0" scrolling="no" id="tttFrame" src="https://editor.p5js.org/ejmeitz/embed/6Ll3mkIKB"></iframe>
                         </div>
+                        <p>Not supported on phones or tablets</p>
                     </Container>
                 </div>        
             </Container>
