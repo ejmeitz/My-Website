@@ -24,14 +24,18 @@ const FunStyles = styled.div `
 }
 
 .animation{
-    justify-items:center;
-    justify-content:center;
-    width:500px;
-    height:500px;
-    padding: 20px;
+    margin:auto;
+    width: 40vw;
+    height:40vw;
+    max-width: 500px;
+    max-height:500px;
 }
-.animation h2{
+h2{
     margin-bottom:10px;
+    text-align:center;
+}
+p{
+    text-align:center;
 }
 
 
@@ -50,16 +54,13 @@ const FunStyles = styled.div `
     }
 
     .animation{
-        justify-items:center;
-        justify-content:center;
         width:500px;
         height:500px;
-        padding: 20px;
     }
 
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 750px) {
     iframe
     {
        width:300px;
@@ -82,14 +83,25 @@ const FunStyles = styled.div `
         height:350px;
     }
 
-    .p5Canvas{
-        margin:auto;
-    }
-    .animation h2{
-        margin-bottom:10px;
+     h2{
+        margin-bottom:5px;
+        font-size:1.3rem;
     }
 }
 
+@media screen and (max-width: 400px) {
+    .grid{
+        display:grid;
+        width: 100%;
+        grid-gap:10px;
+       
+        margin: 60px auto;
+    
+        justify-items:center;
+        justify-content:center;
+        grid-auto-flow:row;
+    }
+}
 `;
 
 
@@ -102,14 +114,15 @@ export default class my_projects extends Component {
         <FunStyles>  
             <Container fluid>
                 <div className = "grid">
-                    <Container>
-                        <h2 className = "title">Bouncing Balls</h2>
+                    <Container className = "box">  
+                        <h2 className = "title">Bouncing Balls:</h2>
                         <div className = "animation a">
                             <iframe samesite = "None Secure"  title = "bouncing-balls" width="100%" height="100%" frameBorder="0" scrolling="no" id="ballFrame"  src="https://editor.p5js.org/ejmeitz/embed/Ggf2mFF9o"></iframe>
                         </div>
                     </Container>
                     <Container>
-                        <h2 className = "title">TicTacToe</h2> 
+                        <h2 className = "title">TicTacToe w/ Mini-Max:</h2> 
+                        <p>Not supported on phones or tablets</p>
                         <div className = "animation b">
                             <iframe  samesite = "None Secure" title = "tictactoe" width="100%" height="100%" frameBorder="0" scrolling="no" id="tttFrame" src="https://editor.p5js.org/ejmeitz/embed/6Ll3mkIKB"></iframe>
                         </div>
