@@ -9,13 +9,12 @@ require('dotenv').config();
 const app = express();
 const currentPORT = process.env.PORT || 5000;
 
+
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true})); 
 app.use(bodyParser.json());
-enforce.HTTPS({ trustProtoHeader: true });
-app.use(enforce.HTTPS());
-
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
 let URI;
 if(process.env.NODE_ENV === 'production'){
