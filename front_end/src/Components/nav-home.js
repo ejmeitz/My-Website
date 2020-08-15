@@ -21,12 +21,14 @@ const NavStyles = styled.div `
     height:50px;
     
     top: 0;
-    transition: top 0.4s;
+    transition: .5s ease;
+    -webkit-transform: translate(0,0);
     z-index:10;
   }
 
   .navbar--hidden {
-    top: -50px;
+    -webkit-transform: translate(0,-50px);
+    transition: .5s ease;
   }
 
    .navbar-nav .nav-link {
@@ -129,14 +131,16 @@ export default class NavHome extends Component{
           prevScrollpos: window.pageYOffset,
           visible: true
         };
+        this.handleScroll = this.handleScroll.bind(this);
       }
     
-      // Adds an event listener when the component is mount.
+
+      // Adds an event listener when the component is mounted.
       componentDidMount() {
         window.addEventListener("scroll", this.handleScroll);
       }
     
-      // Remove the event listener when the component is unmount.
+      // Remove the event listener when the component is unmounted.
       componentWillUnmount() {
         window.removeEventListener("scroll", this.handleScroll);
       }
@@ -159,8 +163,7 @@ export default class NavHome extends Component{
     render(){
     return (
             <NavStyles>
-                <Navbar fixed = "top" expand = "lg" className={"navbar", {
-          "navbar--hidden": !this.state.visible}}>
+                <Navbar fixed = "top" expand = "lg" className={"navbar", {"navbar--hidden": !this.state.visible}}>
                 <Navbar.Brand href = "/"> 
                     Ethan Meitz
                 </Navbar.Brand> 
