@@ -127,12 +127,12 @@ export default class my_projects extends Component {
                         </div>
                         <p>Not supported on phones or tablets</p>
                     </Container>
-                    <Container>
+                    {/* <Container>
                         <h2 className = "title">DFS Visualization:</h2> 
                         <div className = "animation c">
-                          <iframe samesite = "None Secure" title = "dfsVis" width="100%" height="100%" frameBorder="0" scrolling="no" id="dfsFrame" src="https://editor.p5js.org/ejmeitz/embed/wrmrxv3XA"></iframe>
+                        <iframe  samesite = "None Secure" title = "tictactoe" width="100%" height="100%" frameBorder="0" scrolling="no" id="tttFrame" src="https://editor.p5js.org/ejmeitz/embed/6Ll3mkIKB"></iframe>
                         </div>
-                    </Container>
+                    </Container> */}
                 </div>        
             </Container>
         </FunStyles>
