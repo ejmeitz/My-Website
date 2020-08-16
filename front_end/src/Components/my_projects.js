@@ -25,7 +25,7 @@ const ProjectStyles = styled.div `
         grid-template-columns: 40% 40%;
         grid-template-rows: 1fr 1fr;
         grid-gap: 20px;
-        margin: 7vh auto 1vh auto;
+        margin: 60px auto 1vh auto;
         grid-auto-flow:rows;
         grid-auto-rows:500px
        
@@ -49,7 +49,7 @@ const ProjectStyles = styled.div `
             grid-gap:20px;
             grid-template-columns: 80%;
             grid-auto-flow:row;
-            margin: 7vh auto 1vh auto;
+            margin: 60px auto 1vh auto;
             width: 80%;
             
             align-items:strech;
@@ -75,7 +75,7 @@ const ProjectStyles = styled.div `
             grid-auto-flow:row;
             
 
-            margin: 7vh auto 1vh auto;   
+            margin: 60px auto 1vh auto;   
             
             
             align-items:strech;
@@ -98,7 +98,7 @@ const ProjectStyles = styled.div `
             grid-auto-flow:row;
             grid-template-columns: 100%;
             grid-gap:20px;
-            margin: 7vh auto 1vh auto;
+            margin: 60px auto 1vh auto;
             
             justify-items:center;
             justify-content:center;
@@ -125,7 +125,7 @@ const ProjectStyles = styled.div `
             grid-auto-flow:row;
             grid-template-columns: 100%;
             grid-gap:20px;
-            margin: 7vh auto 1vh auto;
+            margin: 60px auto 1vh auto;
             justify-items:center;
             justify-content:center;
             

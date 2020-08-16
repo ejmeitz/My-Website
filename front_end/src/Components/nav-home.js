@@ -101,6 +101,25 @@ const NavStyles = styled.div `
   background-color:rgb( 140, 194, 255);
     text-align:center;
 }
+@media screen and (max-width: 1000px){
+  .navbar{
+    background-color:rgb( 140, 194, 255);
+    position:fixed;
+    width: 100%;
+    padding: 10px;
+    height:50px;
+    
+    top: 0;
+    z-index:10;
+  }
+
+  .navbar--hidden {
+    top:0;
+  }
+
+
+
+}
 
 @supports (-webkit-touch-callout: none) {
   .navbar{
