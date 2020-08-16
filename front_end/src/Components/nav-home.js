@@ -3,6 +3,9 @@ import {Nav, Navbar, NavDropdown} from 'react-bootstrap';
 import styled from 'styled-components';
 
 
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faBars} from '@fortawesome/free-solid-svg-icons';
+
 const NavStyles = styled.div `
 
 *{
@@ -81,8 +84,6 @@ const NavStyles = styled.div `
     outline-color: black;
 }
 
-
-
 .dropdown-menu, .dropdown-item{
   background-color:rgb( 140, 194, 255);
   margin:auto;
@@ -101,6 +102,18 @@ const NavStyles = styled.div `
   background-color:rgb( 140, 194, 255);
     text-align:center;
 }
+
+.svg-inline--fa.fa-w-14 {
+  width: 1em;
+}
+.navbar-toggler {
+  border:none;
+}
+.navbar-toggler:focus{
+  outline-color:rgba(0,0,0,0);
+}
+
+
 @media screen and (max-width: 1000px){
   .navbar{
     background-color:rgb( 140, 194, 255);
@@ -182,11 +195,17 @@ export default class NavHome extends Component{
     render(){
     return (
             <NavStyles>
-                <Navbar fixed = "top" expand = "lg" className={"navbar", {"navbar--hidden": !this.state.visible}}>
+                <Navbar fixed = "top" variant = "dark" expand = "lg" className={"navbar", {"navbar--hidden": !this.state.visible}}>
                 <Navbar.Brand href = "/"> 
                     Ethan Meitz
                 </Navbar.Brand> 
-                    <Navbar.Toggle aria-controls='basic-navbar-nav' />
+                    <Navbar.Toggle aria-controls="basic-navbar-nav">
+                      <span>
+                        <FontAwesomeIcon
+                          icon={faBars} color="white" size="lg"
+                        />
+                      </span>
+                    </Navbar.Toggle>
                         <Navbar.Collapse id = "basic-navbar-nav">
                             <Nav  className = "ml-auto">
                                     <Nav.Link href="/">HOME</Nav.Link>              

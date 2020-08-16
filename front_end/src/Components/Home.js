@@ -14,6 +14,8 @@ import AmeriCorps from "../resources/AmeriCorps.jpg";
 import Plane from "../resources/Plane.jpg";
 import Robot from "../resources/robot.jpg";
 import beluga from "../resources/beluga.png";
+import AmeriCorps2 from "../resources/americorps2.png"
+
 
 import '../index.css';
 
@@ -29,14 +31,19 @@ const HomeStyles = styled.div `
     .bg{
         display:grid;
         grid-template-columns:  45% 55%;
-        margin: auto;
+        margin: 60px auto auto auto;
         justify-items:center;
         justify-content:center;
     
     }
 
     .welcome {
-        margin-top:35vh;
+        margin-top:25vh;
+        grid-column: 1 / span 1;
+    }
+    .me {
+        grid-column: 2 / spawn 1;
+        height:90%;
     }
 
     .welcome h5{
@@ -47,20 +54,28 @@ const HomeStyles = styled.div `
         margin-left:4vw;
         
     }
-    .me{
-        grid-column: 2 / span 1;
-            align-self:center;
-         
-            height: 650px;
-            width: 650px;
-  
-            border: 2px solid lightgrey;
-            display: inline-block;
 
-            background-position: center;
-         
+    .readMore{
+        position:absolute;
+        text-align:center;
+        color:rgb( 140, 194, 255);
+        
+        width: 150px;
+        top:86vh;
+        left: 50%;
+        margin-left: -75px;
+
+     
+        &:hover {
+            color:rgb( 140, 194, 255);
+            cursor:pointer
+          }
+    
+        p{
+            font-size:1.3em;
+            color:rgb( 140, 194, 255);
+        }
     }
- 
 
 
 .secondPage {
@@ -85,25 +100,6 @@ a{
     color: #457BD9;
 }
 
-.readMore{
-    position:absolute;
-    text-align:center;
-    
-    color:rgb( 140, 194, 255);
-    top:86vh;
-    left:50vw;
-    margin:auto;
- 
-    &:hover {
-        color:rgb( 140, 194, 255);
-        cursor:pointer
-      }
-
-    p{
-        font-size:1.3em;
-        color:rgb( 140, 194, 255);
-    }
-}
 .card-img-top {
     width: 100%;
     height: 15vw;
@@ -142,11 +138,6 @@ a{
     }
 }
 
-@media screen and (max-width: 1200px) {
-    .welcome h1{
-        font-size: 2.25em;
-    }
-}
 
 @media screen and (max-width: 1200px) {
     .secondPage {
@@ -168,6 +159,9 @@ a{
     .card-img-top {
         width: 100%;
         height: 30vw;
+    }
+    .welcome h1{
+        font-size: 2.25em;
     }
 }
 
@@ -218,6 +212,7 @@ render(){
                      Check out my  <a href = "/projects">engineering projects</a>, <a href = "/art">artwork</a>  and some <a href = "/fun">fun animations</a>! 
                     </h5>
             </div> 
+            <img className = "me"  src = {AmeriCorps2}/>
         
             
         </div>
