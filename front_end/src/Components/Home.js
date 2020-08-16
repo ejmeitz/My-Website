@@ -13,7 +13,7 @@ import StPaul from "../resources/StPaul.jpg";
 import AmeriCorps from "../resources/AmeriCorps.jpg";
 import Plane from "../resources/Plane.jpg";
 import Robot from "../resources/robot.jpg";
-import beluga from "../resources/beluga169.png";
+import beluga from "../resources/beluga.png";
 
 import '../index.css';
 
@@ -24,7 +24,6 @@ const HomeStyles = styled.div `
     padding:0px;
     box-sizing:border-box;
     font-family: 'Josefin Sans', sans-serif;
-   
 }
 
     .bg{

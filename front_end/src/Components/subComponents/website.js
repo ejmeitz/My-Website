@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import codePic from "../../resources/codePic.PNG";
 import {Carousel, Card, Col, Row, Container} from 'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -81,7 +80,7 @@ export default class website extends Component {
                                         <Carousel.Item>
                                             <img
                                             className="d-block w-100"
-                                            src= {codePic}
+                                            src= ""
                                             alt="First slide"
                                             />
                                             <Carousel.Caption style = {{textShadow: "2px 2px black"}}>
@@ -91,7 +90,7 @@ export default class website extends Component {
                                         <Carousel.Item>
                                             <img
                                             className="d-block w-100"
-                                            src={codePic}
+                                            src=""
                                             alt="Second slide"
                                             />
                                             <Carousel.Caption>
@@ -101,7 +100,7 @@ export default class website extends Component {
                                         <Carousel.Item>
                                             <img
                                             className="d-block w-100"
-                                            src={codePic}
+                                            src=""
                                             alt="Third slide"
                                             />
                                             <Carousel.Caption>
