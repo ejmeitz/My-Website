@@ -24,15 +24,11 @@ const NavStyles = styled.div `
     height:50px;
     
     top: 0;
-    transition: .5s ease;
-    -webkit-transform: translate(0,0);
+    transition: top 0.5s;
+
     z-index:10;
   }
 
-  .navbar--hidden {
-    -webkit-transform: translate(0,-50px);
-    transition: .5s ease;
-  }
 
    .navbar-nav .nav-link {
     color: white;
@@ -160,8 +156,7 @@ export default class NavHome extends Component{
         super(props);
     
         this.state = {
-          prevScrollpos: window.pageYOffset,
-          visible: true
+          prevScrollPos: window.pageYOffset,
         };
         this.handleScroll = this.handleScroll.bind(this);
       }
@@ -179,23 +174,34 @@ export default class NavHome extends Component{
     
       // Hide or show the menu.
       handleScroll = () => {
-        const { prevScrollpos } = this.state;
-    
-        const currentScrollPos = window.pageYOffset;
-        const visible = prevScrollpos > currentScrollPos;
-    
+        const nav = document.getElementById('navbar');
+
+        let currentScrollPos = window.pageYOffset;
+        if(currentScrollPos < 0){
+          currentScrollPos = 0;
+        }
+
+        if (this.state.prevScrollPos > currentScrollPos) {
+         nav.style.top = "0";
+        } else {
+         nav.style.top = "-50px";
+        }
+        console.log("Current: " + currentScrollPos);
+        console.log("Prev: " + this.state.prevScrollPos);
+
         this.setState({
-          prevScrollpos: currentScrollPos,
-          visible
-        });
-      };
+          prevScrollPos : currentScrollPos
+          });
+
+      }
+
     
     
     
     render(){
     return (
             <NavStyles>
-                <Navbar fixed = "top" variant = "dark" expand = "lg" className={"navbar", {"navbar--hidden": !this.state.visible}}>
+                <Navbar id = "navbar" fixed = "top" variant = "dark" expand = "lg">
                 <Navbar.Brand href = "/"> 
                     Ethan Meitz
                 </Navbar.Brand> 

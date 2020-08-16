@@ -206,13 +206,12 @@ render(){
         <div className="bg">
             
             <div className = "welcome">
-            
                     <h5>
                      Hi, I'm <strong>Ethan Meitz</strong>, and I'm a senior at Washington University in St. Louis. I am majoring in <i>mechanical engineering</i> and minoring in <i>computer science</i> and love creating art. 
                      Check out my  <a href = "/projects">engineering projects</a>, <a href = "/art">artwork</a>  and some <a href = "/fun">fun animations</a>! 
                     </h5>
             </div> 
-            <img className = "me"  src = {AmeriCorps2}/>
+            <img className = "me"  src = {AmeriCorps2} alt = "Operating a saw at a Habitat for Humanity construction site"/>
         
             
         </div>
