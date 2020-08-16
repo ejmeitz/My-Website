@@ -130,7 +130,9 @@ const NavStyles = styled.div `
 
 }
 
-@supports (-webkit-touch-callout: none) {
+
+
+@media screen and (max-device-width: 1000px){
   .navbar{
     background-color:rgb( 140, 194, 255);
     position:fixed;
@@ -141,10 +143,8 @@ const NavStyles = styled.div `
     top: 0;
     z-index:10;
   }
-  .navbar--hidden {
-    top: 0;
-  }
 }
+
 
 
 `;
@@ -174,18 +174,21 @@ export default class NavHome extends Component{
     
       // Hide or show the menu.
       handleScroll = () => {
+      if(document.documentElement.clientWidth >= 1100){
         const nav = document.getElementById('navbar');
 
         let currentScrollPos = window.pageYOffset;
         if(currentScrollPos < 0){
           currentScrollPos = 0;
         }
-
-        if (this.state.prevScrollPos > currentScrollPos) {
-         nav.style.top = "0";
+        let temp = this.state.prevScrollPos - currentScrollPos;
+        temp = Math.abs(temp);
+        if (this.state.prevScrollPos > currentScrollPos && temp < 50) {
+         nav.style.top = "0px";
         } else {
          nav.style.top = "-50px";
         }
+
         console.log("Current: " + currentScrollPos);
         console.log("Prev: " + this.state.prevScrollPos);
 
@@ -195,6 +198,8 @@ export default class NavHome extends Component{
 
       }
 
+      }
+        
     
     
     

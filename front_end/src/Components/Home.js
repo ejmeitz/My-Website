@@ -201,10 +201,8 @@ render(){
             <p>Read More</p>
             <FontAwesomeIcon  icon = {faChevronDown} size = "4x" />
         </Link>
-        
-
         <div className="bg">
-            
+        
             <div className = "welcome">
                     <h5>
                      Hi, I'm <strong>Ethan Meitz</strong>, and I'm a senior at Washington University in St. Louis. I am majoring in <i>mechanical engineering</i> and minoring in <i>computer science</i> and love creating art. 
