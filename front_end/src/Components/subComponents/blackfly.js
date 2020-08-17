@@ -14,6 +14,7 @@ const BlackflyStyles = styled.div `
 }
 .container-fluid{
     margin: 70px auto 20px auto;
+    padding: 0;
 }
 
 .grid{
@@ -49,27 +50,94 @@ img{
 }
 
 p{
-    font-size:1.5em;
+    font-size:1.33vw;
 }
+.projectName{
+    font-size:2vw;
+}
+
 
 
 @media screen and (max-width: 1100px) {
     p{
-        font-size:1.05em;
+        font-size:1.28vw;
+    }
+    .carousel-caption{
+        font-size: 0.8rem;
     }
 }
-@media screen and (max-width: 800px) {
+
+
+@media screen and (max-width: 800px){
+    .grid{
+        display:grid;
+        grid-template-columns:  1fr;
+        grid-auto-flow:row;
+        grid-gap:10px;
+
+        margin:auto;
+
+        justify-items:center;
+        justify-content:center;
+    }
+
+    .carousel{
+        margin:auto;
+        height:60vh;
+        grid-column: 1 / span 1;
+    }
+    
+    .card-body{
+        grid-column: 1 / span 1;
+        margin:auto;
+        box-shadow: 2px 2px 2px 1px grey;
+        border-radius:5px;
+        height:100%;
+        width : calc(60vh * 0.8)
+    }
     p{
-        font-size:0.9em;
+        font-size:1.5vw;
     }
-    .projectName{
-        font-size:1.5em;
+    img{
+        margin:auto;
+        height:60vh;
+        max-width:80vw;
+        object-fit:scale-down;
     }
+
 }
+
 
 `;
 
 export default class Blackfly extends Component {
+
+   
+
+    // constructor(props) {
+    //     super(props);
+    
+    //     this.state = {
+    //       currentWidth : 0,
+    //     };
+    //     this.updateWidth = this.updateWidth.bind(this);
+    //   }
+
+    //   componentDidMount() {
+    //     window.addEventListener("resize", this.updateWidth);
+    //   }
+    
+    //   // Remove the event listener when the component is unmounted.
+    //   componentWillUnmount() {
+    //     window.removeEventListener("resize", this.updateWidth);
+    //   }
+
+    //    updateWidth = () => {
+    //        if(window.innerWidth < 800){
+    //             let newWidth = document.getElementById("carousel").offsetWidth;
+    //             document.getElementById("cardBody").style.width = newWidth;
+    //        }
+    //   }
 
     render(){
         return (
@@ -78,7 +146,7 @@ export default class Blackfly extends Component {
             <Container fluid>
                     <Card>
                         <div className = "grid">
-                                    <Carousel>
+                                    <Carousel id = "carousel" onresize = {this.updateWidth}>
                                         <Carousel.Item>
                                             <img
                                             className="d-block"
@@ -110,8 +178,8 @@ export default class Blackfly extends Component {
                                             </Carousel.Caption>
                                         </Carousel.Item>
                                     </Carousel>                     
-                                <Card.Body>
-                                    <Card.Title className = "projectName" style={{margin:"10px", fontSize:"2em"}}><strong>Blackfly Polarization Camera UI:</strong></Card.Title>
+                                <Card.Body id = "cardBody">
+                                    <Card.Title className = "projectName" style={{margin:"10px 0px"}}><strong>Blackfly Polarization Camera UI:</strong></Card.Title>
                                     <div className = "card-text"> {/*don't use Card.Text cause its harder to customize*/}
 
                                             <p>
