@@ -21,8 +21,7 @@ const ArtStyles = styled.div `
         background-color:rgba( 140, 194, 255,0.6);
 
         justify-content:center;
-        align-content:center;
-        
+        align-content:center;    
    }
 
 

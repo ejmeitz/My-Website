@@ -7,27 +7,48 @@ import {faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const StrainStyles = styled.div `
 
+*{
+    font-family: 'Josefin Sans', sans-serif;
+
+}
 .container-fluid{
     margin: 70px auto 20px auto;
 }
+
+p{
+    font-size:1.5em;
+}
+
 .card {
     border:none;
     width:95%;
 }
+
 .card-text{
     box-shadow: 2px 2px 2px grey;
     background-color:#F8F8F8;
     border-radius:5px;
 }
 
-h5{
-    font-size:1.25em;
-    padding:10px;
-}
-
 .carousel{
     box-shadow: 2px 2px 2px grey;
 }
+
+
+@media screen and (max-width: 1100px) {
+    p{
+        font-size:1.05em;
+    }
+}
+@media screen and (max-width: 800px) {
+    p{
+        font-size:0.9em;
+    }
+    .projectName{
+        font-size:1.5em;
+    }
+}
+
 
 `;
 
@@ -79,11 +100,10 @@ export default class Strain extends Component {
                                     <Card.Title className = "projectName" style={{margin:"10px", fontSize:"2em"}}><strong>Strain Tracking with MATLAB Image Processing</strong></Card.Title>
                                     <div className = "card-text"> 
 
-                                            <h5>
-                                                WIP
-                                            </h5>
-                                                 
-                                        <h5>
+                                        <p>
+                                            WIP
+                                        </p>        
+                                        <p>
                                             Languages: C++ &nbsp;&nbsp; <br/>
                                             Code: <a 
                                                     href = "https://github.com/ejmeitz/StrainApproximationandVisualization"
@@ -92,14 +112,12 @@ export default class Strain extends Component {
                                                     rel="noopener noreferrer">
                                                     <FontAwesomeIcon className = "fa-lg" icon = {faGithub}/>
                                                     </a>
-                                        </h5>
-                                            
-                                   
-                                        <h5>
+                                        </p>
+                                        <p>
                                             <Card.Link href = "https://lakelab.wustl.edu/resources/" target = "_blank" rel="noopener noreferrer">
                                             The Lake Lab    
                                             </Card.Link>
-                                        </h5>
+                                        </p>
                                     </div>
                                 </Card.Body>
                         </Col>

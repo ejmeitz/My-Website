@@ -12,7 +12,6 @@ import exp from "../../resources/ExpVsTheory.PNG";
 
 const ProjStyles = styled.div `
 
-
 *{
     font-family: 'Josefin Sans', sans-serif;
 
@@ -21,7 +20,7 @@ const ProjStyles = styled.div `
     margin: 70px auto 20px auto;
 }
 
-h5{
+p{
     font-size:1.5em;
 }
 
@@ -36,37 +35,29 @@ h5{
     border-radius:5px;
 }
 
-h5{
+p{
     font-size:1.25em;
     padding:10px;
 }
 
 .carousel{
     box-shadow: 2px 2px 2px grey;
-    aspectRatio: 10/8;
 }
 
-li{
-    background-color:black;
-}
-.carousel-indicators {
-    bottom:-50px;
-  }
 
 @media screen and (max-width: 1100px) {
-    h5{
+    p{
         font-size:1.05em;
     }
 }
 @media screen and (max-width: 800px) {
-    h5{
+    p{
         font-size:0.9em;
     }
     .projectName{
         font-size:1.5em;
     }
 }
-
 
 `;
 
@@ -126,7 +117,7 @@ export default class Project3 extends Component {
                                     <Card.Title className = "projectName" style={{margin:"10px", fontSize:"2em"}}><strong> Cooking a Hot Dog according to a Finite Differencing Model</strong></Card.Title>
                                     <div className = "card-text"> {/*don't use Card.Text cause its harder to customize*/}
 
-                                            <h5>
+                                            <p>
                                                 During the Spring 2020 semester I took Heat Transfer where I was assinged a semester long project to cook a hot dog using what we learned in class.
                                                 Throughout the year, my group and I worked to developed a radial finite differencing model of heat transfer in a hot dog. The end goal was to 
                                                 use our model and cook a hotdog. Our early model assumed that the temperature gradients in the hotdog were negligable at a given time which allowed us to apply the lumped capacitence model.
@@ -136,9 +127,9 @@ export default class Project3 extends Component {
                                                 the hot dog would take 353 seconds to cook, and the real world hot dog took 402 seconds to cook under the same conditions as our model. While the real hot dog took slightly
                                                 longer to cook conditions in the test did not exactly match the model. Despite that, when the data was plotted the only difference was the initial temperature of the hot dog and
                                                 the temperature of the hot dog followed the same trend as our model.  
-                                            </h5>
+                                            </p>
                                                     
-                                            <h5>
+                                            <p>
                                                 Languages: MATLAB &nbsp;&nbsp; <br/>
                                                 Code:   <a 
                                                             href = "https://github.com/ejmeitz/Radial-Finite-Differencing-Model--Cooking-a-HotDog"
@@ -147,7 +138,7 @@ export default class Project3 extends Component {
                                                             rel="noopener noreferrer">
                                                             <FontAwesomeIcon icon = {faGithub} size = "1x" />
                                                         </a>
-                                            </h5>
+                                            </p>
                                     </div>
                                 </Card.Body>
                         </Col>

@@ -17,7 +17,7 @@ const Proj2Styles = styled.div `
     margin: 70px auto 20px auto;
 }
 
-h5{
+p{
     font-size:1.5em;
 }
 
@@ -32,29 +32,30 @@ h5{
     border-radius:5px;
 }
 
-h5{
+p{
     font-size:1.25em;
     padding:10px;
 }
 
 .carousel{
     box-shadow: 2px 2px 2px grey;
-    aspectRatio: 10/8;
 }
 
+
 @media screen and (max-width: 1100px) {
-    h5{
+    p{
         font-size:1.05em;
     }
 }
 @media screen and (max-width: 800px) {
-    h5{
+    p{
         font-size:0.9em;
     }
     .projectName{
         font-size:1.5em;
     }
 }
+
 
 
 `;
@@ -115,24 +116,23 @@ export default class website extends Component {
                                 <Card.Body style = {{height:"70vh"}}>
                                     <Card.Title className = "projectName" style={{margin:"10px", fontSize:"2em"}}><strong>Personal Website</strong></Card.Title>
                                     <div className = "card-text"> {/*don't use Card.Text cause its harder to customize*/}
-
-                                        <h5>
+                                        <p>
                                             This website is a personal project which unites my love of art and coding. To create the website I deployed a MERN stack to heroku.
                                             Specifically, my website employs mongoDB, Express, React, NodeJS and several smaller packages such as axios and react-boostrap to run. Each of these components
                                             plays a unique role. For example, mongoDB stores data like the time at which someone views my website and React allows me to design a beautiful front end from HTML and
                                             custom objects to streamline development.
-                                        </h5> 
+                                        </p> 
                                                  
-                                        <h5>
+                                        <p>
                                             Languages & Packages: JavaScript, CSS, HTML, MongoDB, ExpressJS, ReactJS, NodeJS, Bootstrap, and Styled Components &nbsp;&nbsp; <br/>
                                             Code: &nbsp;&nbsp; <a 
-                                                                href = "https://github.com/ejmeitz/GUI"
+                                                                href = "https://github.com/ejmeitz/My-Website"
                                                                 className = "gitHub social" 
                                                                 target = "_blank"
                                                                 rel="noopener noreferrer">
                                                                 <FontAwesomeIcon icon = {faGithub} size = "2x" />
                                                                 </a>
-                                        </h5>
+                                        </p>
                                     </div>
                                 </Card.Body>
                         </Col>

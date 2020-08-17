@@ -16,38 +16,50 @@ const BlackflyStyles = styled.div `
     margin: 70px auto 20px auto;
 }
 
-h5{
-    font-size:1.5em;
+.grid{
+    width:95%;
+    display:grid;
+    grid-template-columns:  40% 60%;
+
+    justify-items:center;
+    justify-content:center;
+}
+.carousel{
+    margin:auto;
+    grid-column: 1 / span 1;
+}
+
+
+.card-body{
+    grid-column: 2 / span 1;
+    margin:auto;
+    box-shadow: 2px 2px 2px 2px grey;
+    border-radius:5px;
+    height:40vw;
 }
 
 .card {
     border:none;
-    width:95%;
 }
 
-.card-text{
-    box-shadow: 2px 2px 2px grey;
-    background-color:#F8F8F8;
-    border-radius:5px;
+img{
+    height:40vw;
+    margin:auto;
+    object-fit:scale-down;
 }
 
-h5{
-    font-size:1.25em;
-    padding:10px;
-}
-
-.carousel{
-    box-shadow: 2px 2px 2px grey;
+p{
+    font-size:1.5em;
 }
 
 
 @media screen and (max-width: 1100px) {
-    h5{
+    p{
         font-size:1.05em;
     }
 }
 @media screen and (max-width: 800px) {
-    h5{
+    p{
         font-size:0.9em;
     }
     .projectName{
@@ -65,13 +77,11 @@ export default class Blackfly extends Component {
         <BlackflyStyles>
             <Container fluid>
                     <Card>
-                        <Row >
-                        <Col xs={4} style = {{margin:"auto"}}>
+                        <div className = "grid">
                                     <Carousel>
-
                                         <Carousel.Item>
                                             <img
-                                            className="d-block w-100"
+                                            className="d-block"
                                             src= {blackfly}
                                             alt="First slide"
                                             />
@@ -81,7 +91,7 @@ export default class Blackfly extends Component {
                                         </Carousel.Item>
                                         <Carousel.Item>
                                             <img
-                                            className="d-block w-100"
+                                            className="d-block"
                                             src={blackfly}
                                             alt="Second slide"
                                             />
@@ -91,7 +101,7 @@ export default class Blackfly extends Component {
                                         </Carousel.Item>
                                         <Carousel.Item>
                                             <img
-                                            className="d-block w-100"
+                                            className="d-block"
                                             src={blackfly}
                                             alt="Third slide"
                                             />
@@ -99,15 +109,12 @@ export default class Blackfly extends Component {
                                             
                                             </Carousel.Caption>
                                         </Carousel.Item>
-                                    </Carousel>
-                        </Col>
-                        <Col style = {{margin:"auto"}}>
-                       
-                                <Card.Body style = {{height:"70vh"}}>
-                                    <Card.Title className = "projectName" style={{margin:"10px", fontSize:"2em"}}><strong>Blackfly Polarization Camera UI</strong></Card.Title>
+                                    </Carousel>                     
+                                <Card.Body>
+                                    <Card.Title className = "projectName" style={{margin:"10px", fontSize:"2em"}}><strong>Blackfly Polarization Camera UI:</strong></Card.Title>
                                     <div className = "card-text"> {/*don't use Card.Text cause its harder to customize*/}
 
-                                            <h5>
+                                            <p>
                                                    While working as an undergraduate research assistant, I 
                                                     developed a user interface (UI) for use in reflectance and transmission mode quantitative polarized light imaging (QPLI). QPLI is an imaging technique that uses polarized light
                                                     to image birefringent materials. Birefringent materials, such as certain human tissues, reflect and transmit polarized light in a predictable manner. Therefore, by exposing
@@ -116,9 +123,9 @@ export default class Blackfly extends Component {
                                                     filtered images in real time. The UI and camera will be used to study stress and failure in the ulnar collateral ligament (UCL) which 
                                                     when torn requires Tommy John surgery to repair. By studying the failure mechanism with QPLI we may be able to prevent the need for Tommy 
                                                     John surgery.
-                                            </h5>
+                                            </p>
                                                  
-                                        <h5>
+                                        <p>
                                             Languages: C++ &nbsp;&nbsp; <br/>
                                             Code: <a 
                                                     href = "https://github.com/ejmeitz/GUI"
@@ -127,18 +134,17 @@ export default class Blackfly extends Component {
                                                     rel="noopener noreferrer">
                                                     <FontAwesomeIcon className = "fa-lg" icon = {faGithub}/>
                                                     </a>
-                                        </h5>
+                                        </p>
                                             
                                    
-                                        <h5>
+                                        <p>
                                             <Card.Link href = "https://lakelab.wustl.edu/resources/" target = "_blank" rel="noopener noreferrer">
                                             The Lake Lab    
                                             </Card.Link>
-                                        </h5>
+                                        </p>
                                     </div>
                                 </Card.Body>
-                        </Col>
-                        </Row>
+                    </div>
                     </Card>
                 </Container>
                 </BlackflyStyles>

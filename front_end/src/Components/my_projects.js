@@ -28,8 +28,7 @@ const ProjectStyles = styled.div `
         margin: 60px auto 2vh auto;
         grid-auto-flow:rows;
 
-        
-        width:85vw;
+        width:80vw;
 
         justify-items:center;
         justify-content:center;

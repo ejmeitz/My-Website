@@ -32,6 +32,7 @@ const HomeStyles = styled.div `
         display:grid;
         grid-template-columns:  45% 55%;
         margin: 60px auto auto auto;
+        height: calc(100vh - 50px) ;
         justify-items:center;
         justify-content:center;
     
