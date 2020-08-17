@@ -22,6 +22,7 @@ h5{
 
 .card {
     border:none;
+    width:95%;
 }
 
 .card-text{
@@ -37,7 +38,6 @@ h5{
 
 .carousel{
     box-shadow: 2px 2px 2px grey;
-    aspectRatio: 10/8;
 }
 
 

@@ -27,6 +27,7 @@ h5{
 
 .card {
     border:none;
+    width:95%;
 }
 
 .card-text{

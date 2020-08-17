@@ -151,8 +151,9 @@ export default class my_projects extends Component {
                         <Card.Body>                
                                         <p>While working as an research assistant I developed a user interface (UI) to control a FLIR polarized light sensor.
                                             The UI was created using Qt and the code to manipulate the camera was written with C++ to minimize overhead. 
-                                            The UI was ultimately successful and enabled the lab to perform quantative polarized light imaging with greater precison and ease.
-                                            For more detail click the title or check out the source code by clicking the GitHub logo.
+                                            The UI was ultimately successful and enabled the lab to perform reflectance mode quantative polarized light imaging with
+                                             greater precison and ease than previous versions of the software. 
+                                             For more detail click the title or check out the source code by clicking the GitHub logo.
                                         </p>   
                                         <br/>
                                         <p className = "langs"> 
