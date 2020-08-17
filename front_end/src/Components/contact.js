@@ -10,7 +10,6 @@ const ContactStyles = styled.div `
 
 *{
 
-    
 }
 .container{
     margin:60px auto 1vh auto;
@@ -23,8 +22,6 @@ const ContactStyles = styled.div `
     margin:1vh auto 1vh auto;
     width: 60vw;
 }
-
-
 
 `;
 
@@ -146,8 +143,7 @@ export default class Contact extends Component {
             document.body.style.cursor = 'default';
             console.log(res.data);
         })
-        .catch((err) => {
-            
+        .catch((err) => {           
             this.setState({
                 showFailModal: true,
                 disabled:false,
@@ -156,6 +152,7 @@ export default class Contact extends Component {
             this.hideSpinner();
             document.body.style.cursor = 'default';
             console.log('Could not send info: ' + err)
+
         });
 
 
@@ -163,7 +160,7 @@ export default class Contact extends Component {
             this.setState({
                 disabled:false
                 });
-        }, 6000) //prevent spamming submit button
+        }, 4000) //prevent spamming submit button
 
       }
 

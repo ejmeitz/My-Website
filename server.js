@@ -14,12 +14,14 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true})); 
 app.use(bodyParser.json());
+app.set('trust proxy', 1); //for rate limiting
+
 
 let URI;
 if(process.env.NODE_ENV === 'production'){
     URI = process.env.PRODUCTION_ATLAS_URI2;
 } else {
-    URI = process.env.ATLAS_URI2
+    URI = process.env.ATLAS_URI2 //database for testing
 }
 
 mongoose.connect( URI, {

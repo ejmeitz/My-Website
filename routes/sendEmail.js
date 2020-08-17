@@ -1,6 +1,13 @@
 const router = require('express').Router();
 let Email = require('../models/sendEmail.model');
 const nodeoutlook = require('nodejs-nodemailer-outlook')
+const rateLimit = require("express-rate-limit");
+ 
+
+const apiLimiter = rateLimit({
+    windowMs: 45 *  1000, // max of 2 req per 30 seconds
+    max: 3,   
+  });
 
 //use alternate email to send to my main email
 function nodeOutlookEmail(first, last, emp, textVal){
@@ -8,7 +15,7 @@ function nodeOutlookEmail(first, last, emp, textVal){
     nodeoutlook.sendEmail({
         auth: {
             user: "meitzwebsite@outlook.com",
-            pass: process.env.PASS_OUTLOOK
+            pass: process.env.PASS_OUTLOOK //a random email I dont care about the integrity of
         },
         from: 'meitzwebsite@outlook.com',
         to: 'ejmeitz1@gmail.com',
@@ -24,12 +31,12 @@ function nodeOutlookEmail(first, last, emp, textVal){
    
 }
 
-router.get('/', (request,response) => {
+router.get('/', apiLimiter, (request,response) => {
      response.json("On post page");
 });
 
 
-router.post('/', (request,response) => {
+router.post('/', apiLimiter, (request,response) => {
  
     //parse request info
     let firstName = request.body.firstName;
@@ -42,7 +49,7 @@ router.post('/', (request,response) => {
     let month = today.getMonth() + 1; //january is 0
     let day = today.getDate();
 
-    let parsedDate = day + '-' + month + '-' + year;
+    let parsedDate = month + '-' + day + '-' + year;
     let viewerIP = request.headers['x-forwarded-for'];
     //send email
     nodeOutlookEmail (firstName,lastName,employer,textBody);
