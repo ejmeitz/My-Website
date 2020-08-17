@@ -34,7 +34,7 @@ const BlackflyStyles = styled.div `
 .card-body{
     grid-column: 2 / span 1;
     margin:auto;
-    box-shadow: 2px 2px 2px 2px grey;
+    box-shadow: 2px 2px grey;
     border-radius:5px;
     height:40vw;
 }
@@ -70,6 +70,7 @@ p{
 
 @media screen and (max-width: 800px){
     .grid{
+        width:90vw;
         display:grid;
         grid-template-columns:  1fr;
         grid-auto-flow:row;
@@ -90,13 +91,16 @@ p{
     .card-body{
         grid-column: 1 / span 1;
         margin:auto;
-        box-shadow: 2px 2px 2px 1px grey;
         border-radius:5px;
         height:100%;
-        width : calc(60vh * 0.8)
+        border:1px solid grey;
+        width : calc(60vh * 0.8);
     }
     p{
-        font-size:1.5vw;
+        font-size:0.85em;
+    }
+    .projectName{
+        font-size:1.5em;
     }
     img{
         margin:auto;
@@ -146,7 +150,7 @@ export default class Blackfly extends Component {
             <Container fluid>
                     <Card>
                         <div className = "grid">
-                                    <Carousel id = "carousel" onresize = {this.updateWidth}>
+                                    <Carousel id = "carousel">
                                         <Carousel.Item>
                                             <img
                                             className="d-block"

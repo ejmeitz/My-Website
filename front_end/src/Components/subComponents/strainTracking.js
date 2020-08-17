@@ -13,41 +13,103 @@ const StrainStyles = styled.div `
 }
 .container-fluid{
     margin: 70px auto 20px auto;
+    padding: 0;
 }
 
-p{
-    font-size:1.5em;
+.grid{
+    width:95%;
+    display:grid;
+    grid-template-columns:  40% 60%;
+
+    justify-items:center;
+    justify-content:center;
+}
+.carousel{
+    margin:auto;
+    grid-column: 1 / span 1;
+}
+
+
+.card-body{
+    grid-column: 2 / span 1;
+    margin:auto;
+    box-shadow: 2px 2px grey;
+    border-radius:5px;
+    height:40vw;
 }
 
 .card {
     border:none;
-    width:95%;
 }
 
-.card-text{
-    box-shadow: 2px 2px 2px grey;
-    background-color:#F8F8F8;
-    border-radius:5px;
+img{
+    height:40vw;
+    margin:auto;
+    object-fit:scale-down;
 }
 
-.carousel{
-    box-shadow: 2px 2px 2px grey;
+p{
+    font-size:1.33vw;
 }
+.projectName{
+    font-size:2vw;
+}
+
 
 
 @media screen and (max-width: 1100px) {
     p{
-        font-size:1.05em;
+        font-size:1.28vw;
+    }
+    .carousel-caption{
+        font-size: 0.8rem;
     }
 }
-@media screen and (max-width: 800px) {
+
+
+@media screen and (max-width: 800px){
+    .grid{
+        width:90vw;
+        display:grid;
+        grid-template-columns:  1fr;
+        grid-auto-flow:row;
+        grid-gap:10px;
+
+        margin:auto;
+
+        justify-items:center;
+        justify-content:center;
+    }
+
+    .carousel{
+        margin:auto;
+        height:60vh;
+        grid-column: 1 / span 1;
+    }
+    
+    .card-body{
+        grid-column: 1 / span 1;
+        margin:auto;
+        border-radius:5px;
+        height:100%;
+        border:1px solid grey;
+        width : calc(60vh * 0.8);
+    }
     p{
-        font-size:0.9em;
+        font-size:0.85em;
     }
     .projectName{
         font-size:1.5em;
     }
+    img{
+        margin:auto;
+        height:60vh;
+        max-width:80vw;
+        object-fit:scale-down;
+    }
+
 }
+
 
 
 `;
@@ -59,10 +121,8 @@ export default class Strain extends Component {
             <StrainStyles>
             <Container fluid>
                     <Card>
-                        <Row>
-                        <Col xs={4} style = {{margin:"auto"}}>
+                    <div className = "grid">
                                     <Carousel>
-
                                         <Carousel.Item>
                                             <img
                                             className="d-block w-100"
@@ -92,12 +152,9 @@ export default class Strain extends Component {
                                             
                                             </Carousel.Caption>
                                         </Carousel.Item>
-                                    </Carousel>
-                        </Col>
-                        <Col style = {{margin:"auto"}}>
-                       
-                                <Card.Body style = {{height:"70vh"}}>
-                                    <Card.Title className = "projectName" style={{margin:"10px", fontSize:"2em"}}><strong>Strain Tracking with MATLAB Image Processing</strong></Card.Title>
+                                    </Carousel>                     
+                                <Card.Body>
+                                    <Card.Title className = "projectName" style={{margin:"10px 0px"}}><strong>Strain Tracking with MATLAB Image Processing</strong></Card.Title>
                                     <div className = "card-text"> 
 
                                         <p>
@@ -120,8 +177,7 @@ export default class Strain extends Component {
                                         </p>
                                     </div>
                                 </Card.Body>
-                        </Col>
-                        </Row>
+                       </div>
                     </Card>
                 </Container>
             </StrainStyles>
