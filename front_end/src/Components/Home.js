@@ -180,7 +180,7 @@ a{
     }
     .card-img-top {
         width: 100%;
-        height: 40vw;
+        height: 45vw;
     }
 
 }

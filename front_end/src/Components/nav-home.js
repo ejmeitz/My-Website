@@ -189,9 +189,6 @@ export default class NavHome extends Component{
          nav.style.top = "-50px";
         }
 
-        console.log("Current: " + currentScrollPos);
-        console.log("Prev: " + this.state.prevScrollPos);
-
         this.setState({
           prevScrollPos : currentScrollPos
           });
