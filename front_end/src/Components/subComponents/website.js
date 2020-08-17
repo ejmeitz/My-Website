@@ -81,7 +81,7 @@ export default class website extends Component {
                                         <Carousel.Item>
                                             <img
                                             className="d-block w-100"
-                                            src= ""
+                                            src = "https://via.placeholder.com/540x675.png?text=Temp"
                                             alt="First slide"
                                             />
                                             <Carousel.Caption style = {{textShadow: "2px 2px black"}}>
@@ -91,7 +91,7 @@ export default class website extends Component {
                                         <Carousel.Item>
                                             <img
                                             className="d-block w-100"
-                                            src=""
+                                            src = "https://via.placeholder.com/540x675.png?text=Temp"
                                             alt="Second slide"
                                             />
                                             <Carousel.Caption>
@@ -101,7 +101,7 @@ export default class website extends Component {
                                         <Carousel.Item>
                                             <img
                                             className="d-block w-100"
-                                            src=""
+                                            src = "https://via.placeholder.com/540x675.png?text=Temp"
                                             alt="Third slide"
                                             />
                                             <Carousel.Caption>

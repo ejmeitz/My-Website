@@ -222,11 +222,11 @@ render(){
                     <Card.Body>
                         <Card.Title style={{margin:"10px"}}><strong>About Me</strong></Card.Title>
                         <Card.Text>
-                            I grew up in St. Paul Minnesota and currently attend Washington University in St. Louis. 
-                           WashU has taught me how to solve a variety problems in a focused and efficient manner. I can solve specific problems like the forces in a truss network
+                            I grew up in St. Paul, Minnesota and currently attend Washington University in St. Louis. 
+                           WashU has taught me how to solve a variety of problems in a focused and efficient manner. I can solve specific problems like the forces in a truss network
                             but can also apply myself to solve abstract, new problems. For example, this website! I began this app not knowing
                             anything about full stack development, JavaScript, CSS, HTML or the dozen other packages used to create this site. I find every
-                            new challenge fun and exciting, and I know the future holds plently to push my limits.
+                            new challenge fun and exciting, and I know the future holds plenty to push my limits.
                             
                         
                             Check out the <a href ="/projects">projects</a> page for school work or the <a href ="/art">art</a> and <a href ="/fun">other</a> section for fun, artsy designs and animations.
@@ -245,7 +245,7 @@ render(){
                             <li>Coding</li>
                         
                                 I'm curious about absolutely everything and love learning. 
-                                Outer space, rockets, art and robots are my primary interests, but I can find just about anything fascinating. 
+                                Outer space, rockets, art and robots are my primary interests.
 
                         </Card.Text>
                     </Card.Body>
@@ -271,7 +271,7 @@ render(){
                         <Card.Text>
                                 DBF has offered me the opportunity to learn about building and operating aircraft. Each year DBF participates
                                 in the AAIA Design/Build/Fly competition where competitors follow a set of rules to build an airplane. During the 2019-2020 school year, 
-                                the team built a banner-towing plane that could also carry "passengers". I was a member of the manufacturing and structures teams which
+                                the team built a banner-towing plane that could also carry "passengers." I was a member of the manufacturing and structures teams which
                                 are responsible for the design and construction of the aircraft.
                         </Card.Text>
                     </Card.Body>
@@ -282,7 +282,7 @@ render(){
                         <Card.Title style={{marginTop:"10px"}}><strong>IEEE</strong></Card.Title>
                         <Card.Text>
                                     The Washington University chapter of IEEE works with other clubs to design and build a product they request. For example, the Raas team at WashU asked
-                                    IEEE to build them dandiya (essentially batons) that light up synchronously. The IEEE team also participated in the IEEE robotics competition in 2020 to 
+                                    IEEE to build them dandiya for Diwali that light up synchronously. The IEEE team also participated in the IEEE robotics competition in 2020 to 
                                     produce a fully autonomous robot to pick up trash. In both of these projects, I was responsible for the CAD and manufacturing. 
                         </Card.Text>
                     </Card.Body>
@@ -302,7 +302,7 @@ render(){
                         </ListGroup>
                       
                         <Card.Text>
-                               CRASH is a service oriented improvisational drumming group that uses plastic buckets and metal objects instead of traditional drums. The group
+                               CRASH is a service-oriented improvisational drumming group that uses plastic buckets and metal objects instead of traditional drums. The group
                                 performs within the community and on campus. We open for a capella groups but mostly play with groups of kids and teach them how to play drums. 
                                 In the past, we've gone to grief clinics, after school care, and a local highschool. Everyone in CRASH enjoys playing drums and loves
                                 teaching and sharing drumming with our community.
