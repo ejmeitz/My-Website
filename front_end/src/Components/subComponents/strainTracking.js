@@ -170,9 +170,9 @@ export default class Strain extends Component {
                                         <p>
                                             After completing the Blackfly Polarization UI, I developed a program to visualize the data the UI output. The Lake Lab
                                             typically uses the UI to perform <a href = "https://www.microscopyu.com/techniques/polarized-light/polarized-light-microscopy" target = "_blank" rel="noopener noreferrer">
-                                            QPLI </a> during mechanical testing  where tissue samples are deformed under a sinusoidal load. With QPLI the lake lab can measure the alignment of the collagen fibers.
+                                            QPLI </a> during mechanical testing  where tissue samples are deformed under a sinusoidal load. With QPLI the Lake Lab can measure the alignment of the collagen fibers.
                                             To better visualize the changes in this alignment, I modified existing code which created a static heat map of the data to deform with the real tissue. With an animated
-                                            heatmap, the Lake lab can better visualize the changes that occur in a sample and the consequences of that change on the data. I used the MATLAB image processing toolbox to track
+                                            heatmap, the Lake Lab can better visualize the changes that occur in a sample and the consequences of that change on the data. I used the MATLAB image processing toolbox to track
                                             pins in the frame and therefore the tissue level strain. This technique is not as exact as a speckle pattern or a strain gauge but QPLI requires the sample to be unaltered. The end 
                                             product created a heatmap that deformed and displayed the relevant data. Check out the full videos <a href = "/examples">here</a>.
                                         </p>        
