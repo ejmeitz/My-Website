@@ -221,7 +221,7 @@ render(){
                 <Card className = "about" >
                     <Card.Img variant="top" src={StPaul} alt="Downtown St.Paul"/>
                     <Card.Body>
-                        <Card.Title style={{margin:"10px"}}><strong>About Me</strong></Card.Title>
+                        <Card.Title style={{padding:"10px 0px 5px 0px"}}><strong>About Me</strong></Card.Title>
                         <Card.Text>
                             I grew up in St. Paul, Minnesota and currently attend Washington University in St. Louis. 
                            WashU has taught me how to solve a variety of problems in a focused and efficient manner. I can solve specific problems like the forces in a truss network
@@ -233,29 +233,24 @@ render(){
                             Check out the <a href ="/projects">projects</a> page for school work or the <a href ="/art">art</a> and <a href ="/fun">other</a> section for fun, artsy designs and animations.
                         </Card.Text>
                     </Card.Body>
-                </Card>
-                <Card className = "hobbies" >
-                    
-                    <Card.Img variant="top" src={beluga}  />
+                </Card>   
+                <Card className = "club dbf" >
+                    <Card.Img variant="top" src={Plane} alt = "Design Build Fly plane just before a test flight" />
                     <Card.Body>
-                        <Card.Title style={{marginTop:"10px"}}><strong>Hobbies and Interests</strong></Card.Title>
+                        <Card.Title style={{padding:"10px 0px 5px 0px"}}><strong>Design/Build/Fly</strong></Card.Title>
                         <Card.Text>
-                        
-                            <li>Drawing</li>
-                            <li>Playing Drums</li>
-                            <li>Coding</li>
-                        
-                                I'm curious about absolutely everything and love learning. 
-                                Outer space, rockets, art and robots are my primary interests.
-
+                                DBF has offered me the opportunity to learn about building and operating aircraft. Each year DBF participates
+                                in the AAIA Design/Build/Fly competition where participants follow a set of rules to build an airplane. During the 2019-2020 school year, 
+                                the team built a banner-towing plane that could also carry "passengers." I was a member of the manufacturing and structures teams which
+                                are responsible for the design and construction of the aircraft. I created a CAD model of the tail which included the vertical and horizontal stabilizers. The plane
+                                made several successful test flights, but the competition was cancled due to COVID.
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                     
                 <Card className = "exp" >
                     <Card.Img variant="top" src={AmeriCorps} alt="Me and my coworkers at the end of the summer"/>
                     <Card.Body>
-                        <Card.Title style={{marginTop:"10px"}}><strong>AmeriCorps</strong></Card.Title>
+                        <Card.Title style={{padding:"10px 0px 5px 0px"}}><strong>AmeriCorps</strong></Card.Title>
                         <Card.Text>
                             I've always loved volunteering at Habitat for Humanity, but during the 2019 summer I had the chance to serve with AmeriCorps at Habitat for Humanity. Instead of
                             just building the homes I was now responsible for teaching and keeping the volunteers safe. Every day was a new project and I learned so much about how to lead and teach a group
@@ -263,24 +258,10 @@ render(){
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                   
-                      
-                <Card className = "club dbf" >
-                    <Card.Img variant="top" src={Plane} alt = "Design Build Fly plane just before a test flight" />
-                    <Card.Body>
-                        <Card.Title style={{marginTop:"10px"}}><strong>Design/Build/Fly</strong></Card.Title>
-                        <Card.Text>
-                                DBF has offered me the opportunity to learn about building and operating aircraft. Each year DBF participates
-                                in the AAIA Design/Build/Fly competition where competitors follow a set of rules to build an airplane. During the 2019-2020 school year, 
-                                the team built a banner-towing plane that could also carry "passengers." I was a member of the manufacturing and structures teams which
-                                are responsible for the design and construction of the aircraft.
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
                 <Card className = "club ieee" >
                     <Card.Img   variant="top" src={Robot} alt = "CAD model of the autonomous trash collector" />
                     <Card.Body>
-                        <Card.Title style={{marginTop:"10px"}}><strong>IEEE</strong></Card.Title>
+                        <Card.Title style={{padding:"10px 0px 5px 0px"}}><strong>IEEE</strong></Card.Title>
                         <Card.Text>
                                     The Washington University chapter of IEEE works with other clubs to design and build a product they request. For example, the Raas team at WashU asked
                                     IEEE to build them dandiya for Diwali that light up synchronously. The IEEE team also participated in the IEEE robotics competition in 2020 to 
@@ -292,7 +273,7 @@ render(){
                     <Card.Img className="d-block w-100" variant="top" src={Crash1} alt = "CRASH playing on the street" />
                     <Card.Body>
                         <ListGroup>
-                              <Card.Title style={{marginTop:"10px"}}><strong>CRASH</strong>  <a 
+                              <Card.Title style={{padding:"10px 0px 5px 0px"}}><strong>CRASH</strong>  <a 
                             href = "https://www.facebook.com/wustlCRASH/"
                             className = "fb social" 
                             target = "_blank"
@@ -307,6 +288,23 @@ render(){
                                 performs within the community and on campus. We open for a capella groups but mostly play with groups of kids and teach them how to play drums. 
                                 In the past, we've gone to grief clinics, after school care, and a local highschool. Everyone in CRASH enjoys playing drums and loves
                                 teaching and sharing drumming with our community.
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+                <Card className = "hobbies" >
+                    
+                    <Card.Img variant="top" src={beluga}  />
+                    <Card.Body>
+                        <Card.Title style={{padding:"10px 0px 5px 0px"}}><strong>Hobbies and Interests</strong></Card.Title>
+                        <Card.Text>
+                        
+                            <li>Drawing</li>
+                            <li>Playing Drums</li>
+                            <li>Coding</li>
+                        
+                                I'm curious about absolutely everything and love learning. 
+                                Outer space, rockets, art and robots are my primary interests.
+
                         </Card.Text>
                     </Card.Body>
                 </Card>

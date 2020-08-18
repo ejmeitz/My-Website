@@ -5,6 +5,9 @@ import {Carousel, Card, Container} from 'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faGithub } from '@fortawesome/free-brands-svg-icons';
 
+import circleImg from "../../resources/pinTracking.PNG"
+import maskImgPortrait from "../../resources/maskImgPortrait.PNG"
+
 const StrainStyles = styled.div `
 
 *{
@@ -115,16 +118,6 @@ p{
 `;
 
 export default class Strain extends Component {
-
-    constructor(props){
-        super(props);
-
-        this.state = {
-             baseURL : "http://localhost:3000/examples"
-        }
-    }
-
-
     render(){
         return (
             <>
@@ -136,16 +129,16 @@ export default class Strain extends Component {
                                         <Carousel.Item>
                                             <img
                                             className="d-block w-100"
-                                            src = "https://via.placeholder.com/540x675.png?text=Temp"
+                                            src = {circleImg}
                                             alt="First slide"
                                             />
                                             <Carousel.Caption style = {{textShadow: "2px 2px black"}}>
                                             </Carousel.Caption>
                                         </Carousel.Item>
                                         <Carousel.Item>
-                                            <img
+                                            <img 
                                             className="d-block w-100"
-                                               src = "https://via.placeholder.com/540x675.png?text=Temp"
+                                               src = {maskImgPortrait}
                                             alt="Second slide"
                                             />
                                             <Carousel.Caption>
@@ -174,7 +167,8 @@ export default class Strain extends Component {
                                             To better visualize the changes in this alignment, I modified existing code which created a static heat map of the data to deform with the real tissue. With an animated
                                             heatmap, the Lake Lab can better visualize the changes that occur in a sample and the consequences of that change on the data. I used the MATLAB image processing toolbox to track
                                             pins in the frame and therefore the tissue level strain. This technique is not as exact as a speckle pattern or a strain gauge but QPLI requires the sample to be unaltered. The end 
-                                            product created a heatmap that deformed and displayed the relevant data. Check out the full videos <a href = "/examples">here</a>.
+                                            product created a heatmap that deformed and displayed the relevant data. Check out the full videos <a href = "/examples"  target = "_blank"
+                                                    rel="noopener noreferrer">here</a>.
                                         </p>        
                                         <p>
                                             Languages: MATLAB &nbsp;&nbsp; <br/>
@@ -185,7 +179,8 @@ export default class Strain extends Component {
                                                     rel="noopener noreferrer">
                                                     <FontAwesomeIcon className = "fa-lg" icon = {faGithub}/>
                                                     </a> <br/>
-                                            <a href = "/examples" >Videos!</a>
+                                            <a href = "/examples"  target = "_blank"
+                                                    rel="noopener noreferrer" >Videos!</a>
                                         </p>
                                         <p>
                                             <Card.Link href = "https://lakelab.wustl.edu/resources/" target = "_blank" rel="noopener noreferrer">
