@@ -42,6 +42,8 @@ const BlackflyStyles = styled.div `
 .card {
     border:none;
 }
+.carousel-caption{
+}
 
 img{
     height:40vw;
@@ -93,6 +95,7 @@ p{
         margin:auto;
         border-radius:5px;
         height:100%;
+        max-width:80vw;
         border:1px solid grey;
         width : calc(60vh * 0.8);
     }
@@ -106,6 +109,50 @@ p{
         margin:auto;
         height:60vh;
         max-width:80vw;
+        object-fit:scale-down;
+    }
+
+}
+
+@media screen and (max-width: 512px){
+    .grid{
+        width:90vw;
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-auto-flow:row;
+        grid-gap:10px;
+
+        margin:auto;
+
+        justify-items:center;
+        justify-content:center;
+    }
+
+    .carousel{
+        margin:auto;
+        height:60vh;
+        grid-column: 1 / span 1;
+    }
+    
+    .card-body{
+        grid-column: 1 / span 1;
+        margin:auto;
+        border-radius:5px;
+        height:100%;
+        max-width:80vw;
+        border:1px solid grey;
+        width : calc(60vh * 0.8);
+    }
+    p{
+        font-size:0.85em;
+    }
+    .projectName{
+        font-size:1.5em;
+    }
+    img{
+        margin:auto;
+        max-width:80vw;
+        height:auto;
         object-fit:scale-down;
     }
 

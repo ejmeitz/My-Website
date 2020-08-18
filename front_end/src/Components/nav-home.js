@@ -93,6 +93,7 @@ const NavStyles = styled.div `
 
 .navbar-nav{
   background-color:rgb( 140, 194, 255);
+  z-index:10;
 }
 .dropdown-item{
   background-color:rgb( 140, 194, 255);
