@@ -26,7 +26,7 @@ const NavStyles = styled.div `
     top: 0;
     transition: top 0.5s;
 
-    z-index:10;
+    z-index:20;
   }
 
 
@@ -69,7 +69,6 @@ const NavStyles = styled.div `
     background-color:rgb( 140, 194, 255);
 }
 
-
 .navbar-toggler{
   margin-right:20px;
   
@@ -93,7 +92,7 @@ const NavStyles = styled.div `
 
 .navbar-nav{
   background-color:rgb( 140, 194, 255);
-  z-index:10;
+  z-index:20;
 }
 .dropdown-item{
   background-color:rgb( 140, 194, 255);
@@ -120,13 +119,17 @@ const NavStyles = styled.div `
     height:50px;
     
     top: 0;
-    z-index:10;
+    z-index:20;
   }
 
   .navbar--hidden {
     top:0;
   }
-
+  .navbar-nav{
+    border:1px solid white;
+    margin:auto;
+    width:100vw;
+  }
 
 
 }
@@ -142,7 +145,7 @@ const NavStyles = styled.div `
     height:50px;
     
     top: 0;
-    z-index:10;
+    z-index:20;
   }
 }
 

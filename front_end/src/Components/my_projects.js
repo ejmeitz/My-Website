@@ -6,7 +6,6 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faGithub } from '@fortawesome/free-brands-svg-icons';
 import "../index.css";
 
-import camera from "../resources/qpli.jpeg";
 import ui from "../resources/UI.jpg";
 import mask from "../resources/maskImg.PNG";
 import codePic from "../resources/codePic.PNG";

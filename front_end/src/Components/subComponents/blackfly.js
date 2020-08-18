@@ -34,15 +34,13 @@ const BlackflyStyles = styled.div `
 .card-body{
     grid-column: 2 / span 1;
     margin:auto;
-    box-shadow: 2px 2px grey;
+    border:1px solid black;
     border-radius:5px;
     height:40vw;
 }
 
 .card {
     border:none;
-}
-.carousel-caption{
 }
 
 img{
@@ -96,7 +94,7 @@ p{
         border-radius:5px;
         height:100%;
         max-width:80vw;
-        border:1px solid grey;
+        border:1px solid black;
         width : calc(60vh * 0.8);
     }
     p{
@@ -130,7 +128,7 @@ p{
 
     .carousel{
         margin:auto;
-        height:60vh;
+        height:auto;
         grid-column: 1 / span 1;
     }
     
@@ -140,14 +138,14 @@ p{
         border-radius:5px;
         height:100%;
         max-width:80vw;
-        border:1px solid grey;
+        border:1px solid black;
         width : calc(60vh * 0.8);
     }
     p{
         font-size:0.85em;
     }
     .projectName{
-        font-size:1.5em;
+        font-size:1.1em;
     }
     img{
         margin:auto;
@@ -176,7 +174,7 @@ export default class Blackfly extends Component {
                                             <img
                                             className="d-block"
                                             src= {blackfly}
-                                            alt="First slide"
+                                            alt="QPLI camera imaging a sample in the bi-axial testing machine"
                                             />
                                             <Carousel.Caption style = {{textShadow: "2px 2px black"}}>
                                                 QPLI camera imaging a sample in the bi-axial testing machine
@@ -189,7 +187,7 @@ export default class Blackfly extends Component {
                                             alt="Second slide"
                                             />
                                             <Carousel.Caption>
-                                            
+
                                             </Carousel.Caption>
                                         </Carousel.Item>
                                         <Carousel.Item>
@@ -204,7 +202,7 @@ export default class Blackfly extends Component {
                                         </Carousel.Item>
                                     </Carousel>                     
                                 <Card.Body id = "cardBody">
-                                    <Card.Title className = "projectName" style={{margin:"10px 0px"}}><strong>Blackfly Polarization Camera UI:</strong></Card.Title>
+                                    <Card.Title className = "projectName" style={{margin:"10px 0px"}}><strong>Blackfly Polarization Camera UI</strong></Card.Title>
                                     <div className = "card-text"> 
 
                                             <p>
