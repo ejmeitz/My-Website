@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import blackfly from "../../resources/qpli.jpeg";
-import {Carousel, Card, Container, Row, Col} from 'react-bootstrap';
+import {Carousel, Card, Container} from 'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faGithub } from '@fortawesome/free-brands-svg-icons';
 import styled from 'styled-components';
@@ -116,32 +116,6 @@ p{
 
 export default class Blackfly extends Component {
 
-   
-
-    // constructor(props) {
-    //     super(props);
-    
-    //     this.state = {
-    //       currentWidth : 0,
-    //     };
-    //     this.updateWidth = this.updateWidth.bind(this);
-    //   }
-
-    //   componentDidMount() {
-    //     window.addEventListener("resize", this.updateWidth);
-    //   }
-    
-    //   // Remove the event listener when the component is unmounted.
-    //   componentWillUnmount() {
-    //     window.removeEventListener("resize", this.updateWidth);
-    //   }
-
-    //    updateWidth = () => {
-    //        if(window.innerWidth < 800){
-    //             let newWidth = document.getElementById("carousel").offsetWidth;
-    //             document.getElementById("cardBody").style.width = newWidth;
-    //        }
-    //   }
 
     render(){
         return (
@@ -184,11 +158,12 @@ export default class Blackfly extends Component {
                                     </Carousel>                     
                                 <Card.Body id = "cardBody">
                                     <Card.Title className = "projectName" style={{margin:"10px 0px"}}><strong>Blackfly Polarization Camera UI:</strong></Card.Title>
-                                    <div className = "card-text"> {/*don't use Card.Text cause its harder to customize*/}
+                                    <div className = "card-text"> 
 
                                             <p>
                                                    While working as an undergraduate research assistant, I 
-                                                    developed a user interface (UI) for use in reflectance and transmission mode quantitative polarized light imaging (QPLI). QPLI is an imaging technique that uses polarized light
+                                                    developed a user interface (UI) for use in reflectance and transmission mode quantitative polarized light imaging (<a href = "https://www.microscopyu.com/techniques/polarized-light/polarized-light-microscopy" target = "_blank" rel="noopener noreferrer">
+                                                    QPLI</a>). QPLI is an imaging technique that uses polarized light
                                                     to image birefringent materials. Birefringent materials, such as certain human tissues, reflect and transmit polarized light in a predictable manner. Therefore, by exposing
                                                     ligament samples to polarized light the alligmnet of the collagen fibers within that ligament can be determined. This information can then be used to deuce the failure mechanism of the ligament. 
                                                     The UI interfaced with a commercial camera and allowed the operator to remotely control the camera and obtain specially

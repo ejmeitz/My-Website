@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Carousel, Row, Col, Container, Card, Figure} from 'react-bootstrap';
+import {Carousel, Container, Card, Figure} from 'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faGithub } from '@fortawesome/free-brands-svg-icons';
 import styled from 'styled-components';

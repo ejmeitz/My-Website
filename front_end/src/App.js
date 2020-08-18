@@ -11,7 +11,7 @@ import Contact from './Components/contact';
 import Fun from './Components/fun';
 import Nav from './Components/nav-home.js';
 
-
+import videoExamples from './Components/subComponents/exampleVideos.js'
 import Blackfly from './Components/subComponents/blackfly.js';
 import websiteProj from './Components/subComponents/website.js';
 import hotDogProj from './Components/subComponents/hotDogProject.js';
@@ -76,6 +76,7 @@ render(){
                           <Route   path = "/projects/strain" component ={strainProj} />
                         </Route>
                         <Route  path = "/contact" component ={Contact} />
+                        <Route path = "/examples" component = {videoExamples}/>
                         <Route path = "*" component = {NotFound} status = {404} />
                       </Switch>
                   </Router> 
