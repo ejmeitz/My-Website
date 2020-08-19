@@ -15,7 +15,7 @@ const FunStyles = styled.div `
     display:grid;
     margin:60px auto 20px auto;
     width: 80%;
-    grid-template-columns: 40% 40%;
+    grid-template-columns: 50% 50%;
     grid-gap:20px;
  
     justify-items:center;
@@ -43,11 +43,10 @@ p{
     .grid{
         display:grid;
         margin: 60px auto;
-        grid-template-columns: 80%;
+        grid-template-columns: 90%;
         width: 80%;
         grid-gap:20px;
  
-        align-items:strech;
         justify-items:center;
         justify-content:center;
         grid-auto-flow:row;
@@ -56,6 +55,12 @@ p{
     .animation{
         width:500px;
         height:500px;
+        margin:auto;
+    }
+    iframe{
+        width:500px;
+        height:500px;
+        margin:auto;
     }
 
 }
@@ -65,6 +70,7 @@ p{
     {
        width:300px;
        height:300px;
+       margin:auto;
     }
 
     .grid{
@@ -80,7 +86,8 @@ p{
     }
     .animation{
         width:300px;
-        height:350px;
+        height:300px;
+        margin:auto;
     }
 
      h2{
@@ -89,7 +96,15 @@ p{
     }
 }
 
-@media screen and (max-width: 400px) {
+
+@media screen and (max-width: 750px) {
+    iframe
+    {
+        width:275px;
+        height:275px;
+       margin:auto;
+    }
+
     .grid{
         display:grid;
         width: 100%;
@@ -101,7 +116,14 @@ p{
         justify-content:center;
         grid-auto-flow:row;
     }
+    .animation{
+        width:275px;
+        height:275px;
+        margin:auto;
+    }
+
 }
+
 `;
 
 
@@ -114,7 +136,7 @@ export default class my_projects extends Component {
         <FunStyles>  
             <Container fluid>
                 <div className = "grid">
-                    <Container className = "box">  
+                    <Container>  
                         <h2 className = "title">Bouncing Balls:</h2>
                         <div className = "animation a">
                             <iframe samesite = "None Secure"  title = "bouncing-balls" width="100%" height="100%" frameBorder="0" scrolling="no" id="ballFrame"  src="https://editor.p5js.org/ejmeitz/embed/Ggf2mFF9o"></iframe>

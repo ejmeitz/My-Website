@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
-import blackfly from "../../resources/qpli.jpeg";
 import {Carousel, Card, Container} from 'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faGithub } from '@fortawesome/free-brands-svg-icons';
 import styled from 'styled-components';
 
+import blackfly from "../../resources/qpli.jpeg";
+import uiImage from "../../resources/uiImg.PNG"
+import uiPortrait from "../../resources/UI_Portrait.jpg"
 
 const BlackflyStyles = styled.div `
 
@@ -183,21 +185,18 @@ export default class Blackfly extends Component {
                                         <Carousel.Item>
                                             <img
                                             className="d-block"
-                                            src={blackfly}
+                                            src={uiImage}
                                             alt="Second slide"
                                             />
-                                            <Carousel.Caption>
-
-                                            </Carousel.Caption>
                                         </Carousel.Item>
                                         <Carousel.Item>
                                             <img
                                             className="d-block"
-                                            src={blackfly}
+                                            src={uiPortrait}
                                             alt="Third slide"
                                             />
-                                            <Carousel.Caption>
-                                            
+                                            <Carousel.Caption style = {{color:"black"}}>
+                                                The user interface with all three image views open showing various polarization information
                                             </Carousel.Caption>
                                         </Carousel.Item>
                                     </Carousel>                     
@@ -211,7 +210,7 @@ export default class Blackfly extends Component {
                                                     QPLI</a>). QPLI is an imaging technique that uses polarized light
                                                     to image birefringent materials. Birefringent materials, such as certain human tissues, reflect and transmit polarized light in a predictable manner. Therefore, by exposing
                                                     ligament samples to polarized light the alligmnet of the collagen fibers within that ligament can be determined. This information can then be used to deuce the failure mechanism of the ligament. 
-                                                    The UI interfaced with a commercial camera and allowed the operator to remotely control the camera and obtain specially
+                                                    The UI interfaced with a commercial camera and allowed the operator to control the camera and obtain specially
                                                     filtered images in real time. The UI and camera will be used to study stress and failure in the ulnar collateral ligament (UCL) which 
                                                     when torn requires Tommy John surgery to repair. By studying the failure mechanism with QPLI we may be able to prevent the need for Tommy 
                                                     John surgery.
@@ -230,7 +229,7 @@ export default class Blackfly extends Component {
                                             
                                    
                                         <p>
-                                            <Card.Link href = "https://lakelab.wustl.edu/resources/" target = "_blank" rel="noopener noreferrer">
+                                            <Card.Link href = "https://lakelab.wustl.edu/" target = "_blank" rel="noopener noreferrer">
                                             The Lake Lab    
                                             </Card.Link>
                                         </p>

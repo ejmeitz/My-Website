@@ -243,7 +243,7 @@ render(){
                                 in the AAIA Design/Build/Fly competition where participants follow a set of rules to build an airplane. During the 2019-2020 school year, 
                                 the team built a banner-towing plane that could also carry "passengers." I was a member of the manufacturing and structures teams which
                                 are responsible for the design and construction of the aircraft. I created a CAD model of the tail which included the vertical and horizontal stabilizers. The plane
-                                made several successful test flights, but the competition was cancled due to COVID.
+                                made several successful test flights, but the competition was canceled due to COVID.
                         </Card.Text>
                     </Card.Body>
                 </Card>

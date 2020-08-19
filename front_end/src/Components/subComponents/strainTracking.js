@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 
-import {Carousel, Card, Container, Button} from 'react-bootstrap';
+import {Carousel, Card, Container} from 'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faGithub } from '@fortawesome/free-brands-svg-icons';
 
@@ -220,10 +220,10 @@ export default class Strain extends Component {
                                                     </a> <br/>
                                         
                                     
-                                                <Card.Link href = "https://lakelab.wustl.edu/resources/" target = "_blank" rel="noopener noreferrer">
+                                                <Card.Link href = "/examples" target = "_blank" rel="noopener noreferrer">
                                                     Videos   
                                                 </Card.Link>
-                                                <Card.Link href = "https://lakelab.wustl.edu/resources/" target = "_blank" rel="noopener noreferrer">
+                                                <Card.Link href = "https://lakelab.wustl.edu/" target = "_blank" rel="noopener noreferrer">
                                                     The Lake Lab    
                                                 </Card.Link>
                                         </p>

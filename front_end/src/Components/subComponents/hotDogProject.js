@@ -16,13 +16,6 @@ const HotDogStyles = styled.div `
     margin: 70px auto 20px auto;
     padding: 0;
 }
-.carousel-control-next-icon{
-    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'
-     fill='%23f00'
-      width='8' height='8'
-       viewBox='0 0 8 8'%3e%3cpath 
-       d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e")
-}
 
 .grid{
     width:95%;
