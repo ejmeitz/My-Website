@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 import hotdogs from "../../resources/hotdogs.jpg"
 
-const ProjStyles = styled.div `
+const HotDogStyles = styled.div `
 
 *{
     font-family: 'Josefin Sans', sans-serif;
@@ -15,6 +15,13 @@ const ProjStyles = styled.div `
 .container-fluid{
     margin: 70px auto 20px auto;
     padding: 0;
+}
+.carousel-control-next-icon{
+    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'
+     fill='%23f00'
+      width='8' height='8'
+       viewBox='0 0 8 8'%3e%3cpath 
+       d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e")
 }
 
 .grid{
@@ -67,6 +74,9 @@ p{
     .carousel-caption{
         font-size: 0.8rem;
     }
+    p{
+        font-size:1.2vw;
+    }
 }
 
 
@@ -112,6 +122,20 @@ p{
         object-fit:scale-down;
     }
 
+}
+
+@media screen and (max-width: 650px){
+    img{
+        margin:auto;
+        height:auto;
+        max-width:80vw;
+        object-fit:scale-down;
+    }
+    .carousel{
+        margin:auto;
+        height:auto;
+        grid-column: 1 / span 1;
+    }
 }
 
 @media screen and (max-width: 512px){
@@ -171,7 +195,7 @@ export default class Project3 extends Component {
         return (
     <>
       
-        <ProjStyles>
+        <HotDogStyles>
                     <Container fluid>
                     <Card>
                         <div className = "grid">
@@ -184,7 +208,7 @@ export default class Project3 extends Component {
                                     </Carousel>                       
                                 <Card.Body>
                                     <Card.Title className = "projectName" style={{margin:"10px 0px"}}><strong> Cooking a Hot Dog According to a Finite Differencing Model</strong></Card.Title>
-                                    <div className = "card-text"> {/*don't use Card.Text cause its harder to customize*/}
+                                    <div className = "card-text"> 
 
                                             <p>
                                                 In Spring 2020 I took Heat Transfer where I worked on a semester long project to cook a hot dog using what I learned in class.
@@ -214,10 +238,7 @@ export default class Project3 extends Component {
                             </div>
                     </Card>
                 </Container>
-
-
-
-                </ProjStyles>
+                </HotDogStyles>
            
         </>
         )

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 
-import {Carousel, Card, Container} from 'react-bootstrap';
+import {Carousel, Card, Container, Button} from 'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faGithub } from '@fortawesome/free-brands-svg-icons';
 
@@ -60,6 +60,7 @@ p{
 
 
 
+
 @media screen and (max-width: 1100px) {
     p{
         font-size:1.28vw;
@@ -67,6 +68,7 @@ p{
     .carousel-caption{
         font-size: 0.8rem;
     }
+
 }
 
 
@@ -176,29 +178,20 @@ export default class Strain extends Component {
                                             <img
                                             className="d-block w-100"
                                             src = {circleImg}
-                                            alt="First slide"
+                                            alt="A frame from the circle tracking program."
                                             />
                                             <Carousel.Caption style = {{textShadow: "2px 2px black"}}>
+                                                A frame from the circle tracking program.
                                             </Carousel.Caption>
                                         </Carousel.Item>
                                         <Carousel.Item>
                                             <img 
                                             className="d-block w-100"
                                                src = {maskImgPortrait}
-                                            alt="Second slide"
+                                            alt=" An image mask of a tissue sample divided into square units"
                                             />
                                             <Carousel.Caption>
-                                            
-                                            </Carousel.Caption>
-                                        </Carousel.Item>
-                                        <Carousel.Item>
-                                            <img
-                                            className="d-block w-100"
-                                               src = "https://via.placeholder.com/540x675.png?text=Temp"
-                                            alt="Third slide"
-                                            />
-                                            <Carousel.Caption>
-                                            
+                                                An image mask of a tissue sample divided into square units
                                             </Carousel.Caption>
                                         </Carousel.Item>
                                     </Carousel>                     
@@ -225,13 +218,14 @@ export default class Strain extends Component {
                                                     rel="noopener noreferrer">
                                                     <FontAwesomeIcon className = "fa-lg" icon = {faGithub}/>
                                                     </a> <br/>
-                                            <a href = "/examples"  target = "_blank"
-                                                    rel="noopener noreferrer" >Videos!</a>
-                                        </p>
-                                        <p>
-                                            <Card.Link href = "https://lakelab.wustl.edu/resources/" target = "_blank" rel="noopener noreferrer">
-                                            The Lake Lab    
-                                            </Card.Link>
+                                        
+                                    
+                                                <Card.Link href = "https://lakelab.wustl.edu/resources/" target = "_blank" rel="noopener noreferrer">
+                                                    Videos   
+                                                </Card.Link>
+                                                <Card.Link href = "https://lakelab.wustl.edu/resources/" target = "_blank" rel="noopener noreferrer">
+                                                    The Lake Lab    
+                                                </Card.Link>
                                         </p>
                                     </div>
                                 </Card.Body>
