@@ -30,21 +30,21 @@ const HomeStyles = styled.div `
 
     .bg{
         display:grid;
-        grid-template-columns:  45% 55%;
+        grid-template-columns:  55% 45%;
         margin: 60px auto auto auto;
         height: calc(100vh - 50px) ;
         justify-items:center;
         justify-content:center;
-    
+        width:95vw;
     }
 
     .welcome {
-        margin-top:25vh;
+        position:relative;
+        max-width:50vw;
+        top:25vh;
         grid-column: 1 / span 1;
-    }
-    .me {
-        grid-column: 2 / spawn 1;
-        height:90%;
+
+        z-index: 2;
     }
 
     .welcome h5{
@@ -53,7 +53,15 @@ const HomeStyles = styled.div `
         color:black;
         min-width:360px;
         margin-left:4vw;
-        
+    }
+
+    .me {
+        grid-column: 2 / spawn 1;
+        height:90%;
+        overflow:hidden;
+        max-width:40vw;
+        object-fit:scale-down;
+        z-index: 2;
     }
 
     .readMore{
@@ -66,7 +74,7 @@ const HomeStyles = styled.div `
         left: 50%;
         margin-left: -75px;
 
-     
+        z-index: 3;
         &:hover {
             color:rgb( 140, 194, 255);
             cursor:pointer
@@ -140,6 +148,7 @@ a{
 }
 
 
+
 @media screen and (max-width: 1200px) {
     .secondPage {
         padding-top:10px;
@@ -161,30 +170,111 @@ a{
         width: 100%;
         height: 30vw;
     }
-    .welcome h1{
-        font-size: 2.25em;
+    .welcome {
+        position:relative;
+        max-width:50vw;
+        top:20vh;
+        grid-column: 1 / span 1;
+
+        z-index: 2;
     }
 }
 
-
-@media screen and (max-width: 400px) {
-    .bg{
-        display:grid;
-        grid-template-columns: auto;
-        margin: auto;
-        justify-items:center;
-        justify-content:center;
-    
+@media screen and (max-width: 875px) {
+    .welcome h5{
+        font-size: 2.1em;
     }
     .welcome {
-        margin-top:15vh;
-    }
-    .card-img-top {
-        width: 100%;
-        height: 45vw;
+        position:relative;
+        max-width:50vw;
+        top:23vh;
+        grid-column: 1 / span 1;
+
+        z-index: 2;
     }
 
 }
+@media screen and (max-width: 750px) {
+    .bg{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:1fr;
+        margin: 60px auto auto auto;
+
+        justify-items:center;
+        justify-content:center;
+        width:95vw;
+    }
+
+    .welcome {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        z-index: 2;
+        position:static;
+        max-width:80vw;;
+        height:20vh;
+    }
+    .welcome h5{
+        margin:0px;
+        min-width:1px;
+        height:25vh;
+        font-size: 1.8em;
+    }
+
+    .me {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+
+        overflow:hidden;
+        z-index: 2;
+
+        position:relative;
+        top:5vh;
+        max-width: 300px;
+        min-width:300px;
+    }
+}
+@media screen and (max-width: 605px) {
+    .welcome h5{
+        margin:0px;
+        min-width:1px;
+        height:25vh;
+        font-size: 1.7em;
+    }
+}
+@media screen and (max-width: 500px) {
+    .welcome h5{
+        margin:0px;
+        min-width:1px;
+        height:25vh;
+        font-size: 1.55em;
+    }
+    .me {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+
+        overflow:hidden;
+        z-index: 2;
+
+        position:relative;
+        top:7vh;
+        width:300px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .me {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+
+        overflow:hidden;
+        z-index: 2;
+
+        position:relative;
+        top:9vh;
+        width:250px
+    }
+}
+
 
 
 
@@ -206,7 +296,8 @@ render(){
         
             <div className = "welcome">
                     <h5>
-                     Hi, I'm <strong>Ethan Meitz</strong>, and I'm a senior at Washington University in St. Louis. I am majoring in <i>mechanical engineering</i> and minoring in <i>computer science</i> and love creating art. 
+                     Hi, I'm <strong>Ethan Meitz</strong>, and I'm a senior at Washington University in St. Louis. I am majoring in <i>Mechanical Engineering</i> and minoring in <i>Computer Science</i>. 
+                     I love creating art, playing drums, building homes. 
                      Check out my  <a href = "/projects">engineering projects</a>, <a href = "/art">artwork</a>  and some <a href = "/fun">fun animations</a>! 
                     </h5>
             </div> 

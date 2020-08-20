@@ -107,7 +107,7 @@ export default class myData extends Component {
                                 src={exp}
                             />
                             <Figure.Caption>
-                                Despite the slight inaccuracy of the finite element model, it predicted the final cook time (time to reach 68 degrees C) within 50 seconds. However, the real 
+                                Despite the slight inaccuracy of the finite element model, it predicted the final cook time (centerline at 68 degrees C) within 50 seconds. However, the real 
                                 hotdog started 10 degrees colder than the hotdog in our model which could account for the discrepency if we were able to do more testing.
                             </Figure.Caption>
                         </Figure>
