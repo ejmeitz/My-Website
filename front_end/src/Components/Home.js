@@ -233,6 +233,17 @@ a{
         max-width: 300px;
         min-width:300px;
     }
+    .card{
+        width:85vw;
+        aspectRatio: 1/1;
+    }
+    .secondPage {
+        width:85vw;
+    }
+    .card-img-top {
+        width: 100%;
+        height: 40vw;
+    }
 }
 @media screen and (max-width: 605px) {
     .welcome h5{
@@ -260,6 +271,13 @@ a{
         top:7vh;
         width:300px;
     }
+    .card{
+        width:90vw;
+        aspectRatio: 1/1;
+    }
+    .secondPage {
+        width:90vw;
+    }
 }
 @media screen and (max-width: 400px) {
     .me {
@@ -272,6 +290,27 @@ a{
         position:relative;
         top:9vh;
         width:250px
+    }
+    .card{
+        width:90vw;
+        aspectRatio: 1/1;
+    }
+    .secondPage {
+        padding-top:10px;
+        padding-bottom: 10px;
+        justify-content:center;
+    
+        display:grid;
+        grid-template-columns: auto;
+    
+        grid-auto-flow:row;
+        grid-gap:20px;
+        width:90vw;
+  
+    }
+    .card-img-top {
+        width: 100%;
+        height: 50vw;
     }
 }
 
