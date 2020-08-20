@@ -115,7 +115,6 @@ a{
 }
 .card{
     width:30vw;
-    aspectRatio: 1/1;
 }
 
 @media screen and (max-width: 1500px) {
@@ -139,7 +138,6 @@ a{
     }
     .card{
         width:40vw;
-        aspectRatio: 1/1;
     }
     .card-img-top {
         width: 100%;
