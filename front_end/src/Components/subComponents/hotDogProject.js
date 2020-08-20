@@ -214,8 +214,8 @@ export default class Project3 extends Component {
                                             </p>
                                                     
                                             <p>
-                                                Languages: MATLAB &nbsp;&nbsp; <br/>
-                                                Code:   <a 
+                                                <strong>Languages:</strong> MATLAB &nbsp;&nbsp; <br/>
+                                               <strong>Code:</strong>   <a 
                                                             href = "https://github.com/ejmeitz/Radial-Finite-Differencing-Model--Cooking-a-HotDog"
                                                             className = "gitHub social" 
                                                             target = "_blank"

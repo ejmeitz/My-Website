@@ -191,7 +191,7 @@ img{
     .carousel{
         position:relative;
         overflow:hidden;
-        height: 50vh;
+        height: 55vh;
         width: 90vw;
         margin:auto;
         top:15vh;
@@ -203,7 +203,7 @@ img{
     left: 0;
     top: 45vh;
     height:5vh;
-    width:90vw;
+    max-width:80vw;
     margin:auto;
 }
 

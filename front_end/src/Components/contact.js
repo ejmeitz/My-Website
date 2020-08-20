@@ -13,7 +13,7 @@ const ContactStyles = styled.div `
 }
 .container{
     margin:60px auto 1vh auto;
-    height: 94vh;
+    height: calc(100vh - 50px);
     justify-self:center;
     min-width: 375px;
 }
@@ -21,6 +21,9 @@ const ContactStyles = styled.div `
 .largeForm, .name, .employer{
     margin:1vh auto 1vh auto;
     width: 60vw;
+}
+.bigTextBox{
+    max-height:35vh;
 }
 
 `;
@@ -238,7 +241,7 @@ export default class Contact extends Component {
 
                                 <Form.Group controlId="exampleForm.ControlTextarea1">
                                     <Form.Label>Comments:</Form.Label>
-                                    <Form.Control as="textarea" type = "text" rows="15" value={this.state.textValue} onChange={this.handleChangeText} placeholder = "Your text here" />
+                                    <Form.Control className = "bigTextBox" as="textarea" type = "text" rows="15" value={this.state.textValue} onChange={this.handleChangeText} placeholder = "Your text here" />
                                 </Form.Group>
 
                                 <Form.Row > 

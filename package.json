@@ -1,7 +1,7 @@
 {
   "name": "mywebsite",
   "version": "1.0.0",
-  "description": "'Ethan Meitz's website",
+  "description": "'Ethan Meitz's Website",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",

@@ -210,8 +210,8 @@ export default class Strain extends Component {
                                                     rel="noopener noreferrer">here</a>.
                                         </p>        
                                         <p>
-                                            Languages: MATLAB &nbsp;&nbsp; <br/>
-                                            Code: <a 
+                                             <strong>Languages: </strong>MATLAB &nbsp;&nbsp; <br/>
+                                            <strong>Code:</strong> <a 
                                                     href = "https://github.com/ejmeitz/StrainApproximationandVisualization"
                                                     className = "gitHub social" 
                                                     target = "_blank"

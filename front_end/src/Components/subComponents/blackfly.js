@@ -196,7 +196,7 @@ export default class Blackfly extends Component {
                                             alt="Third slide"
                                             />
                                             <Carousel.Caption style = {{color:"black"}}>
-                                                The user interface with all three image views open showing various polarization information
+                                                The user interface with all three image views open.
                                             </Carousel.Caption>
                                         </Carousel.Item>
                                     </Carousel>                     
@@ -217,8 +217,8 @@ export default class Blackfly extends Component {
                                             </p>
                                                  
                                         <p>
-                                            Languages: C++ &nbsp;&nbsp; <br/>
-                                            Code: <a 
+                                            <strong>Languages: </strong>C++ &nbsp;&nbsp; <br/>
+                                            <strong>Code:</strong> <a 
                                                     href = "https://github.com/ejmeitz/GUI"
                                                     className = "gitHub social" 
                                                     target = "_blank"

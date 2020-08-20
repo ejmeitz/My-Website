@@ -117,13 +117,13 @@ a{
     width:30vw;
 }
 
-@media screen and (max-width: 1500px) {
+@media only screen and (max-width: 1500px) {
     .welcome{
         font-size: 0.8em;
     }
 }
 
-@media screen and (max-width: 1350px) {
+@media only screen and (max-width: 1350px) {
     .secondPage {
         padding-top:10px;
         padding-bottom: 10px;
@@ -147,7 +147,7 @@ a{
 
 
 
-@media screen and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
     .secondPage {
         padding-top:10px;
         padding-bottom: 10px;
@@ -178,7 +178,7 @@ a{
     }
 }
 
-@media screen and (max-width: 875px) {
+@media only screen and (max-width: 875px) {
     .welcome h5{
         font-size: 2.1em;
     }
@@ -192,7 +192,7 @@ a{
     }
 
 }
-@media screen and (max-width: 750px) {
+@media only screen and (max-width: 750px) {
     .bg{
         display:grid;
         grid-template-columns: 1fr;
@@ -243,7 +243,7 @@ a{
         height: 40vw;
     }
 }
-@media screen and (max-width: 605px) {
+@media only screen and (max-width: 605px) {
     .welcome h5{
         margin:0px;
         min-width:1px;
@@ -251,7 +251,7 @@ a{
         font-size: 1.7em;
     }
 }
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
     .welcome h5{
         margin:0px;
         min-width:1px;
@@ -279,7 +279,9 @@ a{
         top:82vh;
     }
 }
-@media screen and (max-width: 400px) {
+
+
+@media only screen and (max-width: 450px)   {
     .me {
         grid-column: 1 / span 1;
         grid-row: 1 / span 1;
@@ -288,8 +290,59 @@ a{
         z-index: 2;
 
         position:relative;
-        top:8vh;
-        width:200px
+        top:21vh;
+        max-width:200px;
+        max-height:50vh;
+    }
+    .welcome h5{
+        margin:0px;
+        min-width:1px;
+        font-size: 1.31em;
+    }
+    .card{
+        width:90vw;
+    }
+    .secondPage {
+        padding-top:10px;
+        padding-bottom: 10px;
+        justify-content:center;
+    
+        display:grid;
+        grid-template-columns: auto;
+    
+        grid-auto-flow:row;
+        grid-gap:20px;
+        width:90vw;
+  
+    }
+    .card-img-top {
+        width: 100%;
+        height: 50vw;
+    }
+    .readMore{
+        top:80vh;
+    }
+
+}
+
+@media only screen and (max-width: 330px) {
+    .me {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+
+        overflow:hidden;
+        z-index: 2;
+
+        position:relative;
+        top:22vh;
+        max-width:200px;
+        max-height:50vh;
+    }
+    .welcome h5{
+        margin:0px;
+        min-width:1px;
+        height:20vh;
+        font-size: 1.1em;
     }
     .card{
         width:90vw;

@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faGithub } from '@fortawesome/free-brands-svg-icons';
 import styled from 'styled-components';
 
-
+import codePic2 from "../../resources/codePic2.PNG"
 
 const Proj2Styles = styled.div `
 
@@ -55,7 +55,9 @@ p{
 .projectName{
     font-size:2vw;
 }
-
+.carousel-indicators, .carousel-control-next-icon, .carousel-control-prev-icon, .carousel-control-next, .carousel-control-prev{
+    display:none;
+ }
 
 
 @media screen and (max-width: 1100px) {
@@ -176,52 +178,29 @@ export default class website extends Component {
                                         <Carousel.Item>
                                             <img
                                             className="d-block w-100"
-                                            src = "https://via.placeholder.com/540x675.png?text=Temp"
-                                            alt="First slide"
+                                            src = {codePic2}
+                                            alt="Image of the package.json file"
                                             />
-                                            <Carousel.Caption style = {{textShadow: "2px 2px black"}}>
-                                              
-                                            </Carousel.Caption>
-                                        </Carousel.Item>
-                                        <Carousel.Item>
-                                            <img
-                                            className="d-block w-100"
-                                            src = "https://via.placeholder.com/540x675.png?text=Temp"
-                                            alt="Second slide"
-                                            />
-                                            <Carousel.Caption>
-                                            
-                                            </Carousel.Caption>
-                                        </Carousel.Item>
-                                        <Carousel.Item>
-                                            <img
-                                            className="d-block w-100"
-                                            src = "https://via.placeholder.com/540x675.png?text=Temp"
-                                            alt="Third slide"
-                                            />
-                                            <Carousel.Caption>
-                                            
-                                            </Carousel.Caption>
                                         </Carousel.Item>
                                     </Carousel>
                                 <Card.Body>
                                     <Card.Title className = "projectName" style={{margin:"10px 0px"}}><strong>Personal Website</strong></Card.Title>
                                     <div className = "card-text"> 
                                         <p>
-                                            This website is a personal project which unites my love of art and coding. To create the website I deployed a MERN stack to heroku.
+                                            This website is a personal project which unites my love of art and coding and serves as a place for me to post my projects. To create the website I deployed a MERN stack to heroku.
                                             Specifically, my website employs mongoDB, Express, React, NodeJS and several smaller packages such as axios and react-boostrap to run. Each of these components
-                                            plays a unique role. For example, mongoDB stores data like the time at which someone views my website and React allows me to design a beautiful front end from HTML and
-                                            custom objects to streamline development.
+                                            plays a unique role. For example, mongoDB stores data like the time at which someone views my website and React allows me to design a beautiful front end from HTML/JSX with
+                                            custom components to streamline development. The website is fully responsive and should work on all modern smart phones and tablets. Please <a href = "/contact">contact me</a> if you notice any bugs!
                                         </p> 
                                                  
                                         <p>
-                                            Languages & Packages: JavaScript, CSS, HTML, MongoDB, ExpressJS, ReactJS, NodeJS, Bootstrap, and Styled Components &nbsp;&nbsp; <br/>
-                                            Code: &nbsp;&nbsp; <a 
+                                            <strong>Languages & Packages:</strong> JavaScript, CSS, HTML, MongoDB, ExpressJS, ReactJS, NodeJS, Bootstrap, and Styled Components &nbsp;&nbsp; <br/>
+                                            <strong>Code:</strong>  <a 
                                                                 href = "https://github.com/ejmeitz/My-Website"
                                                                 className = "gitHub social" 
                                                                 target = "_blank"
                                                                 rel="noopener noreferrer">
-                                                                <FontAwesomeIcon icon = {faGithub} size = "2x" />
+                                                                <FontAwesomeIcon className = "fa-lg"icon = {faGithub}/>
                                                                 </a>
                                         </p>
                                     </div>
