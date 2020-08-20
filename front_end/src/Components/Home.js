@@ -273,10 +273,12 @@ a{
     }
     .card{
         width:90vw;
-        aspectRatio: 1/1;
     }
     .secondPage {
         width:90vw;
+    }
+    .readMore{
+        top:82vh;
     }
 }
 @media screen and (max-width: 400px) {
@@ -288,12 +290,11 @@ a{
         z-index: 2;
 
         position:relative;
-        top:9vh;
-        width:250px
+        top:8vh;
+        width:200px
     }
     .card{
         width:90vw;
-        aspectRatio: 1/1;
     }
     .secondPage {
         padding-top:10px;
@@ -312,6 +313,10 @@ a{
         width: 100%;
         height: 50vw;
     }
+    .readMore{
+        top:83vh;
+    }
+
 }
 
 
