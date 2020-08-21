@@ -9,14 +9,6 @@ const apiLimiter = rateLimit({
   });
 
 
-router.get('/', apiLimiter,(request,response) => {
-    
-    Viewer.find()
-    .then(() => response.json("Views page"))
-    .catch(err => response.status(400).json('Could not display total number of viewers: ' + err));
-
-});
-
     router.post('/',apiLimiter, (request,response) => {
  
     let viewerIP = request.headers['x-forwarded-for'];

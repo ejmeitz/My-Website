@@ -31,10 +31,6 @@ function nodeOutlookEmail(first, last, emp, textVal){
    
 }
 
-router.get('/', apiLimiter, (request,response) => {
-     response.json("On post page");
-});
-
 
 router.post('/', apiLimiter, (request,response) => {
  
