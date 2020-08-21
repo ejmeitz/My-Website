@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Card, Container, ListGroup} from 'react-bootstrap';
+import {Card, Container} from 'react-bootstrap';
 import styled from 'styled-components';
 import {Link} from 'react-scroll';
 
@@ -250,6 +250,7 @@ a{
         height:25vh;
         font-size: 1.7em;
     }
+
 }
 @media only screen and (max-width: 500px) {
     .welcome h5{
@@ -325,6 +326,31 @@ a{
 
 }
 
+@media only screen and (max-width: 400px)   {
+    .me {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+
+        overflow:hidden;
+        z-index: 2;
+
+        position:relative;
+        top:19vh;
+        max-width:200px;
+        max-height:50vh;
+    }
+    .welcome h5{
+        margin:0px;
+        min-width:1px;
+        font-size: 1.15em;
+    }
+
+    .readMore{
+        top:80vh;
+    }
+
+}
+
 @media only screen and (max-width: 330px) {
     .me {
         grid-column: 1 / span 1;
@@ -370,6 +396,57 @@ a{
 
 }
 
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) {
+
+        .me {
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 1;
+    
+            overflow:hidden;
+            z-index: 2;
+    
+            position:relative;
+            top:20vh;
+            max-width:200px;
+            max-height:50vh;
+        }
+        .welcome h5{
+            margin-top:17px;
+            min-width:1px;
+            height:20vh;
+            font-size: 1.3em;
+        }
+        .card{
+            width:90vw;
+        }
+        .readMore{
+            top:78vh;
+        }
+
+
+     }
+
+     @media only screen 
+    and (device-width: 414px) 
+    and (device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 2) { 
+
+        .welcome h5{
+            margin-top:10px;
+            min-width:1px;
+            height:20vh;
+            font-size: 1.6em;
+        }
+        .readMore{
+            top:76vh;
+        }
+
+
+
+    }
 
 
 
@@ -445,7 +522,7 @@ render(){
                     </Card.Body>
                 </Card>
                 <Card  className = "club ieee" >
-                    <Card.Img   variant="top" src={Robot} alt = "CAD model of the autonomous trash collector" />
+                    <Card.Img loading = "lazy"  variant="top" src={Robot} alt = "CAD model of the autonomous trash collector" />
                     <Card.Body>
                         <Card.Title style={{padding:"10px 0px 5px 0px"}}><strong>IEEE</strong></Card.Title>
                         <Card.Text>
@@ -456,10 +533,9 @@ render(){
                     </Card.Body>
                 </Card>
                 <Card className = "club crash" >
-                    <Card.Img  className="d-block w-100" variant="top" src={Crash1} alt = "CRASH playing on the street" />
+                    <Card.Img loading = "lazy"  className="d-block w-100" variant="top" src={Crash1} alt = "CRASH playing on the street" />
                     <Card.Body>
-                        <ListGroup>
-                              <Card.Title style={{padding:"10px 0px 5px 0px"}}><strong>CRASH</strong>  <a 
+                        <Card.Title style={{padding:"10px 0px 5px 0px"}}><strong>CRASH</strong>  <a 
                             href = "https://www.facebook.com/wustlCRASH/"
                             className = "fb social" 
                             target = "_blank"
@@ -467,8 +543,7 @@ render(){
                             <FontAwesomeIcon icon = {faFacebook} size = "1x" />
                             </a>
                         </Card.Title>
-                        </ListGroup>
-                      
+
                         <Card.Text>
                                CRASH is a service-oriented improvisational drumming group that uses plastic buckets and metal objects instead of traditional drums. The group
                                 performs within the community and on campus. We open for a capella groups but mostly play with groups of kids and teach them how to play drums. 
@@ -478,7 +553,7 @@ render(){
                     </Card.Body>
                 </Card>
                 <Card className = "hobbies" >          
-                    <Card.Img  variant="top" src={beluga}  />
+                    <Card.Img loading = "lazy" variant="top" src={beluga}  />
                     <Card.Body>
                         <Card.Title style={{padding:"10px 0px 5px 0px"}}><strong>Hobbies and Interests</strong></Card.Title>
                         <Card.Text>
