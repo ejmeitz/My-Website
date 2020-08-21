@@ -335,14 +335,14 @@ a{
         z-index: 2;
 
         position:relative;
-        top:19vh;
+        top:20vh;
         max-width:200px;
         max-height:50vh;
     }
     .welcome h5{
         margin:0px;
         min-width:1px;
-        font-size: 1.12em;
+        font-size: 1.15em;
     }
 
     .readMore{
@@ -441,9 +441,21 @@ a{
             font-size: 1.4em;
         }
         .readMore{
-            top:78vh;
+            top:77vh;
         }
-
+        
+        .me {
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 1;
+    
+            overflow:hidden;
+            z-index: 2;
+    
+            position:relative;
+            top:18vh;
+            max-width:200px;
+            max-height:50vh;
+        }
 
 
     }
