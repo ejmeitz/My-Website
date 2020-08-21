@@ -417,7 +417,7 @@ a{
             margin-top:10px;
             min-width:1px;
             height:20vh;
-            font-size: 1.3em;
+            font-size: 1.15em;
         }
         .card{
             width:90vw;
