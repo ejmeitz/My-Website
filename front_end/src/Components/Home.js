@@ -421,7 +421,7 @@ render(){
                     </Card.Body>
                 </Card>   
                 <Card className = "club dbf" >
-                    <Card.Img variant="top" src={Plane} alt = "Design Build Fly plane just before a test flight" />
+                    <Card.Img  variant="top" src={Plane} alt = "Design Build Fly plane just before a test flight" />
                     <Card.Body>
                         <Card.Title style={{padding:"10px 0px 5px 0px"}}><strong>Design/Build/Fly</strong></Card.Title>
                         <Card.Text>
@@ -444,7 +444,7 @@ render(){
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <Card className = "club ieee" >
+                <Card  className = "club ieee" >
                     <Card.Img   variant="top" src={Robot} alt = "CAD model of the autonomous trash collector" />
                     <Card.Body>
                         <Card.Title style={{padding:"10px 0px 5px 0px"}}><strong>IEEE</strong></Card.Title>
@@ -456,7 +456,7 @@ render(){
                     </Card.Body>
                 </Card>
                 <Card className = "club crash" >
-                    <Card.Img className="d-block w-100" variant="top" src={Crash1} alt = "CRASH playing on the street" />
+                    <Card.Img  className="d-block w-100" variant="top" src={Crash1} alt = "CRASH playing on the street" />
                     <Card.Body>
                         <ListGroup>
                               <Card.Title style={{padding:"10px 0px 5px 0px"}}><strong>CRASH</strong>  <a 
@@ -477,9 +477,8 @@ render(){
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <Card className = "hobbies" >
-                    
-                    <Card.Img variant="top" src={beluga}  />
+                <Card className = "hobbies" >          
+                    <Card.Img  variant="top" src={beluga}  />
                     <Card.Body>
                         <Card.Title style={{padding:"10px 0px 5px 0px"}}><strong>Hobbies and Interests</strong></Card.Title>
                         <Card.Text>

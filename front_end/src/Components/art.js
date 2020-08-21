@@ -273,14 +273,14 @@ export default class art extends Component {
                             />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <img
+                            <img 
                             className ="d-block jaguar"
                             src= {jaguar}
                             alt="Colored pencil jaguar"
                             />
                         </Carousel.Item>
                         <Carousel.Item>
-                            <img
+                            <img 
                             className ="d-block beluga"
                             src= {beluga}
                             alt="Beluga whale drawing"
