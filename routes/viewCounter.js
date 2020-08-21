@@ -19,7 +19,6 @@ router.get('/', apiLimiter,(request,response) => {
 
     router.post('/',apiLimiter, (request,response) => {
  
-    /*let viewerIP = String(request.connection.remoteAddress);*/
     let viewerIP = request.headers['x-forwarded-for'];
     let pageViewed = request.body.pageViewed;
 
@@ -28,7 +27,7 @@ router.get('/', apiLimiter,(request,response) => {
     let month = today.getMonth() + 1; //january is 0
     let day = today.getDate();
 
-    let parsedDate = day + '-' + month + '-' + year;
+    let parsedDate = month + '-' + day + '-' + year;
     let timestamp = parsedDate;
 
     const newViewer = new Viewer({
