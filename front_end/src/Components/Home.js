@@ -438,7 +438,7 @@ a{
             margin-top:10px;
             min-width:1px;
             height:20vh;
-            font-size: 1.45em;
+            font-size: 1.4em;
         }
         .readMore{
             top:78vh;
