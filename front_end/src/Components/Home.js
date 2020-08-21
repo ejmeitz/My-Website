@@ -441,7 +441,7 @@ a{
             font-size: 1.4em;
         }
         .readMore{
-            top:77vh;
+            top:74vh;
         }
         
         .me {
@@ -452,7 +452,7 @@ a{
             z-index: 2;
     
             position:relative;
-            top:18vh;
+            top:17vh;
             max-width:200px;
             max-height:50vh;
         }
