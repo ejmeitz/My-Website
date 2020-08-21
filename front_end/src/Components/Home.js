@@ -298,7 +298,7 @@ a{
     .welcome h5{
         margin:0px;
         min-width:1px;
-        font-size: 1.31em;
+        font-size: 1.21em;
     }
     .card{
         width:90vw;
@@ -342,7 +342,7 @@ a{
     .welcome h5{
         margin:0px;
         min-width:1px;
-        font-size: 1.15em;
+        font-size: 1.05em;
     }
 
     .readMore{
@@ -368,7 +368,7 @@ a{
         margin:0px;
         min-width:1px;
         height:20vh;
-        font-size: 1.1em;
+        font-size: 1.0em;
     }
     .card{
         width:90vw;
@@ -414,7 +414,7 @@ a{
             max-height:50vh;
         }
         .welcome h5{
-            margin-top:17px;
+            margin-top:10px;
             min-width:1px;
             height:20vh;
             font-size: 1.3em;
