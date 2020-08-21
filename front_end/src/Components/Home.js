@@ -342,7 +342,7 @@ a{
     .welcome h5{
         margin:0px;
         min-width:1px;
-        font-size: 1.05em;
+        font-size: 1.12em;
     }
 
     .readMore{
@@ -368,7 +368,7 @@ a{
         margin:0px;
         min-width:1px;
         height:20vh;
-        font-size: 1.0em;
+        font-size: 1.05em;
     }
     .card{
         width:90vw;
