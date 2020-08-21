@@ -441,7 +441,7 @@ a{
             font-size: 1.4em;
         }
         .readMore{
-            top:74vh;
+            top:73vh;
         }
         
         .me {
