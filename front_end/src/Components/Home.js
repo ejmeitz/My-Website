@@ -481,7 +481,7 @@ render(){
             <div className = "welcome">
                     <h5>
                      Hi, I'm <strong>Ethan Meitz</strong>, and I'm a senior at Washington University in St. Louis. I am majoring in <i>Mechanical Engineering</i> and minoring in <i>Computer Science</i>. 
-                     I love creating art, playing drums, building homes. 
+                     I love creating art, playing drums, and building homes. 
                      Check out my  <a href = "/projects">engineering projects</a>, <a href = "/art">artwork</a>  and some <a href = "/fun">fun animations</a>! 
                     </h5>
             </div> 
@@ -499,7 +499,7 @@ render(){
                         <Card.Title style={{padding:"10px 0px 5px 0px"}}><strong>About Me</strong></Card.Title>
                         <Card.Text>
                             I grew up in St. Paul, Minnesota and currently attend Washington University in St. Louis. 
-                           WashU has taught me how to solve a variety of problems in a focused and efficient manner. I can solve specific problems like the forces in a truss network
+                            WashU has taught me how to solve a variety of problems in a focused and efficient manner. I can solve engineering specific problems like the forces in a truss network
                             but can also apply myself to solve abstract, new problems. For example, this website! I began this app not knowing
                             anything about full stack development, JavaScript, CSS, HTML or the dozen other packages used to create this site. I find every
                             new challenge fun and exciting, and I know the future holds plenty to push my limits.
@@ -539,7 +539,7 @@ render(){
                         <Card.Title style={{padding:"10px 0px 5px 0px"}}><strong>IEEE</strong></Card.Title>
                         <Card.Text>
                                     The Washington University chapter of IEEE works with other clubs to design and build a product they request. For example, the Raas team at WashU asked
-                                    IEEE to build them dandiya for Diwali that light up synchronously. The IEEE team also participated in the IEEE robotics competition in 2020 to 
+                                    IEEE to build them dandiya for Diwali that light up synchronously. The IEEE team also participated in the 2020 IEEE robotics competition to 
                                     produce a fully autonomous robot to pick up trash. In both of these projects, I was responsible for the CAD and manufacturing. 
                         </Card.Text>
                     </Card.Body>

@@ -205,7 +205,7 @@ export default class Strain extends Component {
                                             QPLI </a> during mechanical testing  where tissue samples are deformed under a sinusoidal load. With QPLI the Lake Lab can measure the alignment of the collagen fibers.
                                             To better visualize the changes in this alignment, I modified existing code which created a static heat map of the data to deform with the real tissue. With an animated
                                             heatmap, the Lake Lab can better visualize the changes that occur in a sample and the consequences of that change on the data. I used the MATLAB image processing toolbox to track
-                                            pins in the frame and therefore the tissue level strain. This technique is not as exact as a speckle pattern or a strain gauge but QPLI requires the sample to be unaltered. The end 
+                                            pins in the frame and therefore the tissue level strain. This technique is not as exact as a speckle pattern or a strain gauge but QPLI requires the sample to be unaltered and unobstructed. The end 
                                             product created a heatmap that deformed and displayed the relevant data. Check out the full videos <a href = "/examples"  target = "_blank"
                                                     rel="noopener noreferrer">here</a>.
                                         </p>        

@@ -204,13 +204,13 @@ export default class Project3 extends Component {
                                     <div className = "card-text"> 
 
                                             <p>
-                                                In Spring 2020 I took Heat Transfer where I worked on a semester long project to cook a hot dog using what I learned in class.
+                                                In Spring 2020 I took heat transfer where I worked on a semester long project to cook a hot dog using what I learned in class.
                                                 Throughout the year, my group and I worked to develop a radial finite differencing model of heat transfer in a hot dog. Our early model assumed that the temperature gradients in the hotdog were negligable at a given time which allowed us to apply the lumped capacitence model.
                                                 However, when we calculated the total heat transfer coefficient the Biot number was above 0.1 which disallowed us from using lumped capacitence. Therefore,
                                                 we turned to an analytical solution, which given an initial temperature could solve for the temperature of the hot dog at each time step. To use this model the team derived equations
                                                 for the temperature at the center, interior and exterior node(s). Then the equations were put into MATLAB to find the final cook time given our initial conditions. Our model predicted
                                                 the hot dog would take 353 seconds to cook, and the real world hot dog took 402 seconds to cook under the same conditions as our model. While the real hot dog took slightly
-                                                longer to cook conditions in the test did not exactly match the model. However, when the <a href = "/data">data</a> was plotted the trend exactly matched our model.  
+                                                longer to cook conditions in the test did not exactly match the model. When the <a href = "/data">data</a> was plotted the trend matched our model just offset by the an initial temperature difference.  
                                             </p>
                                                     
                                             <p>

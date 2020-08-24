@@ -187,8 +187,8 @@ export default class website extends Component {
                                     <Card.Title className = "projectName" style={{margin:"10px 0px"}}><strong>Personal Website</strong></Card.Title>
                                     <div className = "card-text"> 
                                         <p>
-                                            This website is a personal project which unites my love of art and coding and serves as a place for me to post my projects. To create the website I deployed a MERN stack to heroku.
-                                            Specifically, my website employs mongoDB, Express, React, NodeJS and several smaller packages such as axios and react-boostrap to run. Each of these components
+                                            This website is a personal project which unites my love of art, design and coding while also serving as a place for me to post my projects. To create the website I deployed a MERN stack to heroku.
+                                            Specifically, my website employs mongoDB, Express, React, NodeJS and several smaller packages such as axios and react-boostrap. Each of these components
                                             plays a unique role. For example, mongoDB stores data like the time at which someone views my website and React allows me to design a beautiful front end from HTML/JSX with
                                             custom components to streamline development. The website is fully responsive and should work on all modern smart phones and tablets. Please <a href = "/contact">contact me</a> if you notice any bugs!
                                         </p> 

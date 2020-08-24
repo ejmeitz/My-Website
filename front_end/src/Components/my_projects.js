@@ -198,10 +198,10 @@ export default class my_projects extends Component {
                         </Card.Title>
                         <Card.Body>
                                     <p> 
-                                        The UI I created imaged tissue and gels during mechanical testing; however, strain beads could not be used. Using the image processing toolbox
+                                        The UI as a research assistant imaged tissue and gels during mechanical testing; however, strain beads could not be used. Using the image processing toolbox
                                         on MATLAB I created a program to track the pins which hold the tissue down. Then, using that displacement data, I created an animation to 
-                                        simulate the deformation of the tissue and show relevant data values with a heatmap. Essentially, I created an animated heatmap. Click the title to see an example
-                                        or click the GitHub logo to see the source code.
+                                        simulate the deformation of the tissue and show relevant data values with a heatmap. Essentially, I created an animated heatmap. Click the title to learn more, click  
+                                        <a href ="/examples"   target = "_blank" rel="noopener noreferrer"> here</a> to see an example or click the GitHub logo to see the source code.
                                     </p>
                                     <br/>
                                     <p>
@@ -226,7 +226,8 @@ export default class my_projects extends Component {
                                     While taking heat transfer I was assigned a project to model cooking a hotdog using what I learned in class.
                                     The initial model assumed lumped capacitence which which turned out to be inaccurate.
                                     The second model used a time marching finite differencing method with theoretically derived heat transfer coefficients to improve the accuracy. The finite differencing model proved 
-                                    very accurate when compared with the actual temperatures inside a cooking hotdog. Click on the title to learn more about the model and the results.
+                                    very accurate when compared with the actual temperatures inside a cooking hotdog. Click on the title to learn more about the model and the 
+                                    <a href = "/data" target = "_blank" rel = "noopener noreferrer"> results</a> .
                                 </p> 
                                 <br/>
                                 <p>
