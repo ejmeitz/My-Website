@@ -46,6 +46,13 @@ const ProjectStyles = styled.div `
         position:relative;
         bottom:0;
     }
+
+    .body{
+        padding: 0px 5px 0px 5px;
+    }
+    .card-title {
+        padding: 10px 5px 3px 5px;
+    }
     
     @media screen and (max-width: 1300px) {
         .grid{
@@ -143,10 +150,11 @@ export default class my_projects extends Component {
                  <div className = "grid">
                     <Card className = "a" >
                         <Card.Img  variant="top" src={ui}  alt = "Image of UI during beta test"/>
-                        <Card.Title style = {{paddingBottom: "5px"}}>
+                        <Card.Title>
                                <a href = "/projects/blackfly"target = "_blank" rel="noopener noreferrer">Blackfly Polarizaion Camera UI </a>
                         </Card.Title>
-                        <Card.Body>                
+                        <Card.Body>       
+                            <div className = "body">        
                                         <p>While working as an research assistant I developed a user interface (UI) to control a FLIR polarized light sensor.
                                             The UI was created using Qt and the code to manipulate the camera was written with C++ to minimize overhead. 
                                             The UI was ultimately successful and enabled the lab to perform reflectance mode quantative polarized light imaging with
@@ -163,16 +171,18 @@ export default class my_projects extends Component {
                                             rel="noopener noreferrer">
                                             <FontAwesomeIcon icon = {faGithub} size = "1x" />
                                             </a>
-                                    </p>                           
+                                        </p> 
+                            </div>                           
                         </Card.Body>
                     </Card>
                     
                     <Card className = "b" > 
                         <Card.Img variant="top" src={codePic}  alt = "A screenshot of the React code used to build this card."/>
-                        <Card.Title style = {{paddingBottom: "5px"}}>
+                        <Card.Title>
                             <a href ="/projects/website" target = "_blank" rel="noopener noreferrer">My Website</a>
                         </Card.Title>
                         <Card.Body>
+                            <div className = "body">  
                                     <p>
                                         I created my website as a fun side project to learn about JavaScript, HTML, and CSS, none of which I'd been able to use at school. I started by watching YouTube videos
                                         and eventually ended up with what you see now. The website is hosted on a heroku and runs on a MERN stack (MongoDB, Express, React and NodeJS). This project
@@ -188,15 +198,17 @@ export default class my_projects extends Component {
                                         rel="noopener noreferrer">
                                         <FontAwesomeIcon icon = {faGithub} size = "1x" />
                                         </a>
-                                      </p>                                       
+                                      </p>   
+                            </div>                                    
                         </Card.Body>
                     </Card>
                     <Card className = "c" >
                         <Card.Img variant="top" src={mask}  alt = "Blackfly camera imaging a gel during a ramp to failure test"/>
-                        <Card.Title style = {{paddingBottom: "5px"}}>
+                        <Card.Title>
                             <a href ="/projects/strain" target = "_blank" rel="noopener noreferrer">Strain Tracking w/ Image Processing</a>
                         </Card.Title>
                         <Card.Body>
+                            <div className = "body">  
                                     <p> 
                                         The UI as a research assistant imaged tissue and gels during mechanical testing; however, strain beads could not be used. Using the image processing toolbox
                                         on MATLAB I created a program to track the pins which hold the tissue down. Then, using that displacement data, I created an animation to 
@@ -214,14 +226,16 @@ export default class my_projects extends Component {
                                         <FontAwesomeIcon icon = {faGithub} size = "1x" />
                                         </a> 
                                      </p> 
+                            </div>
                         </Card.Body>
                     </Card> 
                     <Card className = "d" >
                         <Card.Img variant="top" src={nodeImg}  alt = "A node in a radial finite differencing model"/>
-                        <Card.Title style = {{paddingBottom: "5px"}}>
+                        <Card.Title>
                             <a href ="/projects/hotdog" target = "_blank" rel="noopener noreferrer">Heat Transfer Model in a Hot Dog</a>
                         </Card.Title>
-                        <Card.Body>   
+                        <Card.Body>  
+                            <div className = "body">   
                                 <p>
                                     While taking heat transfer I was assigned a project to model cooking a hotdog using what I learned in class.
                                     The initial model assumed lumped capacitence which which turned out to be inaccurate.
@@ -239,7 +253,8 @@ export default class my_projects extends Component {
                                         rel="noopener noreferrer">
                                         <FontAwesomeIcon icon = {faGithub} size = "1x" />
                                     </a>
-                                 </p> 
+                                 </p>
+                            </div>
                         </Card.Body>
                     </Card>
                     </div>
