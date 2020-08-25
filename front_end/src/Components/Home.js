@@ -496,9 +496,10 @@ render(){
             
         </div>
     
-        <Container className = "secondPage" id = "secondPageAnchor">
-             
-            
+        <div id = "secondPageAnchor" style = {{height:"50px"}}>
+
+        </div>
+        <Container className = "secondPage">
                 <Card className = "about" >
                     <Card.Img variant="top" src={StPaul} alt="Downtown St.Paul"/>
                     <Card.Body>
