@@ -152,7 +152,7 @@ export default class my_projects extends Component {
                     {/* <Container>
                         <h2 className = "title">DFS Visualization:</h2> 
                         <div className = "animation c">
-                        <iframe  samesite = "None Secure" title = "tictactoe" width="100%" height="100%" frameBorder="0" scrolling="no" id="tttFrame" src="https://editor.p5js.org/ejmeitz/embed/6Ll3mkIKB"></iframe>
+                        <iframe  loading = "lazy"  samesite = "None Secure" title = "tictactoe" width="100%" height="100%" frameBorder="0" scrolling="no" id="tttFrame"  src="https://editor.p5js.org/ejmeitz/embed/wrmrxv3XA"> </iframe>
                         </div>
                     </Container> */}
                 </div>        

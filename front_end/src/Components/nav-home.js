@@ -156,50 +156,50 @@ const NavStyles = styled.div `
 
 export default class NavHome extends Component{
     
-    constructor(props) {
-        super(props);
+    // constructor(props) {
+    //     super(props);
     
-        this.state = {
-          prevScrollPos: window.pageYOffset,
-        };
-        this.handleScroll = this.handleScroll.bind(this);
-      }
+    //     this.state = {
+    //       prevScrollPos: window.pageYOffset,
+    //     };
+    //     this.handleScroll = this.handleScroll.bind(this);
+    //   }
     
 
-      // Adds an event listener when the component is mounted.
-      componentDidMount() {
-        window.addEventListener("scroll", this.handleScroll);
-      }
+    //   // Adds an event listener when the component is mounted.
+    //   componentDidMount() {
+    //     window.addEventListener("scroll", this.handleScroll);
+    //   }
     
-      // Remove the event listener when the component is unmounted.
-      componentWillUnmount() {
-        window.removeEventListener("scroll", this.handleScroll);
-      }
+    //   // Remove the event listener when the component is unmounted.
+    //   componentWillUnmount() {
+    //     window.removeEventListener("scroll", this.handleScroll);
+    //   }
     
-      // Hide or show the menu.
-      handleScroll = () => {
-      if(document.documentElement.clientWidth >= 1100){
-        const nav = document.getElementById('navbar');
+    //   // Hide or show the menu.
+    //   handleScroll = () => {
+    //   if(document.documentElement.clientWidth >= 1100){
+    //     const nav = document.getElementById('navbar');
 
-        let currentScrollPos = window.pageYOffset;
-        if(currentScrollPos < 0){
-          currentScrollPos = 0;
-        }
-        let temp = this.state.prevScrollPos - currentScrollPos;
-        temp = Math.abs(temp);
-        if (this.state.prevScrollPos > currentScrollPos && temp < 50) {
-         nav.style.top = "0px";
-        } else {
-         nav.style.top = "-50px";
-        }
+    //     let currentScrollPos = window.pageYOffset;
+    //     if(currentScrollPos < 0){
+    //       currentScrollPos = 0;
+    //     }
+    //     let temp = this.state.prevScrollPos - currentScrollPos;
+    //     temp = Math.abs(temp);
+    //     if (this.state.prevScrollPos > currentScrollPos && temp < 50) {
+    //      nav.style.top = "0px";
+    //     } else {
+    //      nav.style.top = "-50px";
+    //     }
 
-        this.setState({
-          prevScrollPos : currentScrollPos
-          });
+    //     this.setState({
+    //       prevScrollPos : currentScrollPos
+    //       });
 
-      }
+    //   }
 
-      }
+    //   }
         
     
     
