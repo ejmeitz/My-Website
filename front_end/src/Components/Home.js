@@ -523,7 +523,7 @@ render(){
                         <Card.Text>
                                 DBF has offered me the opportunity to learn about building and operating aircraft. Each year DBF participates
                                 in the AAIA Design/Build/Fly competition where participants follow a set of rules to build an airplane. During the 2019-2020 school year, 
-                                the team built a banner-towing plane that could also carry "passengers." I was a member of the manufacturing and structures teams which
+                                the team built a banner-towing plane that could also carry "passengers." I was a member of the Manufacturing and Structures teams which
                                 are responsible for the design and construction of the aircraft. I created a CAD model of the tail which included the vertical and horizontal stabilizers. The plane
                                 made several successful test flights, but the competition was canceled due to COVID.
                         </Card.Text>
@@ -534,9 +534,9 @@ render(){
                     <Card.Body>
                         <Card.Title><strong>AmeriCorps</strong></Card.Title>
                         <Card.Text>
-                            I've always loved volunteering at Habitat for Humanity, but during the 2019 summer I had the chance to serve with AmeriCorps at Habitat for Humanity. Instead of
-                            just building the homes I was now responsible for teaching and keeping the volunteers safe. Every day was a new project and I learned so much about how to lead and teach a group
-                            and also about the state of affordable housing in Minnesota. It was a great opportunity and I highly reccomend both <a href = "https://www.nationalservice.gov/programs/americorps" target = "_blank" rel="noopener noreferrer">AmeriCorps</a> and <a href="https://www.habitat.org/" target = "_blank" rel="noopener noreferrer">Habitat for Humanity</a>.    
+                            I've always loved volunteering at Habitat for Humanity, and during the 2019 summer I had the chance to serve with AmeriCorps at Habitat for Humanity. Instead of
+                            strictly building the homes, I was now responsible for teaching and keeping the volunteers safe. Every day was a new project and I learned so much about how to lead and teach a group
+                            as well as the state of affordable housing in Minnesota. It was a great opportunity and I highly reccomend both <a href = "https://www.nationalservice.gov/programs/americorps" target = "_blank" rel="noopener noreferrer">AmeriCorps</a> and <a href="https://www.habitat.org/" target = "_blank" rel="noopener noreferrer">Habitat for Humanity</a>.    
                         </Card.Text>
                     </Card.Body>
                 </Card>
@@ -546,7 +546,7 @@ render(){
                         <Card.Title><strong>IEEE</strong></Card.Title>
                         <Card.Text>
                                     The Washington University chapter of IEEE works with other clubs to design and build a product they request. For example, the Raas team at WashU asked
-                                    IEEE to build them dandiya for Diwali that light up synchronously. The IEEE team also participated in the 2020 IEEE robotics competition to 
+                                    IEEE to build them dandiya, batons that light up synchronously, for Diwali. The IEEE team also participated in the 2020 IEEE robotics competition to 
                                     produce a fully autonomous robot to pick up trash. In both of these projects, I was responsible for the CAD and manufacturing. 
                         </Card.Text>
                     </Card.Body>
@@ -566,8 +566,8 @@ render(){
                         <Card.Text>
                                CRASH is a service-oriented improvisational drumming group that uses plastic buckets and metal objects instead of traditional drums. The group
                                 performs within the community and on campus. We open for a capella groups but mostly play with groups of kids and teach them how to play drums. 
-                                In the past, we've gone to grief clinics, after school care, and a local highschool. Everyone in CRASH enjoys playing drums and loves
-                                teaching and sharing drumming with our community.
+                                In the past, we've gone to grief clinics, after-school care, and a local highschool. 
+                                I really enjoy playing drums and CRASH has been a great way to share my love of drumming with the community. 
                         </Card.Text>
                     </Card.Body>
                 </Card>
@@ -582,7 +582,7 @@ render(){
                             <li>Coding</li>
                         
                                 I'm curious about absolutely everything and love learning. 
-                                Outer space, rockets, art and robots are my primary interests.
+                                Outer space, rockets, art, and robots are my primary interests.
 
                         </Card.Text>
                     </Card.Body>
