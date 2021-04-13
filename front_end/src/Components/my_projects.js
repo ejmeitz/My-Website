@@ -210,7 +210,7 @@ export default class my_projects extends Component {
                         <Card.Body>
                             <div className = "body">  
                                     <p> 
-                                        The UI as a research assistant imaged tissue and gels during mechanical testing; however, strain beads could not be used. Using the image processing toolbox
+                                        The UI I created imaged tissue and gels during mechanical testing; however, strain beads could not be used. Using the image processing toolbox
                                         on MATLAB I created a program to track the pins which hold the tissue down. Then, using that displacement data, I created an animation to 
                                         simulate the deformation of the tissue and show relevant data values with a heatmap. Essentially, I created an animated heatmap. Click the title to learn more, click  
                                         <a href ="/examples"   target = "_blank" rel="noopener noreferrer"> here</a> to see an example or click the GitHub logo to see the source code.
