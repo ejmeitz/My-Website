@@ -31,7 +31,7 @@
     "mongodb": "^3.6.0",
     "mongoose": "^5.9.29",
     "nodejs-nodemailer-outlook": "^1.2.3",
-    "nodemailer": "^6.4.10",
+    "nodemailer": "^6.4.16",
     "nodemon": "^2.0.4",
     "react-scroll": "^1.8.1"
   },
