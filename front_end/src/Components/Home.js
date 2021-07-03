@@ -267,7 +267,7 @@ a{
         width:90vw;
     }
     .readMore{
-        top:82vh;
+        top:80vh;
         p{
             font-size:1.1em;
         }
@@ -312,7 +312,7 @@ a{
         height: 50vw;
     }
     .readMore{
-        top:80vh;
+        top:78vh;
     }
 
 }
@@ -337,7 +337,7 @@ a{
     }
 
     .readMore{
-        top:80vh;
+        top:78vh;
     }
 
 }
@@ -379,7 +379,7 @@ a{
         height: 50vw;
     }
     .readMore{
-        top:83vh;
+        top:81vh;
     }
 
 }
