@@ -14,7 +14,7 @@ import AmeriCorps from "../resources/AmeriCorps.jpg";
 import Plane from "../resources/Plane.jpg";
 import Robot from "../resources/robot.jpg";
 import beluga from "../resources/beluga.png";
-import AmeriCorps2 from "../resources/americorps2.png"
+import meCoverPhoto from "../resources/me_grad.png"
 
 
 import '../index.css';
@@ -39,11 +39,9 @@ const HomeStyles = styled.div `
     }
 
     .welcome {
-        position:relative;
         max-width:50vw;
-        top:25vh;
         grid-column: 1 / span 1;
-
+        margin:auto;
         z-index: 2;
     }
 
@@ -56,7 +54,8 @@ const HomeStyles = styled.div `
     }
 
     .me {
-        grid-column: 2 / spawn 1;
+        grid-column: 2 / span 1;
+
         height:90%;
         overflow:hidden;
         max-width:40vw;
@@ -154,6 +153,37 @@ a{
 
 
 @media only screen and (max-width: 1200px) {
+
+    .bg{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:1fr 1fr;
+        margin: 60px 0px auto 0px;
+
+        justify-items:center;
+        justify-content:center;
+        width:98vw;
+    }
+
+    .welcome {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        z-index: 2;
+
+        margin: 10px auto auto auto;
+        max-width:70vw;
+    }
+    
+    .me {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        max-width : 75vw;
+        overflow:hidden;
+        z-index: 2;
+        margin:auto;
+
+    }
+
     .secondPage {
         padding-top:10px;
         padding-bottom: 10px;
@@ -174,50 +204,17 @@ a{
         width: 100%;
         height: 30vw;
     }
-    .welcome {
-        position:relative;
-        max-width:50vw;
-        top:20vh;
-        grid-column: 1 / span 1;
 
-        z-index: 2;
-    }
 }
 
 @media only screen and (max-width: 875px) {
     .welcome h5{
         font-size: 2.1em;
     }
-    .welcome {
-        position:relative;
-        max-width:50vw;
-        top:23vh;
-        grid-column: 1 / span 1;
-
-        z-index: 2;
-    }
-
 }
 @media only screen and (max-width: 750px) {
-    .bg{
-        display:grid;
-        grid-template-columns: 1fr;
-        grid-template-rows:1fr;
-        margin: 60px auto auto auto;
 
-        justify-items:center;
-        justify-content:center;
-        width:95vw;
-    }
 
-    .welcome {
-        grid-column: 1 / span 1;
-        grid-row: 1 / span 1;
-        z-index: 2;
-        position:static;
-        max-width:80vw;;
-        height:20vh;
-    }
     .welcome h5{
         margin:0px;
         min-width:1px;
@@ -225,18 +222,6 @@ a{
         font-size: 1.8em;
     }
 
-    .me {
-        grid-column: 1 / span 1;
-        grid-row: 1 / span 1;
-
-        overflow:hidden;
-        z-index: 2;
-
-        position:relative;
-        top:5vh;
-        max-width: 300px;
-        min-width:300px;
-    }
     .card{
         width:85vw;
         aspectRatio: 1/1;
@@ -271,9 +256,8 @@ a{
 
         overflow:hidden;
         z-index: 2;
+        margin:auto;
 
-        position:relative;
-        top:7vh;
         width:300px;
     }
     .card{
@@ -284,6 +268,9 @@ a{
     }
     .readMore{
         top:82vh;
+        p{
+            font-size:1.1em;
+        }
     }
 }
 
@@ -296,15 +283,13 @@ a{
         overflow:hidden;
         z-index: 2;
 
-        position:relative;
-        top:21vh;
         max-width:200px;
-        max-height:50vh;
+        max-width:80vw;
     }
     .welcome h5{
         margin:0px;
         min-width:1px;
-        font-size: 1.21em;
+        font-size: 1.15em;
     }
     .card{
         width:90vw;
@@ -333,21 +318,21 @@ a{
 }
 
 @media only screen and (max-width: 400px)   {
+
     .me {
-        grid-column: 1 / span 1;
         grid-row: 1 / span 1;
 
         overflow:hidden;
         z-index: 2;
 
-        position:relative;
-        top:20vh;
         max-width:200px;
-        max-height:50vh;
+        max-width:80vw;
+        margin:auto;
     }
     .welcome h5{
         margin:0px;
         min-width:1px;
+        margin:auto
         font-size: 1.15em;
     }
 
@@ -359,14 +344,11 @@ a{
 
 @media only screen and (max-width: 330px) {
     .me {
-        grid-column: 1 / span 1;
         grid-row: 1 / span 1;
 
         overflow:hidden;
         z-index: 2;
 
-        position:relative;
-        top:22vh;
         max-width:200px;
         max-height:50vh;
     }
@@ -374,7 +356,7 @@ a{
         margin:0px;
         min-width:1px;
         height:20vh;
-        font-size: 1.05em;
+        font-size: 1.15em;
     }
     .card{
         width:90vw;
@@ -402,70 +384,6 @@ a{
 
 }
 
-@media only screen 
-    and (device-width : 375px) 
-    and (device-height : 812px) 
-    and (-webkit-device-pixel-ratio : 3) {
-
-        .me {
-            grid-column: 1 / span 1;
-            grid-row: 1 / span 1;
-    
-            overflow:hidden;
-            z-index: 2;
-    
-            position:relative;
-            top:20vh;
-            max-width:200px;
-            max-height:50vh;
-        }
-        .welcome h5{
-            margin-top:10px;
-            min-width:1px;
-            height:20vh;
-            font-size: 1.15em;
-        }
-        .card{
-            width:90vw;
-        }
-        .readMore{
-            top:78vh;
-        }
-
-
-     }
-
-     @media only screen 
-    and (device-width: 414px) 
-    and (device-height: 896px) 
-    and (-webkit-device-pixel-ratio: 2) { 
-
-        .welcome h5{
-            margin-top:10px;
-            min-width:1px;
-            height:20vh;
-            font-size: 1.4em;
-        }
-        .readMore{
-            top:74vh;
-        }
-        
-        .me {
-            grid-column: 1 / span 1;
-            grid-row: 1 / span 1;
-    
-            overflow:hidden;
-            z-index: 2;
-    
-            position:relative;
-            top:18vh;
-            max-width:200px;
-            max-height:50vh;
-        }
-
-
-    }
-
 
 
 `;
@@ -486,12 +404,12 @@ render(){
         
             <div className = "welcome">
                     <h5>
-                     Hi, I'm <strong>Ethan Meitz</strong>, and I'm a senior at Washington University in St. Louis. I am majoring in <i>Mechanical Engineering</i> and minoring in <i>Computer Science</i>. 
-                     I love creating art, playing drums, and building homes. 
+                     Hi, I'm <strong>Ethan Meitz</strong>, and I'm a graduate student at Washington University in St. Louis pursuing a M.S. in <i>Mechanical Engineering</i>. 
+                     I love creating art, playing drums, and tinkering. 
                      Check out my  <a href = "/projects/home">engineering projects</a>, <a href = "/art">artwork</a>  and some <a href = "/fun">fun animations</a>! 
                     </h5>
             </div> 
-            <img className = "me"  src = {AmeriCorps2} alt = "Operating a saw at a Habitat for Humanity construction site"/>
+            <img className = "me"  src = {meCoverPhoto} alt = "Operating a saw at a Habitat for Humanity construction site"/>
         
             
         </div>

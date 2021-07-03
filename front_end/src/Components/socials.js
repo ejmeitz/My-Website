@@ -55,7 +55,7 @@ const SocialButtonsPage = () => {
         </a>
 
         <a 
-        href = "https://www.linkedin.com/in/ethan-meitz-48ab8b15b/"
+        href = "https://www.linkedin.com/in/ethan-meitz"
         className = "linkedIn social" 
         target = "_blank"
         rel="noopener noreferrer">

@@ -147,7 +147,7 @@ export default class my_projects extends Component {
                         <div className = "animation b">
                             <iframe loading = "lazy" samesite = "None Secure" title = "tictactoe" width="100%" height="100%" frameBorder="0" scrolling="no" id="tttFrame" src="https://editor.p5js.org/ejmeitz/embed/6Ll3mkIKB"></iframe>
                         </div>
-                        <p>Not supported on phones or tablets</p>
+                        <p>Not supported on iOS devices</p>
                     </Container>
                     {/* <Container>
                         <h2 className = "title">DFS Visualization:</h2> 

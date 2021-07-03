@@ -48,7 +48,7 @@ export default class Contact extends Component {
 
 
              this.styles = {
-                marginLeft:"10px", 
+                marginLeft:"10px",
                 display:"none"
               };
 
@@ -65,18 +65,18 @@ export default class Contact extends Component {
       handleFirstNameChange(event) {
         this.setState({firstName: event.target.value});
       }
-      
+
       handleLastNameChange(event) {
         this.setState({lastName: event.target.value});
       }
-      
+
       handleEmployerChange(event) {
         this.setState({employer: event.target.value});
       }
       handleChangeText(event) {
         this.setState({textValue: event.target.value});
       }
-    
+
 
        hideModal = (e) => {
             this.setState({ //no harm in turning them all off since they never could be activated at the same time
@@ -93,7 +93,7 @@ export default class Contact extends Component {
        }
        hideSpinner = () => {
         this.styles = {
-            marginLeft:"10px", 
+            marginLeft:"10px",
             display:"none"
           };
        }
@@ -105,7 +105,7 @@ export default class Contact extends Component {
             disabled:true
         });
         console.log('Submit Clicked: ');
-        console.log(this.state); 
+        console.log(this.state);
         event.preventDefault();
 
         if(this.state.textValue === "" || this.state.firstName === "" || this.state.lastName === "" || this.state.employer === ""){
@@ -126,7 +126,7 @@ export default class Contact extends Component {
             textBody: this.state.textValue
         }
 
-        
+
         let baseURL = "http://localhost:5000/sendEmail";
         if(process.env.NODE_ENV === "production"){
             baseURL = "/sendEmail";
@@ -146,7 +146,7 @@ export default class Contact extends Component {
             document.body.style.cursor = 'default';
             console.log(res.data);
         })
-        .catch((err) => {           
+        .catch((err) => {
             this.setState({
                 showFailModal: true,
                 disabled:false,
@@ -167,12 +167,12 @@ export default class Contact extends Component {
 
       }
 
-    
+
 
 
     render(){
 
-      
+
 
 
 
@@ -195,7 +195,7 @@ export default class Contact extends Component {
                     <Modal.Header closeButton>
                         <Modal.Title>Success! Form submitted.</Modal.Title>
                     </Modal.Header>
- 
+
                     <Modal.Footer>
                         <Button variant="primary" onClick={this.hideModal}>
                         Close
@@ -215,8 +215,8 @@ export default class Contact extends Component {
                     </Modal.Footer>
                 </Modal>
 
-                
-                    <div className = "container"> 
+
+                    <div className = "container">
 
                         <h1>
                             Contact Me:
@@ -244,7 +244,7 @@ export default class Contact extends Component {
                                     <Form.Control className = "bigTextBox" as="textarea" type = "text" rows="15" value={this.state.textValue} onChange={this.handleChangeText} placeholder = "Your text here" />
                                 </Form.Group>
 
-                                <Form.Row > 
+                                <Form.Row >
                                     <Button variant="primary"  onClick = {this.handleSubmit} type="submit" disabled = {this.state.disabled}>
                                         Submit
                                     </Button>

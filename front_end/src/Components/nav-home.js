@@ -227,6 +227,7 @@ export default class NavHome extends Component{
                                         <NavDropdown.Item href = "/projects/website">Website</NavDropdown.Item>
                                         <NavDropdown.Item href = "/projects/hotdog">FEA Model</NavDropdown.Item>
                                         <NavDropdown.Item href = "/projects/strain">Strain Tracking</NavDropdown.Item>
+                                        <NavDropdown.Item href = "/projects/senior-design">Senior Design</NavDropdown.Item>
                                         <NavDropdown.Divider />
                                         <NavDropdown.Item href = "/projects/home">Project Home</NavDropdown.Item>
                                     </NavDropdown>  

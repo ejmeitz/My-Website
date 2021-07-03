@@ -17,6 +17,7 @@ import Blackfly from './Components/subComponents/blackfly.js';
 import websiteProj from './Components/subComponents/website.js';
 import hotDogProj from './Components/subComponents/hotDogProject.js';
 import strainProj from './Components/subComponents/strainTracking.js';
+import seniorDesign from './Components/subComponents/seniorDesign.js';
 
 
 import Footer from './Components/footer.js';
@@ -75,6 +76,7 @@ render(){
                           <Route   path = "/projects/website" component ={websiteProj} />
                           <Route   path = "/projects/hotdog" component ={hotDogProj} />
                           <Route   path = "/projects/strain" component ={strainProj} />
+                          <Route   path = "/projects/senior-design" component ={seniorDesign} />
                         </Route>
                         <Route  path = "/contact" component ={Contact} />
                         <Route path = "/examples" component = {videoExamples}/>
