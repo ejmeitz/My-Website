@@ -219,17 +219,16 @@ export default class Contact extends Component {
                             Contact Me:
                         </h1>
                             <Form className = "contactMe" id = 'myForm'>
-                            <Form.Row>
-                                    <Form.Group as={Col}>
-                                    <Form.Label>First Name</Form.Label>
-                                    <Form.Control type="name" value={this.state.firstName} onChange={this.handleFirstNameChange} placeholder="First Name" />
-                                    </Form.Group>
+                                <Form.Group as={Col}>
+                                <Form.Label>First Name</Form.Label>
+                                <Form.Control type="name" value={this.state.firstName} onChange={this.handleFirstNameChange} placeholder="First Name" />
+                                </Form.Group>
 
-                                    <Form.Group as={Col}>
-                                    <Form.Label>Last Name</Form.Label>
-                                    <Form.Control type="name" value={this.state.lastName} onChange={this.handleLastNameChange} placeholder="Last Name" />
-                                    </Form.Group>
-                                </Form.Row>
+                                <Form.Group as={Col}>
+                                <Form.Label>Last Name</Form.Label>
+                                <Form.Control type="name" value={this.state.lastName} onChange={this.handleLastNameChange} placeholder="Last Name" />
+                                </Form.Group>
+      
 
                                 <Form.Group>
                                     <Form.Label>Employer</Form.Label>
@@ -241,14 +240,13 @@ export default class Contact extends Component {
                                     <Form.Control className = "bigTextBox" as="textarea" type = "text" rows="15" value={this.state.textValue} onChange={this.handleChangeText} placeholder = "Your text here" />
                                 </Form.Group>
 
-                                <Form.Row >
-                                    <Button variant="primary"  onClick = {this.handleSubmit} type="submit" disabled = {this.state.disabled}>
-                                        Submit
-                                    </Button>
-                                    <Spinner animation="border"  style = {this.styles} size = "lg" variant = "primary" role="status">
-                                         <span className="sr-only">Loading...</span>
-                                    </Spinner>
-                                </Form.Row>
+                                <Button variant="primary"  onClick = {this.handleSubmit} type="submit" disabled = {this.state.disabled}>
+                                    Submit
+                                </Button>
+                                <Spinner animation="border"  style = {this.styles} size = "lg" variant = "primary" role="status">
+                                        <span className="sr-only">Loading...</span>
+                                </Spinner>
+      
                             </Form>
                     </div>
                 </ContactStyles>
