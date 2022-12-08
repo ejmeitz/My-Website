@@ -24,10 +24,8 @@ if(process.env.NODE_ENV === 'production'){
     URI = process.env.ATLAS_URI2 //database for testing
 }
 
-mongoose.connect( URI, {
-        useNewUrlParser: true, 
-        useUnifiedTopology: true,
-         useCreateIndex: true})
+mongoose.set('strictQuery', false);
+mongoose.connect( URI)
 
 const connection = mongoose.connection;
 

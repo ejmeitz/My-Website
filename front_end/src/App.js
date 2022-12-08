@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {BrowserRouter as Router, Route,Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route,Routes} from "react-router-dom";
 import axios from 'axios';
 
 import Home from "./Components/Home";
@@ -26,7 +26,6 @@ import Footer from './Components/footer.js';
 import './App.css';
 import './index.css'
 
-require('dotenv').config();
 
 class App extends Component{ 
   
@@ -65,25 +64,25 @@ render(){
    
     <React.Fragment >
         <Nav />
-                  <Router>
-                      <Switch>
-                        <Route updateViewers={() => this.updateViewers()} exact path = "/" component ={Home} />
-                        <Route  path = "/art" component ={Art} />
-                        <Route  path = "/fun" component ={Fun} />
-                        <Route  path = "/projects">
-                        <Route   path = "/projects/home" component ={Projects} />
-                          <Route   path = "/projects/blackfly" component ={Blackfly} />
-                          <Route   path = "/projects/website" component ={websiteProj} />
-                          <Route   path = "/projects/hotdog" component ={hotDogProj} />
-                          <Route   path = "/projects/strain" component ={strainProj} />
-                          <Route   path = "/projects/senior-design" component ={seniorDesign} />
-                        </Route>
-                        <Route  path = "/contact" component ={Contact} />
-                        <Route path = "/examples" component = {videoExamples}/>
-                        <Route path = "/data" component = {HD_Data}/>
-                        <Route path = "*" component = {NotFound} status = {404} />
-                      </Switch>
-                  </Router> 
+        <Router>
+            <Routes>
+              <Route updateViewers={() => this.updateViewers()} exact path = "/" element ={<Home/>} />
+              <Route  path = "/art" element ={<Art/>} />
+              <Route  path = "/fun" element ={<Fun/>} />
+              <Route  path = "/projects">
+              <Route   path = "/projects/home" element ={<Projects/>} />
+                <Route   path = "/projects/blackfly" element ={<Blackfly/>} />
+                <Route   path = "/projects/website" element ={<websiteProj/>} />
+                <Route   path = "/projects/hotdog" element ={<hotDogProj/>} />
+                <Route   path = "/projects/strain" element ={<strainProj/>} />
+                <Route   path = "/projects/senior-design" element ={<seniorDesign/>} />
+              </Route>
+              <Route  path = "/contact" element ={<Contact/>} />
+              <Route path = "/examples" element = {<videoExamples/>}/>
+              <Route path = "/data" element = {<HD_Data/>}/>
+              <Route path = "*" element = {<NotFound/>} status = {404} />
+            </Routes>
+        </Router> 
         <Footer />
      </React.Fragment>
   )

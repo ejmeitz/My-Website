@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-import {Form, Col, Button, Modal, Spinner} from 'react-bootstrap';
+import {Col, Button, Modal, Spinner} from 'react-bootstrap';
+import Form from 'react-bootstrap/Form';
 import axios from 'axios';
 
 
@@ -171,10 +172,6 @@ export default class Contact extends Component {
 
 
     render(){
-
-
-
-
 
         return(
 
