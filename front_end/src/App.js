@@ -11,13 +11,13 @@ import Contact from './Components/contact';
 import Fun from './Components/fun';
 import Nav from './Components/nav-home.js';
 
-import videoExamples from './Components/subComponents/exampleVideos.js';
+import VideoExamples from './Components/subComponents/exampleVideos.js';
 import HD_Data from './Components/subComponents/HD_Data.js';
 import Blackfly from './Components/subComponents/blackfly.js';
-import websiteProj from './Components/subComponents/website.js';
-import hotDogProj from './Components/subComponents/hotDogProject.js';
-import strainProj from './Components/subComponents/strainTracking.js';
-import seniorDesign from './Components/subComponents/seniorDesign.js';
+import WebsiteProj from './Components/subComponents/website.js';
+import HotDogProj from './Components/subComponents/hotDogProject.js';
+import StrainProj from './Components/subComponents/strainTracking.js';
+import SeniorDesign from './Components/subComponents/seniorDesign.js';
 
 
 import Footer from './Components/footer.js';
@@ -72,13 +72,13 @@ render(){
               <Route  path = "/projects">
               <Route   path = "/projects/home" element ={<Projects/>} />
                 <Route   path = "/projects/blackfly" element ={<Blackfly/>} />
-                <Route   path = "/projects/website" element ={<websiteProj/>} />
-                <Route   path = "/projects/hotdog" element ={<hotDogProj/>} />
-                <Route   path = "/projects/strain" element ={<strainProj/>} />
-                <Route   path = "/projects/senior-design" element ={<seniorDesign/>} />
+                <Route   path = "/projects/website" element ={<WebsiteProj/>} />
+                <Route   path = "/projects/hotdog" element ={<HotDogProj/>} />
+                <Route   path = "/projects/strain" element ={<StrainProj/>} />
+                <Route   path = "/projects/senior-design" element ={<SeniorDesign/>} />
               </Route>
               <Route  path = "/contact" element ={<Contact/>} />
-              <Route path = "/examples" element = {<videoExamples/>}/>
+              <Route path = "/examples" element = {<VideoExamples/>}/>
               <Route path = "/data" element = {<HD_Data/>}/>
               <Route path = "*" element = {<NotFound/>} status = {404} />
             </Routes>

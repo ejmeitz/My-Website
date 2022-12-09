@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import {Container, Button} from 'react-bootstrap';
 
@@ -13,8 +13,8 @@ const ErrorStyle = styled.div `
 `;
 
 
-export default class NotFound extends Component {
-    render(){
+export default function NotFound(props) {
+
         return(
             <ErrorStyle>
                 <Container fluid>
@@ -23,5 +23,5 @@ export default class NotFound extends Component {
                 </Container>   
             </ErrorStyle>
         );
-    }
+
 }

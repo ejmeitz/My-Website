@@ -128,10 +128,9 @@ p{
 
 
 
-export default class my_projects extends Component {
+export default function my_projects(props) {
 
-    render(){
-        return (
+    return (
     <>
         <FunStyles>  
             <Container fluid>
@@ -159,6 +158,6 @@ export default class my_projects extends Component {
             </Container>
         </FunStyles>
     </>
-        )
-    }
+    );
+
 }

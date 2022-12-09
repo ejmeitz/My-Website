@@ -49,9 +49,8 @@ const FooterStyles = styled.div `
 
 
 
-export default class Footer extends Component {
+export default function Footer (props) {
 
-render(){
     
     return(
 
@@ -66,9 +65,7 @@ render(){
     </FooterStyles>
 
 
-)
-
-}
+);
 
 
 }
