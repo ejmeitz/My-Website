@@ -110,44 +110,8 @@ const NavStyles = styled.div `
 }
 
 
-@media screen and (max-width: 1000px){
-  .navbar{
-    background-color:rgb( 140, 194, 255);
-    position:fixed;
-    width: 100%;
-    padding: 10px;
-    height:50px;
-    
-    top: 0;
-    z-index:20;
-  }
-
-  .navbar--hidden {
-    top:0;
-  }
-  .navbar-nav{
-    border:1px solid white;
-    margin:auto;
-    width:100vw;
-  }
 
 
-}
-
-
-
-@media screen and (max-device-width: 1000px){
-  .navbar{
-    background-color:rgb( 140, 194, 255);
-    position:fixed;
-    width: 100%;
-    padding: 10px;
-    height:50px;
-    
-    top: 0;
-    z-index:20;
-  }
-}
 
 
 
@@ -219,9 +183,12 @@ export default class NavHome extends Component{
                       </span>
                     </Navbar.Toggle>
                         <Navbar.Collapse id = "basic-navbar-nav">
-                            <Nav  className = "ml-auto">
-                                    <Nav.Link href="/">HOME</Nav.Link>              
-                                    <Nav.Link href="/art">ART</Nav.Link>            
+                            <Nav  className = "ms-auto">
+                                    <Nav.Link href="/">HOME</Nav.Link>
+                                    <NavDropdown title = "RESEARCH" id = "nav-dropdown">
+                                        <NavDropdown.Item href = "/research/phd">Ph.D.</NavDropdown.Item>
+                                        <NavDropdown.Item href = "/research/undergrad">Undergraduate</NavDropdown.Item>
+                                    </NavDropdown>     
                                     <NavDropdown title = "PROJECTS" id = "nav-dropdown">
                                         <NavDropdown.Item href = "/projects/blackfly">Camera UI</NavDropdown.Item>
                                         <NavDropdown.Item href = "/projects/website">Website</NavDropdown.Item>
@@ -230,7 +197,8 @@ export default class NavHome extends Component{
                                         <NavDropdown.Item href = "/projects/senior-design">Senior Design</NavDropdown.Item>
                                         <NavDropdown.Divider />
                                         <NavDropdown.Item href = "/projects/home">Project Home</NavDropdown.Item>
-                                    </NavDropdown>  
+                                    </NavDropdown>
+                                    <Nav.Link href="/art">ART</Nav.Link>   
                                     <Nav.Link href="/fun">ANIMATIONS</Nav.Link>
                                     <Nav.Link href="/contact">CONTACT ME</Nav.Link>    
                             </Nav>

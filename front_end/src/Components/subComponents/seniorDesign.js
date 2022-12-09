@@ -217,9 +217,6 @@ export default class seniorDes extends Component {
                                            
                                         </p>        
                                         <p>
-                                            <Card.Link href = "/examples" target = "_blank" rel="noopener noreferrer">
-                                                Videos   
-                                            </Card.Link>
                                             <Card.Link href = "https://lakelab.wustl.edu/" target = "_blank" rel="noopener noreferrer">
                                                 The Lake Lab    
                                             </Card.Link>

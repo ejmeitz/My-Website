@@ -18,7 +18,8 @@ import WebsiteProj from './Components/subComponents/website.js';
 import HotDogProj from './Components/subComponents/hotDogProject.js';
 import StrainProj from './Components/subComponents/strainTracking.js';
 import SeniorDesign from './Components/subComponents/seniorDesign.js';
-
+import PHD_Research from "./Components/subComponents/phd_research.js"
+import UG_Research from "./Components/subComponents/ug_research.js"
 
 import Footer from './Components/footer.js';
 
@@ -69,6 +70,10 @@ render(){
               <Route updateViewers={() => this.updateViewers()} exact path = "/" element ={<Home/>} />
               <Route  path = "/art" element ={<Art/>} />
               <Route  path = "/fun" element ={<Fun/>} />
+              <Route  path = "/research">
+                <Route path = "/research/phd" element ={<PHD_Research/>}/>
+                <Route path = "/research/undergrad" element ={<UG_Research/>}/>
+              </Route> 
               <Route  path = "/projects">
               <Route   path = "/projects/home" element ={<Projects/>} />
                 <Route   path = "/projects/blackfly" element ={<Blackfly/>} />

@@ -404,9 +404,9 @@ render(){
         
             <div className = "welcome">
                     <h5>
-                     Hi, I'm <strong>Ethan Meitz</strong>, and I'm a graduate student at Washington University in St. Louis pursuing a M.S. in <i>Mechanical Engineering</i>. 
-                     I love creating art, playing drums, and tinkering. 
-                     Check out my  <a href = "/projects/home">engineering projects</a>, <a href = "/art">artwork</a>  and some <a href = "/fun">fun animations</a>! 
+                     Hi, I'm <strong>Ethan Meitz</strong>, and I'm a graduate student at Carnegie Mellon University pursuing a Ph.D. in <i>Mechanical Engineering</i>. 
+                     I love creating art, playing drums, and tinkering with electronics projects. 
+                     Check out my  <a href = "/projects/home">research</a>, <a href = "/projects/home">projects</a>, <a href = "/art">artwork</a>  and some <a href = "/fun">fun animations</a>! 
                     </h5>
             </div> 
             <img className = "me"  src = {meCoverPhoto} alt = "Operating a saw at a Habitat for Humanity construction site"/>
@@ -423,7 +423,7 @@ render(){
                     <Card.Body>
                         <Card.Title><strong>About Me</strong></Card.Title>
                         <Card.Text>
-                            I grew up in St. Paul, Minnesota and currently attend Washington University in St. Louis. 
+                            I grew up in St. Paul, Minnesota and graduated from Washington University in St. Louis in 2021 with a B.S. in mechanical engineering. 
                             WashU has taught me how to solve a variety of problems in a focused and efficient manner. I can solve engineering specific problems like the forces in a truss network
                             but can also apply myself to solve abstract, new problems. For example, this website! I began this app not knowing
                             anything about full stack development, JavaScript, CSS, HTML or the dozen other packages used to create this site. I find every
