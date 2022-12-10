@@ -29,3 +29,6 @@ yarn-debug.log*
 yarn-error.log*
 Website-Backend/
 *.pem
+keys/id_rsa
+*.pub
+*.ppk
