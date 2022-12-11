@@ -5,7 +5,6 @@ import axios from 'axios';
 
 import Home from "./Components/Home";
 import Art from "./Components/art";
-import Projects from './Components/my_projects';
 import NotFound  from './Components/NotFound';
 import Contact from './Components/contact';
 import Fun from './Components/fun';
@@ -20,6 +19,7 @@ import StrainProj from './Components/subComponents/strainTracking.js';
 import SeniorDesign from './Components/subComponents/seniorDesign.js';
 import PHD_Research from "./Components/subComponents/phd_research.js"
 import UG_Research from "./Components/subComponents/ug_research.js"
+import OvitoProject from "./Components/subComponents/ovito-proj.js"
 
 import Footer from './Components/footer.js';
 
@@ -75,12 +75,12 @@ render(){
                 <Route path = "/research/undergrad" element ={<UG_Research/>}/>
               </Route> 
               <Route  path = "/projects">
-              <Route   path = "/projects/home" element ={<Projects/>} />
                 <Route   path = "/projects/blackfly" element ={<Blackfly/>} />
                 <Route   path = "/projects/website" element ={<WebsiteProj/>} />
                 <Route   path = "/projects/hotdog" element ={<HotDogProj/>} />
                 <Route   path = "/projects/strain" element ={<StrainProj/>} />
                 <Route   path = "/projects/senior-design" element ={<SeniorDesign/>} />
+                <Route   path = "/projects/ovito-proj" element ={<OvitoProject/>} />
               </Route>
               <Route  path = "/contact" element ={<Contact/>} />
               <Route path = "/examples" element = {<VideoExamples/>}/>

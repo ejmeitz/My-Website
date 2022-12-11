@@ -96,7 +96,8 @@ const NavStyles = styled.div `
 }
 .dropdown-item{
   background-color:rgb( 140, 194, 255);
-    text-align:center;
+  text-align:center;
+  padding: 4px;
 }
 
 .svg-inline--fa.fa-w-14 {
@@ -190,13 +191,10 @@ export default class NavHome extends Component{
                                         <NavDropdown.Item href = "/research/undergrad">Undergraduate</NavDropdown.Item>
                                     </NavDropdown>     
                                     <NavDropdown title = "PROJECTS" id = "nav-dropdown">
-                                        <NavDropdown.Item href = "/projects/blackfly">Camera UI</NavDropdown.Item>
+                                        <NavDropdown.Item href = "/projects/senior-design">Senior Design</NavDropdown.Item>
+                                        <NavDropdown.Item href = "/projects/ovito-proj">Visualization Tools </NavDropdown.Item>
                                         <NavDropdown.Item href = "/projects/website">Website</NavDropdown.Item>
                                         <NavDropdown.Item href = "/projects/hotdog">FEA Model</NavDropdown.Item>
-                                        <NavDropdown.Item href = "/projects/strain">Strain Tracking</NavDropdown.Item>
-                                        <NavDropdown.Item href = "/projects/senior-design">Senior Design</NavDropdown.Item>
-                                        <NavDropdown.Divider />
-                                        <NavDropdown.Item href = "/projects/home">Project Home</NavDropdown.Item>
                                     </NavDropdown>
                                     <Nav.Link href="/art">ART</Nav.Link>   
                                     <Nav.Link href="/fun">ANIMATIONS</Nav.Link>
