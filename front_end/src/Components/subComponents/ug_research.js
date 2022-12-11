@@ -18,7 +18,7 @@ export default function UG_Research(props) {
         return(
             <UG_Styles>
                 <Container fluid>
-                    <p>UG Research</p>
+                    <p>UG Research WIP</p>
                 </Container>   
             </UG_Styles>
         );

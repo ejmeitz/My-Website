@@ -18,7 +18,7 @@ export default function Research_PHD(props) {
         return(
             <PHD_Styles>
                 <Container fluid>
-                    <p>PHD Research</p>
+                    <p>PHD Research WIP</p>
                 </Container>   
             </PHD_Styles>
         );
