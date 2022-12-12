@@ -38,6 +38,7 @@ const SeniorDesignStyles = styled.div `
     border:1px solid black;
     border-radius:5px;
     height:40vw;
+    padding:10px;
 }
 
 .card {
@@ -171,58 +172,58 @@ export default class seniorDes extends Component {
             <SeniorDesignStyles>
                 <Container fluid>
                     <div className = "grid">
-                                    <Carousel>
-                                        <Carousel.Item>
-                                            <img
-                                            className="d-block w-100"
-                                            src = {CAD_Exploded_View}
-                                            alt="An exploded view of the z-axis assembly"
-                                            />
-                                            <Carousel.Caption style = {{color: "black"}}>
-                                                An exploded view of the z-axis assembly.
-                                            </Carousel.Caption>
-                                        </Carousel.Item>
-                                        <Carousel.Item>
-                                            <img 
-                                            className="d-block w-100"
-                                               src = {camera3axis}
-                                            alt="The camera in one of the experimental setups"
-                                            />
-                                            <Carousel.Caption style = {{color: "black"}}>
-                                                The camera in one of the experimental setups
-                                            </Carousel.Caption>
-                                        </Carousel.Item>
-                                        <Carousel.Item>
-                                            <img 
-                                            className="d-block w-100"
-                                               src = {SD_UI}
-                                            alt=" The UI used to the control the stepper motor on the z-axis"
-                                            />
-                                            <Carousel.Caption style = {{color: "black"}}>
-                                                The UI used to the control the stepper motor on the z-axis
-                                            </Carousel.Caption>
-                                        </Carousel.Item>
-                                    </Carousel>                     
-                                <Card.Body>
-                                    <Card.Title className = "projectName" style={{margin:"10px 0px"}}><strong>Senior Design: 3-Axis Camera System</strong></Card.Title>
-                                    <div className = "card-text"> 
-                                        <p>
-                                           In the final semester of my B.S. in Mechanical Engineering I worked with the Lake lab to develop a semi-autonomous system to control a camera. 
-                                           The lab specified that the z-axis should be automated with extremely accurate positioning. The other two axes (x,y) could be manually moved. Furthemore, 
-                                           the z-axis had to be controllable through a computer with the ability to return to the exact position as a previous experiment. To acheive this, my team and I
-                                           developed a CAD model and built several prototypes to test our ideas. The final design, was a 3-axis cartesian robot that used a stepper motor to control the
-                                           z-axis. I was responsible for the software used to control the stepper motor and the design of the z-axis. The software used Qt to send commands
-                                           from the lab computer to an on-board Arduino. The Arduino would parse the commands and move the stepper motor. Ultimately the design worked, and the Lake lab uses 
-                                           it to position their cameras. 
-                                           
-                                        </p>        
-                                        <p>
-                                            <Card.Link href = "https://lakelab.wustl.edu/" target = "_blank" rel="noopener noreferrer">
-                                                The Lake Lab    
-                                            </Card.Link>
-                                        </p>
-                                    </div>
-                                </Card.Body>
+                            <Carousel>
+                                <Carousel.Item>
+                                    <img
+                                    className="d-block w-100"
+                                    src = {CAD_Exploded_View}
+                                    alt="An exploded view of the z-axis assembly"
+                                    />
+                                    <Carousel.Caption style = {{color: "black"}}>
+                                        An exploded view of the z-axis assembly.
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img 
+                                    className="d-block w-100"
+                                        src = {camera3axis}
+                                    alt="The camera in one of the experimental setups"
+                                    />
+                                    <Carousel.Caption style = {{color: "black"}}>
+                                        The camera in one of the experimental setups
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <img 
+                                    className="d-block w-100"
+                                        src = {SD_UI}
+                                    alt=" The UI used to the control the stepper motor on the z-axis"
+                                    />
+                                    <Carousel.Caption style = {{color: "black"}}>
+                                        The UI used to the control the stepper motor on the z-axis
+                                    </Carousel.Caption>
+                                </Carousel.Item>
+                            </Carousel>                     
+                        <Card.Body>
+                            <Card.Title className = "projectName" style={{margin:"10px 0px"}}><strong>Senior Design: 3-Axis Camera System</strong></Card.Title>
+                            <div className = "card-text"> 
+                                <p>
+                                    In the final semester of my B.S. in Mechanical Engineering I worked with the Lake lab to develop a semi-autonomous system to control a camera. 
+                                    The lab specified that the z-axis should be automated with extremely accurate positioning. The other two axes (x,y) could be manually moved. Furthemore, 
+                                    the z-axis had to be controllable through a computer with the ability to return to the exact position as a previous experiment. To acheive this, my team and I
+                                    developed a CAD model and built several prototypes to test our ideas. The final design, was a 3-axis cartesian robot that used a stepper motor to control the
+                                    z-axis. I was responsible for the software used to control the stepper motor and the design of the z-axis. The software used Qt to send commands
+                                    from the lab computer to an on-board Arduino. The Arduino would parse the commands and move the stepper motor. Ultimately the design worked, and the Lake lab uses 
+                                    it to position their cameras. 
+                                    
+                                </p>        
+                                <p>
+                                    <Card.Link href = "https://lakelab.wustl.edu/" target = "_blank" rel="noopener noreferrer">
+                                        The Lake Lab    
+                                    </Card.Link>
+                                </p>
+                            </div>
+                        </Card.Body>
                        </div>
                 </Container>
             </SeniorDesignStyles>    

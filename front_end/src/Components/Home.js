@@ -406,7 +406,7 @@ render(){
                     <h5>
                      Hi, I'm <strong>Ethan Meitz</strong>, and I'm a graduate student at Carnegie Mellon University pursuing a Ph.D. in <i>Mechanical Engineering</i>. 
                      I love creating art, playing drums, and tinkering with electronics projects. 
-                     Check out my  <a href = "/projects/home">research</a>, <a href = "/projects/home">projects</a>, <a href = "/art">artwork</a>  and some <a href = "/fun">fun animations</a>! 
+                     Check out my  <a href = "/research/phd">research</a>, projects, <a href = "/art">artwork</a>  and some <a href = "/fun">fun animations</a>! 
                     </h5>
             </div> 
             <img className = "me"  src = {meCoverPhoto} alt = "Operating a saw at a Habitat for Humanity construction site"/>
